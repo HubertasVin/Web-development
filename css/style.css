@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
 
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #52575d;
+    background-color: #FEFFFE;
 }
 
 #page-top {
     display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 90%;
     justify-content: space-between;
     align-items: center;
@@ -19,11 +18,31 @@ body {
     background-color: #41444b;
 }
 
-li, a, button {
+main {
+    position: absolute;
+    top: 19%;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+footer {
+    position: fixed;
+    top: 20%;
+    left: 0;
+    width: 50px;
+    background-color: #E99C20;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 9;
+}
+
+header li, a, button {
     font-family: "Comfortaa";
     font-weight: 700;
+    font-size: 18px;
     text-decoration: none;
-    color: #1a1c20;
+    color: #FEFFFE;
 }
 
 .logo {
@@ -38,6 +57,7 @@ li, a, button {
 .navLinks li {
     display: inline-block;
     padding: 0px 20px;
+    color: rgba(253, 219, 58, 1);
 }
 
 .navLinks li a {
@@ -45,20 +65,80 @@ li, a, button {
 }
 
 .navLinks li a:hover {
-    color: #fddb3a;
+    color: rgba(253, 219, 58, 0.8);
 }
 
 .homeBtn {
     padding: 0.5% 1.5%;
-    background-color: rgba(253, 219, 58, 1);
+    background-color: #fddb3a;
+    color: #1a1c20;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease 0s;
+    transition: background-color 0.3s ease 0s;
+    transition: border-radius 0.5s ease 0s;
 }
 
 .homeBtn:hover {
-    border-radius: 10px;
-    background-color: rgba(253, 219, 58, 0.8);
+    border-radius: 15px;
+    background-color: #FED50B;
     transition: all 0.3s ease 0s;
+}
+
+
+footer img {
+    width: 100%;
+    margin-top: 5%;
+}
+
+.mirageIcon p {position:absolute;top: -5px;left: 120%;opacity: 0;background-color: rgb(204, 134, 20, 0.8);color: #f3f3f3;font-family: 'PT Sans Caption', sans-serif;padding: 2px 4px;border-radius: 5px;transition: all 0.2s ease 0s;}
+.mirageIcon:hover p {opacity: 1;transition: all 0.2s ease 0s;}
+
+.infernoIcon p {position:absolute;top: 40px;left: 120%;opacity: 0;background-color: rgb(204, 134, 20, 0.8);color: #f3f3f3;font-family: 'PT Sans Caption', sans-serif;padding: 2px 4px;border-radius: 5px;transition: all 0.2s ease 0s;}
+.infernoIcon:hover p {opacity: 1;transition: all 0.2s ease 0s;}
+
+.overpassIcon p {position:absolute;top: 85px;left: 120%;opacity: 0;background-color: rgb(204, 134, 20, 0.8);color: #f3f3f3;font-family: 'PT Sans Caption', sans-serif;padding: 2px 4px;border-radius: 5px;transition: all 0.2s ease 0s;}
+.overpassIcon:hover p {opacity: 1;transition: all 0.2s ease 0s;}
+
+.dust2Icon p {position:absolute;top: 130px;left: 120%;opacity: 0;background-color: rgb(204, 134, 20, 0.8);color: #f3f3f3;font-family: 'PT Sans Caption', sans-serif;padding: 2px 4px;border-radius: 5px;transition: all 0.2s ease 0s;}
+.dust2Icon:hover p {opacity: 1;transition: all 0.2s ease 0s;}
+
+.cacheIcon p {position:absolute;top: 180px;left: 120%;opacity: 0;background-color: rgb(204, 134, 20, 0.8);color: #f3f3f3;font-family: 'PT Sans Caption', sans-serif;padding: 2px 4px;border-radius: 5px;transition: all 0.2s ease 0s;}
+.cacheIcon:hover p {opacity: 1;transition: all 0.2s ease 0s;}
+
+.trainIcon p {position:absolute;top: 220px;left: 120%;opacity: 0;background-color: rgb(204, 134, 20, 0.8);color: #f3f3f3;font-family: 'PT Sans Caption', sans-serif;padding: 2px 4px;border-radius: 5px;transition: all 0.2s ease 0s;}
+.trainIcon:hover p {opacity: 1;transition: all 0.2s ease 0s;}
+
+.nukeIcon p {position:absolute;top: 265px;left: 120%;opacity: 0;background-color: rgb(204, 134, 20, 0.8);color: #f3f3f3;font-family: 'PT Sans Caption', sans-serif;padding: 2px 4px;border-radius: 5px;transition: all 0.2s ease 0s;}
+.nukeIcon:hover p {opacity: 1;transition: all 0.2s ease 0s;}
+
+.vertigoIcon p {position:absolute;top: 312px;left: 120%;opacity: 0;background-color: rgb(204, 134, 20, 0.8);color: #f3f3f3;font-family: 'PT Sans Caption', sans-serif;padding: 2px 4px;border-radius: 5px;transition: all 0.2s ease 0s;}
+.vertigoIcon:hover p {opacity: 1;transition: all 0.2s ease 0s;}
+
+h1 {
+    font-family: 'Patua One', cursive;
+    letter-spacing: 5px;
+    font-size: 2vw;
+}
+
+h2 {
+    font-family: 'Patua One', cursive;
+    letter-spacing: 5px;
+    font-size: 1.75vw;
+}
+
+.smokesList {
+    float: left;
+    width: 75%;
+    margin-left: 5%;
+    justify-content: space-between;
+}
+
+.smokeBox {
+    display: inline-block;
+    width: 250px;
+    height: 300px;
+    margin: 15px 30px;
+    background-color: teal;
+    border-radius: 7px;
 }
