@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap');
 
 body {
     box-sizing: border-box;
@@ -127,9 +127,26 @@ h2 {
     font-size: 1.75vw;
 }
 
+h3 {
+    font-family: 'PT Sans Caption', sans-serif;
+    letter-spacing: 1px;
+    line-height: 0px;
+    font-size: 0.75vw;
+    color: #1C1E21;
+}
+
+h4 {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 0px;
+    font-size: 0.6vw;
+    color: #41444b;
+}
+
 .smokesList {
     float: left;
-    width: 75%;
+    width: 95%;
     margin-left: 5%;
     justify-content: space-between;
 }
@@ -139,6 +156,11 @@ h2 {
     width: 250px;
     height: 300px;
     margin: 15px 30px;
-    background-color: teal;
+    background-color: #DAE7DA;
     border-radius: 7px;
+}
+
+.smokeBox img {
+    -webkit-user-drag: none;
+    width: 94%;
 }
