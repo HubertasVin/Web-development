@@ -34,7 +34,7 @@ footer {
     background-color: #E99C20;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    z-index: 9;
+    z-index: 1;
 }
 
 header li, a, button {
@@ -43,6 +43,10 @@ header li, a, button {
     font-size: 18px;
     text-decoration: none;
     color: #FEFFFE;
+}
+
+a {
+    cursor: pointer;
 }
 
 .logo {
@@ -163,4 +167,55 @@ h4 {
 .smokeBox img {
     -webkit-user-drag: none;
     width: 94%;
+}
+
+.imgShowDivBg {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    visibility: hidden;
+    z-index: 2  ;
+}
+
+.imgShowDiv {
+    position: relative;
+    left: 7%;
+    right: 7%;
+    top: 15%;
+    width: 86%;
+    background-color: #efe6dd;
+    z-index: 1;
+}
+
+.imgPrev,
+.imgNext {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.imgNext {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.imgPrev {
+    left: 0;
+}
+
+.imgPrev:hover,
+.imgNext:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
