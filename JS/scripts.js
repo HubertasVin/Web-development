@@ -1,14 +1,15 @@
 function showImageDiv(imgShowId) {
-    var imgShowDiv = document.getElementById(imgShowId);
-    var mapIconFooter = document.getElementById("mapIconList");
+    let imgShowDiv = document.getElementById(imgShowId);
+    let mapIconFooter = document.getElementById("mapIconList");
     imgShowDiv.style.visibility = "visible";
     document.body.style.overflow = "hidden";
     mapIconFooter.style.zIndex = "0";
 }
 
 function hideImageDiv(imgShowId) {
-    var imgShowDiv = document.getElementById(imgShowId);
+    let imgShowDiv = document.getElementById(imgShowId);
+    let mapIconFooter = document.getElementById("mapIconList");
     imgShowDiv.style.visibility = "hidden";
-    document.body.style.overflow = "auto";
+    document.body.style.overflow = "visible";
     mapIconFooter.style.zIndex = "1";
 }

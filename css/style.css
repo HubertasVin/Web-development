@@ -9,115 +9,9 @@ body {
     background-color: #FEFFFE;
 }
 
-#page-top {
-    display: flex;
-    width: 90%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5% 5%;
-    background-color: #41444b;
-}
-
-main {
-    position: absolute;
-    top: 19%;
-    width: 100%;
-    text-align: center;
-    z-index: 1;
-}
-
-footer {
-    position: fixed;
-    top: 20%;
-    left: 0;
-    width: 50px;
-    background-color: #E99C20;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    z-index: 1;
-}
-
-header li, a, button {
-    font-family: "Comfortaa";
-    font-weight: 700;
-    font-size: 18px;
-    text-decoration: none;
-    color: #FEFFFE;
-}
-
 a {
     cursor: pointer;
 }
-
-.logo {
-    cursor: pointer;
-    width: 5%;
-}
-
-.navLinks {
-    list-style: none;
-}
-
-.navLinks li {
-    display: inline-block;
-    padding: 0px 20px;
-    color: rgba(253, 219, 58, 1);
-}
-
-.navLinks li a {
-    transition: all 0.3s ease 0s;
-}
-
-.navLinks li a:hover {
-    color: rgba(253, 219, 58, 0.8);
-}
-
-.homeBtn {
-    padding: 0.5% 1.5%;
-    background-color: #fddb3a;
-    color: #1a1c20;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease 0s;
-    transition: border-radius 0.5s ease 0s;
-}
-
-.homeBtn:hover {
-    border-radius: 15px;
-    background-color: #FED50B;
-    transition: all 0.3s ease 0s;
-}
-
-
-footer img {
-    width: 100%;
-    margin-top: 5%;
-}
-
-.mirageIcon p {position:absolute;top: -5px;left: 120%;opacity: 0;background-color: rgb(204, 134, 20, 0.8);color: #f3f3f3;font-family: 'PT Sans Caption', sans-serif;padding: 2px 4px;border-radius: 5px;transition: all 0.2s ease 0s;}
-.mirageIcon:hover p {opacity: 1;transition: all 0.2s ease 0s;}
-
-.infernoIcon p {position:absolute;top: 40px;left: 120%;opacity: 0;background-color: rgb(204, 134, 20, 0.8);color: #f3f3f3;font-family: 'PT Sans Caption', sans-serif;padding: 2px 4px;border-radius: 5px;transition: all 0.2s ease 0s;}
-.infernoIcon:hover p {opacity: 1;transition: all 0.2s ease 0s;}
-
-.overpassIcon p {position:absolute;top: 85px;left: 120%;opacity: 0;background-color: rgb(204, 134, 20, 0.8);color: #f3f3f3;font-family: 'PT Sans Caption', sans-serif;padding: 2px 4px;border-radius: 5px;transition: all 0.2s ease 0s;}
-.overpassIcon:hover p {opacity: 1;transition: all 0.2s ease 0s;}
-
-.dust2Icon p {position:absolute;top: 130px;left: 120%;opacity: 0;background-color: rgb(204, 134, 20, 0.8);color: #f3f3f3;font-family: 'PT Sans Caption', sans-serif;padding: 2px 4px;border-radius: 5px;transition: all 0.2s ease 0s;}
-.dust2Icon:hover p {opacity: 1;transition: all 0.2s ease 0s;}
-
-.cacheIcon p {position:absolute;top: 180px;left: 120%;opacity: 0;background-color: rgb(204, 134, 20, 0.8);color: #f3f3f3;font-family: 'PT Sans Caption', sans-serif;padding: 2px 4px;border-radius: 5px;transition: all 0.2s ease 0s;}
-.cacheIcon:hover p {opacity: 1;transition: all 0.2s ease 0s;}
-
-.trainIcon p {position:absolute;top: 220px;left: 120%;opacity: 0;background-color: rgb(204, 134, 20, 0.8);color: #f3f3f3;font-family: 'PT Sans Caption', sans-serif;padding: 2px 4px;border-radius: 5px;transition: all 0.2s ease 0s;}
-.trainIcon:hover p {opacity: 1;transition: all 0.2s ease 0s;}
-
-.nukeIcon p {position:absolute;top: 265px;left: 120%;opacity: 0;background-color: rgb(204, 134, 20, 0.8);color: #f3f3f3;font-family: 'PT Sans Caption', sans-serif;padding: 2px 4px;border-radius: 5px;transition: all 0.2s ease 0s;}
-.nukeIcon:hover p {opacity: 1;transition: all 0.2s ease 0s;}
-
-.vertigoIcon p {position:absolute;top: 312px;left: 120%;opacity: 0;background-color: rgb(204, 134, 20, 0.8);color: #f3f3f3;font-family: 'PT Sans Caption', sans-serif;padding: 2px 4px;border-radius: 5px;transition: all 0.2s ease 0s;}
-.vertigoIcon:hover p {opacity: 1;transition: all 0.2s ease 0s;}
 
 h1 {
     font-family: 'Patua One', cursive;
@@ -148,6 +42,127 @@ h4 {
     color: #41444b;
 }
 
+
+
+/* Page top */
+
+.page-top {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5% 5%;
+    background-color: #41444b;
+}
+
+.topWords {
+    font-family: "Comfortaa";
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    color: #FEFFFE;
+}
+
+#topWordsDesel {
+    color: #1A1C20;
+    cursor: default;
+}
+
+.logo {
+    cursor: pointer;
+    width: 5%;
+}
+
+.navLinks li {
+    display: inline-block;
+    padding: 0px 20px;
+    list-style: none;
+    color: rgba(253, 219, 58, 1);
+}
+
+.navLinks li a {
+    transition: all 0.3s ease 0s;
+}
+
+.navLinks li a:hover {
+    color: rgba(253, 219, 58, 0.8);
+}
+
+#homeBtn {
+    padding: 0.5% 1.5%;
+    background-color: #fddb3a;
+    color: #1a1c20;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+    transition: border-radius 0.5s ease 0s;
+}
+
+#homeBtn:hover {
+    border-radius: 15px;
+    background-color: #FED50B;
+    transition: all 0.3s ease 0s;
+}
+
+
+
+/* Navigation on left */
+
+.mapIconList {
+    position: fixed;
+    top: 20%;
+    left: 0;
+    width: 50px;
+    background-color: #E99C20;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 1;
+}
+
+.mapIconList img {
+    width: 100%;
+    margin-top: 5%;
+}
+
+.icon p {
+    position:absolute;
+    left: 120%;
+    opacity: 0;
+    background-color: rgb(204, 134, 20, 0.8);
+    color: #f3f3f3;
+    font-family: 'PT Sans Caption', sans-serif;
+    padding: 2px 4px;
+    border-radius: 5px;
+    transition: all 0.2s ease 0s;
+}
+
+.icon:hover p {
+    opacity: 1;
+    transition: all 0.2s ease 0s;
+}
+
+#mirageIcon p {top: -5px;}
+#infernoIcon p {top: 40px;}
+#overpassIcon p {top: 85px;}
+#dust2Icon p {top: 130px;}
+#cacheIcon p {top: 180px;}
+#trainIcon p {top: 220px;}
+#nukeIcon p {top: 265px;}
+#vertigoIcon p {top: 312px;}
+
+
+
+/* Main content */
+
+main {
+    position: absolute;
+    top: 19%;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
 .smokesList {
     float: left;
     width: 95%;
@@ -175,23 +190,33 @@ h4 {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
     visibility: hidden;
-    z-index: 2  ;
+    z-index: 2;
 }
 
 .imgShowDiv {
     position: relative;
-    left: 7%;
-    right: 7%;
-    top: 15%;
-    width: 86%;
+    left: 5%;
+    right: 5%;
+    top: 5%;
+    bottom: 5%;
+    width: 90%;
+    height: 90%;
     background-color: #efe6dd;
     z-index: 1;
 }
 
-.imgPrev,
-.imgNext {
+.smokeImgBox {
+    position: relative;
+    display: flex;
+    left: 10px;
+    top: 10px;
+    width: 70%;
+    box-shadow: 1px 1px 20px 1px black;
+}
+
+.imgPrev, .imgNext {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -201,7 +226,6 @@ h4 {
   color: white;
   font-weight: bold;
   font-size: 20px;
-  border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
 }
@@ -213,9 +237,14 @@ h4 {
 
 .imgPrev {
     left: 0;
+  border-radius: 0 3px 3px 0;
 }
 
-.imgPrev:hover,
-.imgNext:hover {
+.imgPrev:hover, .imgNext:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+.smokeDescription {
+    float: right;
+    text-align: left;
 }

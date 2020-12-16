@@ -5,35 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geras projektas</title>
     <link rel="stylesheet" type="text/CSS" href="../css/style.css">
-    <script src="../JS/scripts.js"></script>
 </head>
+
 <body>
-    <header id="page-top">
+    <header class="page-top">
         <img class="logo" src="../images/Ecofg logo.png"></img>
         <nav>
             <ul class="navLinks">
-                <li><a style="color: #1A1C20; cursor: default">Smokes</a></li>
-                <li><a href="smokes.html">Coming soon</a></li>
-                <li><a href="smokes.html">Coming soon</a></li>
+                <li><a class="topWords" id="topWordsDesel">Smokes</a></li>
+                <li><a href="smokes.html" class="topWords">Coming soon</a></li>
+                <li><a href="smokes.html" class="topWords">Coming soon</a></li>
             </ul>
         </nav>
-        <a class="homeBtn" href="index.html">Home</a>
+        <a class="topWords" id="homeBtn" href="index.html">Home</a>
     </header>
-    <footer class="mapList"></footer>
     <main>
         <h2>CSGO smokes</h2>
-        <div class="smokesList">
+        <section class="smokesList">
             <a onclick="showImageDiv('OverpassMonsterSmoke1')"><span class="smokeBox"><h3>Monster smoke</h3><h4>from CT spawn</h4><img src="../images/Smokes/Overpass/overpass_monster1_after.jpg"></img></span></a>
             <div class="imgShowDivBg" id="OverpassMonsterSmoke1">
                 <div class="imgShowDiv">
-                    <div id="smokeImgBox">
+                    <div class="smokeImgBox">
                         <img src="../images/Smokes/Overpass/overpass_monster1_after.jpg" style="width: 100%;"/>
                         <a class="imgPrev" onclick="plusSlides(-1)">&#10094;</a>
                         <a class="imgNext" onclick="plusSlides(1)">&#10095;</a>
                     </div>
+                    <p class="smokeDescription">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac magna bibendum, pulvinar ante id, ornare velit. Aenean vitae sem sodales, aliquet sem et, posuere ante. Fusce ullamcorper felis id eros lobortis, in efficitur nisl pretium. Nulla vitae nibh viverra, egestas leo id, laoreet lacus. Proin malesuada condimentum tellus a eleifend. Pellentesque purus velit, tempus a egestas ut, varius nec elit. Duis sollicitudin dapibus urna. Suspendisse potenti. Integer lacinia, elit ut lacinia egestas, massa libero dictum sapien, pellentesque bibendum leo arcu id enim. Maecenas a ipsum varius, scelerisque tellus id, interdum nunc. Sed quis efficitur augue. Curabitur auctor venenatis efficitur. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    </p>
                 </div>
             </div>
 
+            <!--Smoke list-->
             <a href="#"><span class="smokeBox"><h3>Monster smoke</h3><h4>from CT spawn</h4><img src="../images/mapIcons/overpass_icon.webp"></img></span></a>
             <a href="#"><span class="smokeBox"><h3>Monster smoke</h3><h4>from CT spawn</h4><img src="../images/mapIcons/overpass_icon.webp"></img></span></a>
             <a href="#"><span class="smokeBox"><h3>Monster smoke</h3><h4>from CT spawn</h4><img src="../images/mapIcons/overpass_icon.webp"></img></span></a>
@@ -47,41 +50,49 @@
             <a href="#"><span class="smokeBox"><h3>Monster smoke</h3><h4>from CT spawn</h4><img src="../images/mapIcons/overpass_icon.webp"></img></span></a>
             <a href="#"><span class="smokeBox"><h3>Monster smoke</h3><h4>from CT spawn</h4><img src="../images/mapIcons/overpass_icon.webp"></img></span></a>
             <a href="#"><span class="smokeBox"><h3>Monster smoke</h3><h4>from CT spawn</h4><img src="../images/mapIcons/overpass_icon.webp"></img></span></a>
-        </div>
+        </section>
+
+        <!--Map list-->
+        <nav class="mapIconList">
+            <span class="icon" id="mirageIcon">
+                <a href="#"><img src="../images/mapIcons/mirage_icon.webp"/></a>
+                <p>Mirage</p>
+            </span>
+            <span class="icon" id="infernoIcon">
+                <a href="#"><img src="../images/mapIcons/inferno_icon.webp"/></a>
+                <p>Inferno</p>
+            </span>
+            <span class="icon" id="overpassIcon">
+                <a href="#"><img src="../images/mapIcons/overpass_icon.webp"/></a>
+                <p>Overpass</p>
+            </span>
+            <span class="icon" id="dust2Icon">
+                <a href="#"><img src="../images/mapIcons/dust2_icon.webp"/></a>
+                <p>Dust&nbsp;2</p>
+            </span>
+            <span class="icon" id="cacheIcon">
+                <a href="#"><img src="../images/mapIcons/cache_icon.webp"/></a>
+                <p>Cache</p>
+            </span>
+            <span class="icon" id="trainIcon">
+                <a href="#"><img src="../images/mapIcons/train_icon.webp"/></a>
+                <p>Train</p>
+            </span>
+            <span class="icon" id="nukeIcon">
+                <a href="#"><img src="../images/mapIcons/nuke_icon.webp"/></a>
+                <p>Nuke</p>
+            </span>
+            <span class="icon" id="vertigoIcon">
+                <a href="#"><img src="../images/mapIcons/vertigo_icon.webp"/></a>
+                <p>Vertigo</p>
+            </span>
+        </nav>
     </main>
-    <footer id="mapIconList">
-        <span class="mirageIcon">
-            <a href="#"><img src="../images/mapIcons/mirage_icon.webp"/></a>
-            <p>Mirage</p>
-        </span>
-        <span class="infernoIcon">
-            <a href="#"><img src="../images/mapIcons/inferno_icon.webp"/></a>
-            <p>Inferno</p>
-        </span>
-        <span class="overpassIcon">
-            <a href="#"><img src="../images/mapIcons/overpass_icon.webp"/></a>
-            <p>Overpass</p>
-        </span>
-        <span class="dust2Icon">
-            <a href="#"><img src="../images/mapIcons/dust2_icon.webp"/></a>
-            <p>Dust&nbsp;2</p>
-        </span>
-        <span class="cacheIcon">
-            <a href="#"><img src="../images/mapIcons/cache_icon.webp"/></a>
-            <p>Cache</p>
-        </span>
-        <span class="trainIcon">
-            <a href="#"><img src="../images/mapIcons/train_icon.webp"/></a>
-            <p>Train</p>
-        </span>
-        <span class="nukeIcon">
-            <a href="#"><img src="../images/mapIcons/nuke_icon.webp"/></a>
-            <p>Nuke</p>
-        </span>
-        <span class="vertigoIcon">
-            <a href="#"><img src="../images/mapIcons/vertigo_icon.webp"/></a>
-            <p>Vertigo</p>
-        </span>
+
+    <footer>
+
     </footer>
+
+    <script src="../JS/scripts.js"></script>
 </body>
 </html>
