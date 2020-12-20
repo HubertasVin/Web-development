@@ -14,6 +14,7 @@ function hideImageDiv(imgShowId) {
     mapIconFooter.style.zIndex = "1";
 }
 
+// Nuotraukos isjungimas, paspaudus Escape mygtuka
 window.addEventListener("keydown", event => {
         if (event.key === 'Escape' || document.body.style.visibility === "hidden") {
             hideImageDiv('OverpassMonsterSmoke1');
