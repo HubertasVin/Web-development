@@ -24,6 +24,7 @@ h2 {
     font-family: 'Patua One', cursive;
     letter-spacing: 5px;
     font-size: 1.75vw;
+    font-weight: bold;
 }
 
 h3 {
@@ -32,6 +33,7 @@ h3 {
     line-height: 0px;
     font-size: 0.75vw;
     color: #1C1E21;
+    text-decoration: none;
 }
 
 h4 {
@@ -50,7 +52,7 @@ h4 {
 /*   Visas page top display   */
 .page-top {
     display: flex;
-    width: 90%;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 1.5% 5%;
@@ -255,7 +257,17 @@ main {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/*   teksto pozicija paspaudus ant smoke   */
+/*   imgShowDiv uždarymo mygtukas   */
+
+.bi bi-x {
+    position: relative;
+    float: right;
+    right: 10px;
+    top: 10px;
+    width: 2%;
+}
+
+/*   Teksto pozicija paspaudus ant smoke   */
 .smokeDescription {
     float: right;
     text-align: left;
