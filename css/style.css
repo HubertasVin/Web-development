@@ -52,7 +52,7 @@ h4 {
 /*   Visas page top display   */
 .page-top {
     display: flex;
-    width: 100%;
+    width: 90%;
     justify-content: space-between;
     align-items: center;
     padding: 1.5% 5%;
@@ -175,20 +175,18 @@ main {
 
 /*   Benra smoke'ų pozicijos   */
 .smokesList {
-    float: left;
-    width: 95%;
-    margin-left: 5%;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 50px
 }
 
 /*   Kiekvieno smoko (clickable items) stilius   */
 .smokeBox {
     display: inline-block;
-    width: 250px;
-    height: 300px;
-    margin: 15px 30px;
+    width: 300px;
+    height: 350px;
+    margin: 15px 0px;
     background-color: #DAE7DA;
-    border-radius: 7px;
 }
 .smokeBox img {
     -webkit-user-drag: none;
