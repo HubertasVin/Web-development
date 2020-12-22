@@ -164,7 +164,7 @@ h4 {
 
 /* Main content */
 
-/*   Bendra main item'ų pozicija (įeina ir šoninė navigacija)   */
+/*   Bendra main smoke'ų (dėžių) pozicija (įeina ir šoninė navigacija)   */
 main {
     position: absolute;
     top: 19%;
@@ -173,14 +173,14 @@ main {
     z-index: 1;
 }
 
-/*   Benra smoke'ų pozicijos   */
+/*   Bendros smoke'ų pozicijos   */
 .smokesList {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-left: 50px
 }
 
-/*   Kiekvieno smoko (clickable items) stilius   */
+/*   Kiekvieno smoke'o (dežės) stilius   */
 .smokeBox {
     display: inline-block;
     width: 300px;
@@ -193,8 +193,8 @@ main {
     width: 94%;
 }
 
-/*   kaip atrodys paspaudus ant to smoke (pradžioje jis yra hidden)   */
-.imgShowDivBg {
+/*   popup background pozicija ir spalva   */
+.popupBackground {
     position: fixed;
     left: 0;
     right: 0;
@@ -205,30 +205,30 @@ main {
     z-index: 2;
 }
 
-/*   pozicija ir stilius paspaudus ant smoke   */
-.imgShowDiv {
+/*   popup pozicija ir stilius   */
+.popup {
     position: relative;
-    left: 5%;
-    right: 5%;
-    top: 5%;
-    bottom: 5%;
-    width: 90%;
-    height: 90%;
+    left: 5vw;
+    right: 5vw;
+    top: 5vh;
+    bottom: 5vh;
+    width: 90vw;
+    height: 90vh;
     background-color: #efe6dd;
     z-index: 1;
 }
 
-/*   Nuotraukos pozicija paspaudus ant smoke  */
-.smokeImgBox {
+/*   popup nuotraukos pozicija  */
+.popupPhoto {
+    display: block;
     position: relative;
-    display: flex;
-    left: 10px;
     top: 10px;
+    margin: 0 auto;
     width: 70%;
     box-shadow: 1px 1px 20px 1px black;
 }
 
-/*   pirmyn ir atgal mygtukai paspaudus ant smoke   */
+/*   popup pirmyn ir atgal rodykles   */
 .imgPrev, .imgNext {
   cursor: pointer;
   position: absolute;
@@ -255,7 +255,7 @@ main {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/*   imgShowDiv uždarymo mygtukas   */
+/*   popup uždarymo mygtukas   */
 
 .bi bi-x {
     position: relative;
@@ -265,8 +265,8 @@ main {
     width: 2%;
 }
 
-/*   Teksto pozicija paspaudus ant smoke   */
+/*   popup teksto pozicija   */
 .smokeDescription {
-    float: right;
-    text-align: left;
+    text-align: center;
+    padding-top: 20px
 }
