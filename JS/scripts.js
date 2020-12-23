@@ -1,13 +1,11 @@
 function showPopup(popupId) {
     document.getElementById(popupId).style.visibility = "visible";
     document.body.style.overflow = "hidden";
-    document.getElementById("mapIconList").style.zIndex = "0";
 }
 
 function hidePopup(popupId) {
     document.getElementById(popupId).style.visibility = "hidden";
     document.body.style.overflow = "visible";
-    document.getElementById("mapIconList").style.zIndex = "1";
 }
 
 // Nuotraukos isjungimas, paspaudus Escape mygtuka

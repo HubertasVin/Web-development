@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*   Default elementų stilius   */
 body {
@@ -17,7 +18,7 @@ a {
 h1 {
     font-family: 'Patua One', cursive;
     letter-spacing: 5px;
-    font-size: 2vw;
+    font-size: 3vw;
 }
 
 h2 {
@@ -28,20 +29,21 @@ h2 {
 }
 
 h3 {
-    font-family: 'PT Sans Caption', sans-serif;
+    font-family: 'Montserrat';
+    font-weight: 800;
     letter-spacing: 1px;
     line-height: 0px;
-    font-size: 0.75vw;
+    font-size: 0.7vw;
     color: #1C1E21;
     text-decoration: none;
 }
 
 h4 {
-    font-family: 'PT Sans Caption', sans-serif;
-    font-weight: bold;
+    font-family: 'Montserrat';
+    font-weight: 500;
     letter-spacing: 1px;
     line-height: 0px;
-    font-size: 0.6vw;
+    font-size: 0.65vw;
     color: #41444b;
 }
 
@@ -117,9 +119,11 @@ h4 {
 
 /*   Navigacijos pozicija ir background spalva   */
 .mapIconList {
+    display: grid;
+    grid-template-columns: 1fr;
     position: fixed;
-    top: 20%;
-    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 50px;
     background-color: #E99C20;
     border-top-right-radius: 10px;
@@ -127,15 +131,21 @@ h4 {
     z-index: 1;
 }
 
+
 /*   Map'u nuotraukos   */
 .mapIconList img {
     width: 100%;
     margin-top: 5%;
 }
 
+.icon {
+    display: flex;
+}
+
 /*   Map'u komentaras   */
 .icon p {
-    position:absolute;
+    position: absolute;
+    margin-top: 8px;
     left: 120%;
     opacity: 0;
     background-color: rgb(204, 134, 20, 0.8);
@@ -149,17 +159,6 @@ h4 {
     opacity: 1;
     transition: all 0.2s ease 0s;
 }
-
-/*   Atstumas vienas nuo kito   */
-#mirageIcon p {top: -5px;}
-#infernoIcon p {top: 40px;}
-#overpassIcon p {top: 85px;}
-#dust2Icon p {top: 130px;}
-#cacheIcon p {top: 180px;}
-#trainIcon p {top: 220px;}
-#nukeIcon p {top: 265px;}
-#vertigoIcon p {top: 312px;}
-
 
 
 /* Main content */
@@ -176,17 +175,22 @@ main {
 /*   Bendros smoke'ų pozicijos   */
 .smokesList {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-left: 50px
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 2vw;
+    row-gap: 4vw;
+    margin-left: 100px;
+    margin-right: 50px;
 }
 
 /*   Kiekvieno smoke'o (dežės) stilius   */
 .smokeBox {
     display: inline-block;
-    width: 300px;
-    height: 350px;
-    margin: 15px 0px;
+    cursor: pointer;
+    user-select: none;
+    width: 15vw;
+    height: 35vh;
     background-color: #DAE7DA;
+    border-radius: 5px;
 }
 .smokeBox img {
     -webkit-user-drag: none;
@@ -215,12 +219,12 @@ main {
     width: 90vw;
     height: 90vh;
     background-color: #efe6dd;
-    z-index: 1;
+    z-index: 3;
 }
 
 /*   popup nuotraukos pozicija  */
 .popupPhoto {
-    display: block;
+    display: flex;
     position: relative;
     top: 10px;
     margin: 0 auto;

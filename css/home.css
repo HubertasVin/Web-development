@@ -1,0 +1,10 @@
+.items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-row: 2vw; */
+    /* grid-column: 4vw; */
+}
+
+.box {
+    /* display: inline-block; */
+}
