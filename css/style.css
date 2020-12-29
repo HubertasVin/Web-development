@@ -146,18 +146,19 @@ h4 {
 .icon p {
     position: absolute;
     margin-top: 8px;
-    left: 120%;
+    left: -60%;
     opacity: 0;
     background-color: rgb(204, 134, 20, 0.8);
     color: #f3f3f3;
     font-family: 'PT Sans Caption', sans-serif;
     padding: 2px 4px;
     border-radius: 5px;
-    transition: all 0.2s ease 0s;
+    transition: all 0.15s ease 0s;
 }
 .icon:hover p {
     opacity: 1;
-    transition: all 0.2s ease 0s;
+    left: 120%;
+    transition: all 0.15s ease 0s;
 }
 
 
@@ -219,14 +220,14 @@ main {
     width: 90vw;
     height: 90vh;
     background-color: #efe6dd;
-    z-index: 3;
+    border-radius: 5px;
 }
 
 /*   popup nuotraukos pozicija  */
 .popupPhoto {
     display: flex;
     position: relative;
-    top: 10px;
+    top: 4%;
     margin: 0 auto;
     width: 70%;
     box-shadow: 1px 1px 20px 1px black;
@@ -259,18 +260,36 @@ main {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* popup pavadinimo pozicija */
+
+.smokeTitle {
+    display: inline-block;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 45px;
+    position: relative;
+    width: 1100px;
+    top: 1%;
+    letter-spacing: -1px;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.4);
+}
+
 /*   popup uždarymo mygtukas   */
 
-.bi bi-x {
-    position: relative;
+.imgCloseIcon {
+    position: absolute;
     float: right;
     right: 10px;
     top: 10px;
-    width: 2%;
+    width: 1.8%;
 }
 
-/*   popup teksto pozicija   */
+/*   popup aprašymo pozicija   */
 .smokeDescription {
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: 30px;
+    letter-spacing: -1px;
     text-align: center;
-    padding-top: 20px
+    padding-top: 30px
 }
