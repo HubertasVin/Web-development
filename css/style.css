@@ -58,7 +58,8 @@ h4 {
     justify-content: space-between;
     align-items: center;
     padding: 1.5% 5%;
-    background-color: #41444b;
+    background-color: #484A47
+    /* background-color: #41444b; */
 }
 
 /*   <a> tag tekstu stilius, neskaitant "home" mygtuko   */
@@ -166,10 +167,11 @@ h4 {
 
 /*   Bendra main smoke'ų (dėžių) pozicija (įeina ir šoninė navigacija)   */
 main {
-    position: absolute;
-    top: 19%;
+    /* position: absolute;
+    top: 19%; */
     width: 100%;
     text-align: center;
+    /* background-color: #5C6D70; */
     z-index: 1;
 }
 
@@ -212,22 +214,42 @@ main {
 
 /*   popup pozicija ir stilius   */
 .popup {
-    position: relative;
-    left: 5vw;
-    right: 5vw;
-    top: 5vh;
-    bottom: 5vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     width: 90vw;
     height: 90vh;
     background-color: #efe6dd;
     border-radius: 5px;
 }
 
+/*   popup uždarymo mygtukas   */
+.imgCloseIcon {
+    position: absolute;
+    float: right;
+    right: 10px;
+    top: 10px;
+    width: 1.8%;
+}
+
+/*   popup pavadinimo pozicija   */
+.smokeTitle {
+    display: inline-block;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 2.5em;
+    width: 85%;
+    margin: 1% 0;
+    letter-spacing: -1px;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.4);
+}
+
 /*   popup nuotraukos pozicija  */
 .popupPhoto {
     display: flex;
-    position: relative;
-    top: 4%;
     margin: 0 auto;
     width: 70%;
     box-shadow: 1px 1px 20px 1px black;
@@ -260,36 +282,12 @@ main {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* popup pavadinimo pozicija */
-
-.smokeTitle {
-    display: inline-block;
-    font-family: 'Montserrat';
-    font-weight: 600;
-    font-size: 45px;
-    position: relative;
-    width: 1100px;
-    top: 1%;
-    letter-spacing: -1px;
-    border-bottom: 1px solid rgb(0, 0, 0, 0.4);
-}
-
-/*   popup uždarymo mygtukas   */
-
-.imgCloseIcon {
-    position: absolute;
-    float: right;
-    right: 10px;
-    top: 10px;
-    width: 1.8%;
-}
-
 /*   popup aprašymo pozicija   */
 .smokeDescription {
     font-family: 'Montserrat';
-    font-weight: 900;
-    font-size: 30px;
+    font-weight: 800;
+    font-size: 2em;
     letter-spacing: -1px;
     text-align: center;
-    padding-top: 30px
+    margin: 1%;
 }
