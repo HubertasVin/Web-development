@@ -258,35 +258,40 @@ main {
     font-weight: 600;
     font-size: 2.5em;
     width: 85%;
-    margin: 1% 0;
+    margin: 0.5% 0 1.5% 0;
     letter-spacing: -1px;
     border-bottom: 1px solid rgb(0, 0, 0, 0.4);
+}
+
+.popupMiddle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
 }
 
 /*   popup nuotraukos pozicija  */
 .popupPhoto {
     display: flex;
     position: relative;
-    margin: 0 auto;
     width: 70%;
     box-shadow: 1px 1px 20px 1px black;
 }
 
 /*   popup pirmyn ir atgal rodykles   */
 .imgPrev, .imgNext {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  user-select: none;
-  -webkit-user-select: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+    -webkit-user-select: none;
 }
-
 .imgNext {
     right: 0;
     border-radius: 3px 0 0 3px;
@@ -297,6 +302,39 @@ main {
 }
 .imgPrev:hover, .imgNext:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+  /*   kairioji puse (tickrates ir jump-throw)   */
+.leftOfPopupPhoto {
+    margin-left: 3vw;
+}
+.tickrate64 {
+    color: red;
+}
+.tickrate128 {
+    color: green
+}
+.jumpThrow {
+
+}
+
+/*   Dešinioji pusė (watch video ir favorite)   */
+.rightOfPopupPhoto {
+    margin-right: 3vw;
+    font-weight: bold;
+    font-style: italic;
+}
+.watchVideo {
+    /*   1em nes kitoj pusej <p> tag irgi turi margin: 1em   */
+    margin-bottom: 1em;
+    background-color: #4996fa;
+    padding: 5px 15px;
+    border-radius: 8px;
+}
+.favorite {
+    background-color: #e9a840;;
+    border-radius: 8px;
+    padding: 5px 15px;
 }
 
 /*   popup aprašymo pozicija   */
