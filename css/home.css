@@ -1,0 +1,26 @@
+h3 {
+    font-size: 1.25em;
+    line-height: unset;
+}
+
+.introduction {
+    display: inline-block;
+    background-image: linear-gradient(to right, #dbdbdb, #f3f3f3);
+    text-align: left;
+    padding: 1% 2%;
+    width: 80vw;
+    height: 50vh;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 50px 0 100px;
+}
+
+.item {
+    display: inline-block;
+    background-color:#cccccc;
+    width: 25vw;
+    height: 50vh;
+}

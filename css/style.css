@@ -51,8 +51,6 @@ h4 {
     color:rgb(10, 10, 10)
 }
 
-
-
 /* Page top */
 
 /*   Visas page top display   */
@@ -61,7 +59,7 @@ h4 {
     width: 90%;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5% 5%;
+    padding: 1% 5%;
     background-color: #f7f7f7;
     /*   senas   */
     /* background-color: #41444b; */
@@ -71,8 +69,9 @@ h4 {
 .topWords {
     font-family: "Comfortaa";
     font-weight: 700;
-    font-size: 1.3em;
+    /* font-size: 1em; */
     text-decoration: none;
+    /*   senas   */
     /* color: #FEFFFE; */
 }
 
@@ -179,11 +178,6 @@ main {
     padding: 3vh 0 10vh 0;
     z-index: 1;
 }
-
-/* .title {
-    margin: 0;
-    padding: 3vh 0;
-} */
 
 /*   Bendros smoke'ų pozicijos   */
 .smokesList {
