@@ -51,21 +51,18 @@ h4 {
     width: 7px;
   }
   
-  /* Track */
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     background: #868686; 
     border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb:hover {
     background: #797979; 
-  }
+}
 
 .white {
     color: rgb(235, 235, 235);
@@ -80,15 +77,7 @@ h4 {
     justify-content: space-between;
     align-items: center;
     padding: 0.5% 5%;
-    
-    background-image: url("../images/city-skyscraper.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-image: url("../images/city-skyscraper.png");
-    border-color: rgba(0, 0, 0, 0.01);
-    /*   senas   */
-    /* background-color: #41444b; */
+    background-color: rgba(240, 237, 233, 0.98);
 }
 
 /*   <a> tag tekstu stilius, neskaitant "home" mygtuko   */
@@ -114,6 +103,14 @@ h4 {
 
 .navLinks {
     display: flex;
+    background-image: url("../images/city-skyscraper.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2vh 14vw;
+    justify-content: center;
+    border-image: url("../images/city-skyscraper.png");
+    border: 10px solid transparent;
+    border-color: rgba(0, 0, 0, 0.01);
 }
 
 /*   list item'u pozicijos   */
@@ -144,7 +141,7 @@ h4 {
     transition: border-radius 0.5s ease 0s;
 }
 #homeBtn:hover {
-    border-radius: 15px;
+    border-radius: 14px;
     background-color: #FED50B;
     transition: all 0.3s ease 0s;
 }
@@ -152,6 +149,15 @@ h4 {
 
 
 /* Šoninė map'ų navigacija kairėje puseje */
+
+.mapIconList.title {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 11pt;
+    color: white;
+    padding: 2px 0 3px 4px;
+    width: 70px;
+}
 
 /*   Navigacijos pozicija ir background spalva   */
 .mapIconList {
