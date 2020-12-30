@@ -47,6 +47,26 @@ h4 {
     color: #41444b;
 }
 
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #868686; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #797979; 
+  }
+
 .white {
     color: rgb(235, 235, 235);
 }
@@ -60,7 +80,13 @@ h4 {
     justify-content: space-between;
     align-items: center;
     padding: 0.5% 5%;
-    background-color: rgba(247, 244, 240, 0.98);
+    
+    background-image: url("../images/city-skyscraper.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-image: url("../images/city-skyscraper.png");
+    border-color: rgba(0, 0, 0, 0.01);
     /*   senas   */
     /* background-color: #41444b; */
 }
@@ -88,15 +114,6 @@ h4 {
 
 .navLinks {
     display: flex;
-    background-image: url("../images/city-skyscraper.png");
-    background-size: 700px;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 2vh 10vw;
-    justify-content: center;
-    border-image: url("../images/city-skyscraper.png");
-    border: 10px solid transparent;
-    border-color: rgba(0, 0, 0, 0.01);
 }
 
 /*   list item'u pozicijos   */
@@ -242,13 +259,12 @@ main {
 }
 
 /*   popup uždarymo mygtukas   */
-.imgCloseIcon {
+#imgCloseIcon {
     position: absolute;
     cursor: pointer;
     float: right;
-    right: 10px;
+    right: 15px;
     top: 10px;
-    width: 1.8%;
 }
 
 /*   popup pavadinimo pozicija   */
@@ -274,7 +290,7 @@ main {
 .popupPhoto {
     display: flex;
     position: relative;
-    width: 70%;
+    width: 73%;
     box-shadow: 1px 1px 20px 1px black;
 }
 
@@ -306,13 +322,16 @@ main {
 
   /*   kairioji puse (tickrates ir jump-throw)   */
 .leftOfPopupPhoto {
-    margin-left: 3vw;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 11pt;
+    margin: 0 auto;
 }
 .tickrate64 {
-    color: red;
+    color: #c23a38;
 }
 .tickrate128 {
-    color: green
+    color: #43a700;
 }
 .jumpThrow {
 
@@ -320,19 +339,24 @@ main {
 
 /*   Dešinioji pusė (watch video ir favorite)   */
 .rightOfPopupPhoto {
-    margin-right: 3vw;
+    font-family: 'Montserrat';
+    font-weight: 700;
     font-weight: bold;
     font-style: italic;
+    font-size: 12pt;
+    margin: 0 auto;
 }
 .watchVideo {
     /*   1em nes kitoj pusej <p> tag irgi turi margin: 1em   */
+    cursor: pointer;
     margin-bottom: 1em;
-    background-color: #4996fa;
-    padding: 5px 15px;
+    background-color: #0085da;
+    padding: 5px 20px;
     border-radius: 8px;
 }
 .favorite {
-    background-color: #e9a840;;
+    cursor: pointer;
+    background-color: #e3af24;
     border-radius: 8px;
     padding: 5px 15px;
 }
