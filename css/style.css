@@ -47,8 +47,8 @@ h4 {
     color: #41444b;
 }
 
-.dark {
-    color:rgb(10, 10, 10)
+.white {
+    color: rgb(235, 235, 235);
 }
 
 /* Page top */
@@ -69,7 +69,7 @@ h4 {
 .topWords {
     font-family: "Comfortaa";
     font-weight: 700;
-    /* font-size: 1em; */
+    color:rgb(10, 10, 10);
     text-decoration: none;
     /*   senas   */
     /* color: #FEFFFE; */

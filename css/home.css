@@ -5,6 +5,7 @@ h3 {
 
 .introduction {
     display: inline-block;
+    /*   idek kokia turnyro sales nuotrauka jei randi   */
     background-image: linear-gradient(to right, #dbdbdb, #f3f3f3);
     text-align: left;
     padding: 1% 2%;
@@ -18,9 +19,29 @@ h3 {
     margin: 0 50px 0 100px;
 }
 
-.item {
+.items {
     display: inline-block;
-    background-color:#cccccc;
+    background-color:#dadada;
     width: 25vw;
     height: 50vh;
+}
+.items img {
+    width: 80%;
+    margin-top: 5vh;
+}
+
+.capsule {
+    width: 50%;
+    height: 80%;
+}
+
+.about {
+    background-color: rgb(40, 40, 40);
+    border: none;
+    padding: 0.6em 1.5em;
+}
+
+.about:hover {
+    transition: all 0.3s ease 0s;
+    background-color: rgb(100, 100, 100);
 }
