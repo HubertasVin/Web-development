@@ -55,7 +55,6 @@ h4 {
 
 /*   Visas page top display   */
 .page-top {
-    position: fixed;
     display: flex;
     width: 90%;
     justify-content: space-between;
@@ -93,7 +92,7 @@ h4 {
     background-size: 700px;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 15px 100px 15px 100px;
+    padding: 2vh 10vw;
     justify-content: center;
     border-image: url("../images/city-skyscraper.png");
     border: 10px solid transparent;
@@ -142,8 +141,7 @@ h4 {
     display: grid;
     grid-template-columns: 1fr;
     position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 25%;
     width: 50px;
     background-color: #e6a337;
     /* background-color: #E99C20; */
@@ -165,7 +163,7 @@ h4 {
 /*   Map'u komentaras   */
 .icon p {
     position: absolute;
-    margin-top: 8px;
+    margin-top: 5px;
     left: -60%;
     opacity: 0;
     background-color: rgb(204, 134, 20, 0.8);
@@ -173,7 +171,6 @@ h4 {
     font-family: 'PT Sans Caption', sans-serif;
     padding: 2px 4px;
     border-radius: 5px;
-    transition: all 0.05s ease 0s;
 }
 .icon:hover p {
     opacity: 1;
@@ -189,7 +186,7 @@ main {
     width: 100%;
     text-align: center;
     background-color: #f3f3f3;
-    padding: 15vh 0 10vh 0;
+    padding: 1vh 0 10vh 0;
     z-index: 1;
 }
 
