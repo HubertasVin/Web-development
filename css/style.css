@@ -47,6 +47,7 @@ h4 {
     color: #41444b;
 }
 
+/*   puslapio scrollbar   */
 ::-webkit-scrollbar {
     width: 7px;
   }
@@ -64,85 +65,9 @@ h4 {
     background: #797979; 
 }
 
+/*   kai tamsus background, žodžiai būtų balti   */
 .white {
     color: rgb(235, 235, 235);
-}
-
-/* Page top */
-
-/*   Visas page top display   */
-.page-top {
-    display: flex;
-    width: 90%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5% 5%;
-    background-color: rgba(240, 237, 233, 0.98);
-}
-
-/*   <a> tag tekstu stilius, neskaitant "home" mygtuko   */
-.topWords {
-    font-family: "Comfortaa";
-    font-weight: 700;
-    color:rgb(10, 10, 10);
-    text-decoration: none;
-}
-
-/*   Juodas tekstas, kai esi šiame menu   */
-#topWordsDesel {
-    color: #1A1C20;
-    cursor: default;
-}
-
-.logo {
-    cursor: pointer;
-    width: 5%;
-}
-
-.navLinks {
-    display: flex;
-    background-image: url("../images/city-skyscraper.png");
-    box-shadow: 1px 1px 20px 1px rgb(198, 243, 248);
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 2vh 14vw;
-    justify-content: center;
-    /* border-image: url("../images/city-skyscraper.png"); */
-    border: 10px solid transparent;
-    /* border-color: rgba(0, 0, 0, 0.01); */
-}
-
-/*   list item'u pozicijos   */
-.navLinks li {
-    display: inline-block;
-    padding: 0px 20px;
-    list-style: none;
-}
-
-/*   (li a) ir (li a:hover) padaro, kad kai laikai pelę virš menu, auksine spalva tekstas būtų ir iš lėto pranyktu   */
-.navLinks li a {
-    transition: all 0.3s ease 0s;
-}
-
-.navLinks li a:hover {
-    color: rgba(253, 219, 58, 0.8);
-}
-
-/*   home mygtuko stilius   */
-#homeBtn {
-    padding: 0.5% 1.5%;
-    background-color: #fddb3a;
-    color: #1a1c20;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease 0s;
-    transition: border-radius 0.5s ease 0s;
-}
-#homeBtn:hover {
-    border-radius: 14px;
-    background-color: #FED50B;
-    transition: all 0.3s ease 0s;
 }
 
 
@@ -201,9 +126,83 @@ h4 {
 }
 
 
+
+/* PAGE TOP */
+
+/*   Visas page top display   */
+.pageTop {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5% 5%;
+    background-color: rgba(240, 237, 233, 0.98);
+}
+
+/*   <a> tag tekstu stilius, neskaitant "home" mygtuko   */
+.topWords {
+    font-family: "Comfortaa";
+    font-weight: 700;
+    color:rgb(10, 10, 10);
+    text-decoration: none;
+}
+
+.logo {
+    cursor: pointer;
+    width: 5%;
+}
+
+/*   pageTop vidurys  */
+.navLinks {
+    display: flex;
+    background-image: url("../images/city-skyscraper.png");
+    box-shadow: 1px 1px 20px 1px rgb(198, 243, 248);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2vh 14vw;
+    justify-content: center;
+    /* border-image: url("../images/city-skyscraper.png"); */
+    /* border: 10px solid transparent; */
+    /* border-color: rgba(0, 0, 0, 0.01); */
+}
+
+/*   pageTop vidurio tekstas (list items)   */
+.navLinks li {
+    display: inline-block;
+    padding: 0px 20px;
+    list-style: none;
+}
+
+/*   (li a) ir (li a:hover) padaro, kad kai laikai pelę virš menu, auksine spalva tekstas būtų ir iš lėto pranyktu   */
+.navLinks li a {
+    transition: all 0.3s ease 0s;
+}
+.navLinks li a:hover {
+    color: rgba(253, 219, 58, 0.8);
+}
+
+/*   home mygtuko stilius   */
+#homeBtn {
+    padding: 0.5% 1.5%;
+    background-color: #fddb3a;
+    color: #1a1c20;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+    transition: border-radius 0.5s ease 0s;
+}
+#homeBtn:hover {
+    border-radius: 14px;
+    background-color: #FED50B;
+    transition: all 0.3s ease 0s;
+}
+
+
+
 /* MAIN CONTENT */
 
-/*   Bendra main smoke'ų (dėžių) pozicija (įeina ir šoninė navigacija)   */
+/*   Bendras main stilius   */
 main {
     width: 100%;
     text-align: center;
@@ -212,7 +211,7 @@ main {
     z-index: 1;
 }
 
-/*   Bendros smoke'ų pozicijos   */
+/*   bendras block'ų (popup'ų) stilius   */
 .smokesList {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -222,7 +221,7 @@ main {
     margin-right: 50px;
 }
 
-/*   Kiekvieno smoke'o (dežės) stilius   */
+/*   Kiekvieno block'o stilius   */
 .smokeBox {
     display: inline-block;
     cursor: pointer;
@@ -284,7 +283,7 @@ main {
     border-bottom: 1px solid rgb(0, 0, 0, 0.4);
 }
 
-/*   kairioji puse, nuotrauka su rodyklem ir desinioji puse   */
+/*   kairioji pusė; nuotrauka su rodyklem; ir dešinioji pusė   */
 .popupMiddle {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
@@ -363,7 +362,7 @@ main {
     padding: 5px 15px;
 }
 
-/*   popup aprašymo pozicija   */
+/*   popup aprašymo stilius   */
 .smokeDescription {
     font-family: 'Montserrat';
     font-weight: 800;
