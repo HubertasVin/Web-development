@@ -86,8 +86,6 @@ h4 {
     font-weight: 700;
     color:rgb(10, 10, 10);
     text-decoration: none;
-    /*   senas   */
-    /* color: #FEFFFE; */
 }
 
 /*   Juodas tekstas, kai esi šiame menu   */
@@ -104,13 +102,14 @@ h4 {
 .navLinks {
     display: flex;
     background-image: url("../images/city-skyscraper.png");
+    box-shadow: 1px 1px 20px 1px rgb(198, 243, 248);
     background-repeat: no-repeat;
     background-position: center;
     padding: 2vh 14vw;
     justify-content: center;
-    border-image: url("../images/city-skyscraper.png");
+    /* border-image: url("../images/city-skyscraper.png"); */
     border: 10px solid transparent;
-    border-color: rgba(0, 0, 0, 0.01);
+    /* border-color: rgba(0, 0, 0, 0.01); */
 }
 
 /*   list item'u pozicijos   */
@@ -285,9 +284,10 @@ main {
     border-bottom: 1px solid rgb(0, 0, 0, 0.4);
 }
 
+/*   kairioji puse, nuotrauka su rodyklem ir desinioji puse   */
 .popupMiddle {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
     align-items: center;
     font-size: 1.2em;
 }
@@ -296,7 +296,6 @@ main {
 .popupPhoto {
     display: flex;
     position: relative;
-    width: 73%;
     box-shadow: 1px 1px 20px 1px black;
 }
 
@@ -331,7 +330,6 @@ main {
     font-family: 'Montserrat';
     font-weight: 600;
     font-size: 11pt;
-    margin: 0 auto;
 }
 .tickrate64 {
     color: #c23a38;
@@ -339,25 +337,23 @@ main {
 .tickrate128 {
     color: #43a700;
 }
-.jumpThrow {
-
-}
 
 /*   Dešinioji pusė (watch video ir favorite)   */
 .rightOfPopupPhoto {
+    width: 80%;
+    margin: 0 auto;
     font-family: 'Montserrat';
     font-weight: 700;
     font-weight: bold;
     font-style: italic;
     font-size: 12pt;
-    margin: 0 auto;
 }
 .watchVideo {
-    /*   1em nes kitoj pusej <p> tag irgi turi margin: 1em   */
     cursor: pointer;
+    /*   1em nes kitoj pusej <p> tag irgi turi margin: 1em   */
     margin-bottom: 1em;
     background-color: #0085da;
-    padding: 5px 20px;
+    padding: 1vh 0vw;
     border-radius: 8px;
 }
 .favorite {
@@ -374,7 +370,7 @@ main {
     font-size: 2em;
     letter-spacing: -1px;
     text-align: center;
-    margin: 1%;
+    margin: 1.5%;
 }
 
 /* FOOTER */
