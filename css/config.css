@@ -1,0 +1,39 @@
+/*   kur visas content bus   */
+.confContent {
+    width: 60%;
+    height: 300vh;
+    background-color: rgb(219, 219, 219);
+    margin: 5vh auto;
+    padding: 1.5vh 3vw;
+}
+
+/*   laikinam didesnes raides   */
+p {
+    font-size: 1.3em;
+    text-align: left;
+}
+
+.highlight {
+    background-color: rgb(172, 207, 233);
+    padding: 3px 10px;
+    font-weight: bold;
+}
+
+.goTo {
+    position: fixed;
+    top: 50%;
+    left: 95%;
+    /*   transform kad būtų lygiai vidury   */
+    transform: translate(-50%);
+    width: 10vw;
+    background-color:yellowgreen;
+    transition: all 0.3s ease 0s;
+}
+.goTo p {
+    text-align: center;
+    /*   aukštį nusakiau su margin   */
+    margin: 1.5vh 0;
+}
+.goTo:hover {
+    background-color:rgb(129, 167, 119);
+}
