@@ -54,6 +54,7 @@ h4 {
   
 ::-webkit-scrollbar-track {
     border-radius: 10px;
+    background-color: #f3f3f3;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -80,7 +81,7 @@ h4 {
     font-size: 11pt;
     color: white;
     padding: 2px 0 3px 4px;
-    width: 70px;
+    width: 55px;
 }
 
 /*   Navigacijos pozicija ir background spalva   */
@@ -155,8 +156,6 @@ h4 {
 /*   pageTop vidurys  */
 .navLinks {
     display: flex;
-    background-image: url("../images/city-skyscraper.png");
-    box-shadow: 1px 1px 20px 1px rgb(198, 243, 248);
     background-repeat: no-repeat;
     background-position: center;
     padding: 2vh 14vw;
@@ -176,6 +175,9 @@ h4 {
 /*   (li a) ir (li a:hover) padaro, kad kai laikai pelę virš menu, auksine spalva tekstas būtų ir iš lėto pranyktu   */
 .navLinks li a {
     transition: all 0.3s ease 0s;
+    background-color: #e4e2e0fa;
+    padding: 5px;
+    border-radius: 10px;
 }
 .navLinks li a:hover {
     color: rgba(253, 219, 58, 0.8);
@@ -244,8 +246,10 @@ main {
     top: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
     visibility: hidden;
     z-index: 2;
+    transition: all 0.1s ease 0s;
 }
 
 /*   popup pozicija ir stilius   */
@@ -286,7 +290,7 @@ main {
 /*   kairioji pusė; nuotrauka su rodyklem; ir dešinioji pusė   */
 .popupMiddle {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 16fr 3fr;
     align-items: center;
     font-size: 1.2em;
 }
@@ -325,7 +329,7 @@ main {
 }
 
   /*   kairioji puse (tickrates ir jump-throw)   */
-.leftOfPopupPhoto {
+.specs {
     font-family: 'Montserrat';
     font-weight: 600;
     font-size: 11pt;
@@ -339,7 +343,7 @@ main {
 
 /*   Dešinioji pusė (watch video ir favorite)   */
 .rightOfPopupPhoto {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     font-family: 'Montserrat';
     font-weight: 700;
@@ -352,24 +356,30 @@ main {
     /*   1em nes kitoj pusej <p> tag irgi turi margin: 1em   */
     margin-bottom: 1em;
     background-color: #0085da;
-    padding: 1vh 0vw;
+    padding: 0.5vh 0vw;
     border-radius: 8px;
 }
 .favorite {
     cursor: pointer;
     background-color: #e3af24;
     border-radius: 8px;
-    padding: 5px 15px;
+    padding: 0.5vh 0vw;
 }
 
 /*   popup aprašymo stilius   */
 .smokeDescription {
+    position: absolute;
     font-family: 'Montserrat';
     font-weight: 800;
-    font-size: 2em;
-    letter-spacing: -1px;
+    font-size: 1em;
+    bottom: 1%;
+    margin: 0 40%;
+    padding-top: 15px;
     text-align: center;
-    margin: 1.5%;
+    width: 20%;
+    color: white;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 /* FOOTER */
