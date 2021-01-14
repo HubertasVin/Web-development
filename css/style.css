@@ -263,6 +263,7 @@ main {
     width: 90vw;
     height: 90vh;
     background-color: #efe6dd;
+    vertical-align: middle;
     border-radius: 5px;
 }
 
@@ -288,17 +289,14 @@ main {
 }
 
 /*   kairioji pusė; nuotrauka su rodyklem; ir dešinioji pusė   */
-.popupMiddle {
-    display: grid;
-    grid-template-columns: 1fr 16fr 3fr;
-    align-items: center;
-    font-size: 1.2em;
-}
 
 /*   popup nuotraukos pozicija  */
 .popupPhoto {
+    bottom: 0px;
+    margin: 0 0 4vh 4vh;
     display: flex;
     position: relative;
+    width: 80%;
     box-shadow: 1px 1px 20px 1px black;
 }
 
@@ -343,8 +341,9 @@ main {
 
 /*   Dešinioji pusė (watch video ir favorite)   */
 .rightOfPopupPhoto {
-    width: 70%;
-    margin: 0 auto;
+    position: relative;
+    float: right;
+    width: 12vw;
     font-family: 'Montserrat';
     font-weight: 700;
     font-weight: bold;
