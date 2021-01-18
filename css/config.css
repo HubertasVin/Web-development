@@ -1,3 +1,7 @@
+main {
+    text-align: start;
+}
+
 /*   kur visas content bus   */
 .confContent {
     width: 60%;
@@ -36,4 +40,23 @@ p {
 }
 .goTo:hover {
     background-color:rgb(129, 167, 119);
+}
+
+.olStyle {
+    padding: 0;
+    list-style: none;
+}
+
+.cfgCopy {
+    padding: 1%;
+    border: 4px double black;
+    /* background-color: rgb(172, 207, 233); */
+    background-color: rgb(184, 184, 184);
+}
+
+.copySnippet {
+    position: relative;
+    background-color: rgb(122, 224, 224);
+    width: 10vw;
+    height: 4vh;
 }

@@ -76,6 +76,7 @@ h4 {
 /* Šoninė map'ų navigacija kairėje puseje */
 
 .mapIconList.title {
+    top: 22.5%;
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 11pt;
@@ -246,8 +247,8 @@ main {
     top: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.4);
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+    visibility: visible;
     z-index: 2;
     transition: all 0.1s ease 0s;
 }
@@ -260,7 +261,7 @@ main {
     left: 0;
     right: 0;
     margin: auto;
-    width: 90vw;
+    width: 150vh;
     height: 90vh;
     background-color: #efe6dd;
     vertical-align: middle;
@@ -282,7 +283,7 @@ main {
     font-family: 'Montserrat';
     font-weight: 600;
     font-size: 2.5em;
-    width: 85%;
+    padding: 0 5%;
     margin: 0.5% 0 1.5% 0;
     letter-spacing: -1px;
     border-bottom: 1px solid rgb(0, 0, 0, 0.4);
@@ -292,15 +293,16 @@ main {
 
 /*   popup nuotraukos pozicija  */
 .popupPhoto {
-    left: 4vh;
-    right: 4vh;
-    top: 10vh;
     display: flex;
-    position: absolute; 
-    width: 100%;
-    max-width: 72%;
-    max-height: 100%;
+    position: relative; 
+    width: 90%;
+    max-width: 90vw;
+    margin: 0 auto;
     box-shadow: 1px 1px 20px 1px black;
+}
+
+.popupPhoto img {
+    width: 100%;
 }
 
 /*   popup pirmyn ir atgal rodykles   */
@@ -319,93 +321,73 @@ main {
 }
 .imgNext {
     right: 0;
-    border-radius: 3px 0 0 3px;
+    border-radius: 7px 0 0 7px;
 }
 .imgPrev {
     left: 0;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 7px 7px 0;
 }
 .imgPrev:hover, .imgNext:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
-  /*   kairioji puse (tickrates ir jump-throw)   */
-.specs {
-    font-family: 'Montserrat';
-    font-weight: 600;
-    font-size: 11pt;
-}
-.tickrate64 {
-    color: #c23a38;
-}
-.tickrate128 {
-    color: #43a700;
-}
-
-/*   Dešinioji pusė (watch video ir favorite)   */
-.rightOfPopupPhoto {
-    position: relative;
-    float: right;
-    width: 12vw;
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 12pt;
-}
-.watchVideo {
-    display: inline-block;
-    cursor: pointer;
-    
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 10pt;
-
-    /*   1em nes kitoj pusej <p> tag irgi turi margin: 1em   */
-    margin-bottom: 1em;
-    margin-right: 3vw;
-    padding: 0.5vh 1vw;
-    height: 1%;
-    background-color: #0085da;
-    color: black;
-    border-radius: 8px;
-}
-.favorite {
-    display: inline-block;
-    cursor: pointer;
-
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 10pt;
-
-    margin-left: 3vw;
-    padding: 0.5vh 1vw;
-    height: 1%;
-    border-radius: 8px;
-    background-color: #e3af24;
-    color: black;
-}
-
-/*   popup aprašymo stilius   */
+/*   popup aprašymo stilius + crouch teksto stilius   */
 .smokeDescription {
     display: flex;
     position: absolute;
     font-family: 'Montserrat';
     font-weight: 800;
     font-size: 1em;
-    bottom: 1%;
-    text-align: center;
+    bottom: 0%;
     width: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(163, 163, 163, 0));
     color: white;
     
     justify-content: center;
     user-select: none;
     -webkit-user-select: none;
+
+    padding: 0 0 1% 0
 }
+
+/*   watch video ir favorite bendras tekstas   */
+.popupText {
+    display: inline-block;
+    cursor: pointer;
+
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 0.8em;
+
+    /* margin: 0.5em 0em 2em 3%; */
+    padding: 0.4% 1%;
+    border-radius: 8px;
+}
+
+.smokeInstructions {
+    margin: 0;
+    letter-spacing: 1pt;
+}
+
+.watchVideo {
+    margin-right: 3%;
+    height: 1%;
+    background-color: #0085da;
+    color: black;
+}
+
+.favorite {
+
+    margin-left: 3%;
+    
+    height: 1%;
+    background-color: #e3af24;
+    color: black;
+}
+
+
 
 /* FOOTER */
 footer {
