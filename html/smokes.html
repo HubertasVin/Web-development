@@ -61,14 +61,14 @@
         <!--  Tam tikro map'o smoke'ai  -->
         <h2>CSGO smokes</h2>
         <section class="smokesList">
-            <div class="smokeBox" onclick="showPopup('OverpassMonsterSmoke1')"><h3 class="smokeName">Monster smoke</h3><h4 class="smokeSubtitle">from CT spawn</h4><img id="imgSrc" src="../images/Smokes/Overpass/overpass_monster1_after.jpg"></img></div>
+            <div class="smokeBox" onclick="showPopup('OverpassMonsterSmoke1')"><h3 class="smokeName">Monster smoke</h3><h4 class="smokeSubtitle">from CT spawn</h4><img src="../images/Smokes/Overpass/overpass_monster1_after.jpg"></img></div>
             <div class="popupBackground" id="OverpassMonsterSmoke1">
                 <div class="popup">
                     <p class="smokeTitle">Monster-Tracks smoke</p>
                     <div class="popupPhoto">
-                        <img src="../images/Smokes/Overpass/overpass_monster1_after.jpg"/>
-                        <a class="fas fa-chevron-left imgPrev" id="nextImg" onclick="plusSlides(-1)"></a>
-                        <a class="fas fa-chevron-right imgNext" id="prevImg" onclick="plusSlides(1)"></a>
+                        <img id="imgSrc" src="../images/Smokes/Overpass/overpass_monster1_after.jpg"/>
+                        <a class="fas fa-chevron-left imgPrev" id="nextImg" onclick="previousImage()"></a>
+                        <a class="fas fa-chevron-right imgNext" id="prevImg" onclick="nextImage()"></a>
 
                         <div class="smokeDescription">
                             <div class="watchVideo popupText" onclick=""><i class="fas fa-play"></i> watch the video</div>

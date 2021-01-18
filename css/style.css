@@ -247,8 +247,8 @@ main {
     top: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.4);
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
     z-index: 2;
     transition: all 0.1s ease 0s;
 }
@@ -347,7 +347,7 @@ main {
     user-select: none;
     -webkit-user-select: none;
 
-    padding: 0 0 1% 0
+    padding: 2% 0 1% 0;
 }
 
 /*   watch video ir favorite bendras tekstas   */
@@ -363,7 +363,9 @@ main {
 
     /* margin: 0.5em 0em 2em 3%; */
     padding: 0.4% 1%;
+    height: 1%;
     border-radius: 8px;
+    color: black;
 }
 
 .smokeInstructions {
@@ -373,18 +375,13 @@ main {
 
 .watchVideo {
     margin-right: 3%;
-    height: 1%;
     background-color: #0085da;
-    color: black;
 }
 
 .favorite {
 
     margin-left: 3%;
-    
-    height: 1%;
     background-color: #e3af24;
-    color: black;
 }
 
 
