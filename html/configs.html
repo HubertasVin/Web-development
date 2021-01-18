@@ -22,7 +22,9 @@
     </header>
 
     <nav class="goTo">
-        <p>Go to code</p>
+        <div class="rightSide">Practice</div>
+        <div class="rightSide">1 vs 1</div>
+        <div class="rightSide">5 vs 5</div>
     </nav>
 
     <!--  Šono navigacija i skirtingus map'us  -->
@@ -67,21 +69,51 @@
             <h2>Don't know what config files are?</h2>
             <p>
                 Config files are like your cs:go console cheat sheet. Whatever you type in the config file will be pasted to the console. When you launch these files in the console, whatever was written to the config file will be pasted to the console.
-                <br>
-                <br>
+                <br><br>
                 This is useful if you want to save custom settings that when you launch the game it applies immediately.
-                <br>
-                <br>
+                <br><br>
                 They are written as "name".cfg and you can find them in:  <p class="highlight">C:\Program Files (86x)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg</p>
             </p>
-            <ol class="olStyle">
-                <li>1. Practice</li>
-                <p></p>
-                <div class="cfgCopy">
+            <section>
+                <h2>Launcher options</h2>
+                <h3>Creating a cfg file</h3>
+                <ol>
+                    <li>You can find the directory of cfg files in the text above.</li>
+                    <li>After navigating to the directory, create a random.txt text document and put the jumpthrow bind in there.</li>
+                    <div class="cfgCopy">alias "+jumpthrow" "+jump;-attack"; alias "-jumpthrow" "-jump"; bind x "+jumpthrow"; </div>
                     <div class="copySnippet">
                         Copy to clipboard
                     </div>
-<br>                    sv_cheats 1
+                    <li>Press save as and make the extension .cfg</li>
+                </ol>
+                <h3>Launching cfg files on startup</h3>
+                <p>You can add any cfg file to autoload when starting CS:GO by editing the launcher options</p>
+                <ol>
+                    <li>Right click on CS:GO and press properties</li>
+                    <li>Enter in launch options "+exec [filename].cfg"</li>
+                </ol>
+                <p>That's it! Now every time you start CS:GO these specific commands will launch in console.</p>
+                <h3>Additional options</h3>
+                <p>Our recommendated:</p>
+                <ul>
+                    <li>-nojoy   <span style="margin-left: 50px;">// will remove joystick support from the game, which may free up RAM.</span></li>
+                    <li>-novid   <span style="margin-left: 50px;">// skips the intro video</span></li>
+                </ul>
+                <p>other useful commands:</p>
+                <ul>
+                    <li></li>
+                </ul>
+                <p>Your launch options should now look something like this</p>
+                <h4>nuotrauka</h4>
+                <img src="" alt="">
+            </section>
+
+            <h2>Private practice</h2>
+            <ol class="olStyle">
+                <li style="margin:0">1. Map overview practice</li>
+                <p></p>
+                <div class="cfgCopy">
+                        sv_cheats 1
 <br>                    mp_limitteams 0
 <br>                    mp_autoteambalance 0
 <br>                    mp_roundtime 60
@@ -121,10 +153,43 @@
 <br>                    echo “”
 <br>                    echo “”
                 </div>
+                <div class="copySnippet">
+                    Copy to clipboard
+                </div>
                 
-                <li>2. Launcher options</li>
-                <li>3. 1 vs 1</li>
-                <li>4. 5 vs 5</li>
+                <li>2. 1 vs 1</li>
+                <div class="cfgCopy">
+                    bot_kick;
+<br>                    exec gamemode_competitive;
+<br>                    mp_free_armor 1;
+<br>                    mp_freezetime 3;
+<br>                    mp_weapons_allow_map_placed 1;
+<br>                    mp_humanteam any;
+<br>                    mp_restartgame 1;
+<br>                    mp_round_restart_delay 3;
+<br>                    mp_roundtime 80250;
+<br>                    mp_maxrounds 30;
+<br>                    mp_halftime 1;
+<br>                    mp_warmup_end;
+<br>
+<br>                    sv_infite_ammo 2;
+<br>                    sv_alltalk 1;
+<br>                    sv_deadtalk 1;
+<br>
+<br>                    mp_restart 2;
+<br>
+<br>                    clear; 
+<br>                    echo #########################
+<br>                    echo 1v1 CONFIGURATION LOADED
+<br>                    echo #########################
+<br>                    echo mp_t_default_secondary weapon_usp_silencer
+<br>                    echo mp_t_default_primary ""
+<br>                    mp_restart 1
+                </div>
+                <div class="copySnippet">
+                    Copy to clipboard
+                </div>
+                <li>3. friendly 5 vs 5</li>
             </ol>
         </div>
     </main>

@@ -5,7 +5,6 @@ main {
 /*   kur visas content bus   */
 .confContent {
     width: 60%;
-    height: 300vh;
     background-color: rgb(219, 219, 219);
     margin: 5vh auto;
     padding: 1.5vh 3vw;
@@ -24,21 +23,22 @@ p {
 }
 
 .goTo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
     position: fixed;
     top: 50%;
-    left: 95%;
+    right: 0;
     /*   transform kad būtų lygiai vidury   */
-    transform: translate(-50%);
-    width: 10vw;
+    transform: translateY(-50%);
+}
+
+.rightSide {
+    padding: 2vh 3vw;
     background-color:yellowgreen;
     transition: all 0.3s ease 0s;
 }
-.goTo p {
-    text-align: center;
-    /*   aukštį nusakiau su margin   */
-    margin: 1.5vh 0;
-}
-.goTo:hover {
+.rightSide:hover {
     background-color:rgb(129, 167, 119);
 }
 
@@ -46,17 +46,27 @@ p {
     padding: 0;
     list-style: none;
 }
+.olStyle li {
+    margin-top: 8%;
+}
 
 .cfgCopy {
     padding: 1%;
     border: 4px double black;
-    /* background-color: rgb(172, 207, 233); */
     background-color: rgb(184, 184, 184);
 }
 
 .copySnippet {
-    position: relative;
+    cursor: pointer;
+    text-align: center;
+    float: right;
+    width: 20%;
+    padding: 1% 2%;
+    margin-top: 0.5%;
     background-color: rgb(122, 224, 224);
-    width: 10vw;
-    height: 4vh;
+    transition: all 0.3s ease 0s;
+}
+
+.copySnippet:hover {
+    background-color: rgb(29, 204, 204);
 }
