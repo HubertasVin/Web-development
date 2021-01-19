@@ -3,17 +3,20 @@ let index = 0;
 
 let next = document.getElementById('nextImg');
 let prev = document.getElementById('prevImg');
+let img = document.getElementById('imgSrc');
 
 
 function showPopup(popupId) {
     document.getElementById(popupId).style.visibility = "visible";
     document.getElementById(popupId).style.opacity = "1";
+    // document.getElementById('imgSrc').style.visibility = "visible";
     document.body.style.overflow = "hidden";
 }
 
 function hidePopup(popupId) {
     document.getElementById(popupId).style.visibility = "hidden";
     document.getElementById(popupId).style.opacity = "0";
+    // document.getElementById('videoSrc').style.visibility = "hidden";
     document.body.style.overflow = "visible";
 }
 
@@ -31,7 +34,7 @@ function nextImage() {
     } else {
         index = 0;
     }
-    document.getElementById('imgSrc').src = images[index];
+    img.src = images[index];
 }
 
 
@@ -41,5 +44,12 @@ function previousImage() {
     } else {
         index = images.length - 1;
     }
-    document.getElementById('imgSrc').src = images[index];
+    img.src = images[index];
 }
+
+
+// function playVideo() {
+//     img.remove();
+//     document.getElementById('videoSrc').style.visibility = "visible";
+//     document.getElementById('imgSrc').style.visibility = "hidden";
+// }

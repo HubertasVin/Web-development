@@ -65,13 +65,14 @@
             <div class="popupBackground" id="OverpassMonsterSmoke1">
                 <div class="popup">
                     <p class="smokeTitle">Monster-Tracks smoke</p>
-                    <div class="popupPhoto">
+                    <div class="popupPhoto" id="popupPhoto">
                         <img id="imgSrc" src="../images/Smokes/Overpass/overpass_monster1_after.jpg"/>
+                        <!-- <video id="videoSrc" src="../images/videos/stock_video.mp4" style="visibility: hidden;" controls autoplay></video> -->
                         <a class="fas fa-chevron-left imgPrev" id="nextImg" onclick="previousImage()"></a>
                         <a class="fas fa-chevron-right imgNext" id="prevImg" onclick="nextImage()"></a>
 
                         <div class="smokeDescription">
-                            <div class="watchVideo popupText" onclick=""><i class="fas fa-play"></i> watch the video</div>
+                            <div class="watchVideo popupText" id="playVid" onclick="playVideo()"><i class="fas fa-play"></i> watch the video</div>
                             <p class="smokeInstructions">1. Crouch<p>
                             <div class="favorite popupText"><i class="fas fa-star"></i> favorite</div>
                         </div>

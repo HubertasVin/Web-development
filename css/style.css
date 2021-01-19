@@ -301,7 +301,7 @@ main {
     box-shadow: 1px 1px 20px 1px black;
 }
 
-.popupPhoto img {
+.popupPhoto img, video {
     width: 100%;
 }
 
