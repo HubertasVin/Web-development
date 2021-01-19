@@ -154,6 +154,10 @@ h4 {
     width: 5%;
 }
 
+.placeholder {
+    width: 5vh;
+}
+
 /*   pageTop vidurys  */
 .navLinks {
     display: flex;
@@ -201,6 +205,51 @@ h4 {
     transition: all 0.3s ease 0s;
 }
 
+.smokeModeSwitch {
+    position: relative;
+}
+
+.smokeModeSwitch input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    background-color: #003049;
+    transition: 0.1s;
+    width: 3vh;
+    height: 1vh;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 2.5vh;
+    width: 2.5vh;
+    background-color: #D62828;
+    transition: 0.1s;
+    top: -0.75vh;
+    left: -1.25vh;
+}
+
+.smokeModeSwitch input:checked + .slider {
+}
+
+.smokeModeSwitch input:checked + .slider:before {
+    transform: translateX(3vh);
+}
+
+.slider.round {
+}
+
+.slider.round::before {
+    border-radius: 2.5vh;
+}
 
 
 /* MAIN CONTENT */
