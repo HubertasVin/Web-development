@@ -6,6 +6,7 @@
     <title>Geras projektas</title>
     <script src="https://kit.fontawesome.com/e5aefc04fe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/CSS" href="../css/style.css">
+    <link rel="stylesheet" type="text/CSS" href="../css/smokesMapVersion.css">
 </head>
 <body>
     <header class="pageTop">
@@ -59,7 +60,13 @@
 
     <main style="background-color: #000000;">
         <!--  Tam tikro map'o smoke'ai  -->
-        <img src="../images/overviews/mirage_overview.webp">
+        <div class="smokeMapBox">
+            <img class="smokeMapImg" src="../images/overviews/vertigo_overview.webp">
+            <div class="fas fa-cloud fa-2x mapSmokeIcon" style="bottom: 80vh;right: 79vh;" onclick="alert('you clicked on a smoke')">
+            </div>
+            <div class="fas fa-cloud fa-2x mapSmokeIcon" style="bottom: 75vh;right: 90vh;" onclick="alert('you clicked on a smoke')">
+            </div>
+        </div>
     </main>
 
     <!--  Puslapio apačia (ateityje)   -->

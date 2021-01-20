@@ -1,0 +1,12 @@
+.smokeMapBox {
+    height: 100%;
+}
+
+.smokeMapImg {
+    height: 100vh;
+}
+
+.mapSmokeIcon {
+    position: relative;
+    color: #d6d6d6;
+}
