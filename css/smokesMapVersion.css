@@ -1,5 +1,8 @@
 .smokeMapBox {
+    position: absolute;
     height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .smokeMapImg {
@@ -7,6 +10,34 @@
 }
 
 .mapSmokeIcon {
-    position: relative;
+    position: absolute;
+    display: flex;
+    cursor: pointer;
     color: #d6d6d6;
+    opacity: 0.5;
+    transition: 0.4s;
+}
+
+.mapSmokeIcon:hover {
+    opacity: 0.8;
+    transition: 0.4s;
+}
+
+.smokeCount {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 0.8em;
+    position: absolute;
+    display: flex;
+    left: 20%;
+    top: 50%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    color: black;
+    z-index: 1;
+}
+
+.bendras {
+    display: flex;
+    /* position: absolute; */
 }

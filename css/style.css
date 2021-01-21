@@ -72,25 +72,13 @@ h4 {
 }
 
 
-
-/* Šoninė map'ų navigacija kairėje puseje */
-
-.mapIconList.title {
-    top: 22.5%;
-    font-family: 'Montserrat';
-    font-weight: 500;
-    font-size: 11pt;
-    color: white;
-    padding: 2px 0 3px 4px;
-    width: 55px;
-}
-
 /*   Navigacijos pozicija ir background spalva   */
 .mapIconList {
     display: grid;
     grid-template-columns: 1fr;
     position: fixed;
-    top: 25%;
+    top: 50%;
+    transform: translateY(-50%);
     width: 50px;
     background-color: #e6a337;
     /* background-color: #E99C20; */
@@ -231,7 +219,7 @@ h4 {
     content: "";
     height: 2.5vh;
     width: 2.5vh;
-    background-color: #D62828;
+    background-color: #fddb3a;
     transition: 0.1s;
     top: -0.75vh;
     left: -1.25vh;
@@ -242,6 +230,7 @@ h4 {
 
 .smokeModeSwitch input:checked + .slider:before {
     transform: translateX(3vh);
+    background-color: #D62828;
 }
 
 .slider.round {
@@ -257,6 +246,7 @@ h4 {
 /*   Bendras main stilius   */
 main {
     width: 100%;
+    min-height: 90vh;
     text-align: center;
     background-color: #f3f3f3;
     padding: 1vh 0 10vh 0;
