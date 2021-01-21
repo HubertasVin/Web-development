@@ -112,79 +112,92 @@
             <ol class="olStyle">
                 <li style="margin:0">1. Map overview practice</li>
                 <p></p>
+                <div class="explanation">Command explanation</div>
                 <div class="cfgCopy">
-                        sv_cheats 1
-<br>                    mp_limitteams 0
-<br>                    mp_autoteambalance 0
-<br>                    mp_roundtime 60
-<br>                    mp_roundtime_defuse 60
-<br>                    mp_maxmoney 60000
-<br>                    mp_startmoney 60000
-<br>                    mp_freezetime 0
-<br>                    mp_buytime 9999
-<br>                    mp_buy_anywhere 1
-<br>                    mp_friendlyfire 0
-<br>                    sv_infinite_ammo 1
-<br>                    ammo_grenade_limit_total 5
-<br>                    bot_kick
-<br>                    mp_warmup_end
-<br>                    mp_solid_teammates 0
+                    <ul class="cfgExplanation">
+                    <p>sv_cheats 1</p>
+                    <li>Enables cheats</li>
+                    <p>mp_limitteams 0</p>
+                    <p>mp_autoteambalance 0</p>
+                    <p>mp_roundtime 60</p>
+                    <p>mp_roundtime_defuse 60</p>
+                    <p>mp_maxmoney 60000</p>
+                    <p>mp_startmoney 60000</p>
+                    <p>mp_freezetime 0</p>
+                    <p>mp_buytime 9999</p>
+                    <p>mp_buy_anywhere 1</p>
+                    <p>mp_friendlyfire 0</p>
+                    <p>sv_infinite_ammo 1</p>
+                    <p>ammo_grenade_limit_total 5</p>
+                    <p>bot_kick</p>
+                    <p>mp_warmup_end</p>
+                    <p>mp_solid_teammates 0</p>
 <br>
-<br>                    // Practice
-<br>                    sv_grenade_trajectory 1
-<br>                    sv_grenade_trajectory_time 10
-<br>                    sv_showimpacts 1
-<br>                    sv_showimpacts_time 10
+                    <br>// trajectories
+                    <br>sv_grenade_trajectory 1
+                    <br>sv_grenade_trajectory_time 10
+                    <br>sv_showimpacts 1
+                    <br>sv_showimpacts_time 10
 <br>
-<br>                    // bhop
-<br>                    sv_enablebunnyhopping 1
-<br>                    sv_autobunnyhopping 1
+                    <br>// bhop
+                    <br>sv_enablebunnyhopping 1
+                    <br>sv_autobunnyhopping 1
 <br>
-<br>                    mp_restartgame 1
+                    <br>mp_restartgame 1
 <br>
-<br>                    // Binds
-<br>                    bind alt noclip
+                    <br>// binds
+                    <br>bind alt noclip
 <br>
-<br>                    echo “”
-<br>                    echo “”
-<br>                    echo “”
-<br>                    echo “STARTING”
-<br>                    echo “”
-<br>                    echo “”
-<br>                    echo “”
+                    <br>echo “”
+                    <br>echo “”
+                    <br>echo “”
+                    <br>echo “STARTING”
+                    <br>echo “”
+                    <br>echo “”
+                    <br>echo “”
+                    </ul>
                 </div>
                 <div class="copySnippet">
                     Copy to clipboard
                 </div>
-                
+                <p>
+                    Command explanations:
+                    <ul>
+                        <li>sv_cheats 1 - allows commands to be executed</li>
+                        <li>mp_limitteams 0 - disables team limiter</li>
+                        <li></li>
+                    </ul>
+                </p>
+
+
                 <li>2. 1 vs 1</li>
                 <div class="cfgCopy">
-                    bot_kick;
-<br>                    exec gamemode_competitive;
-<br>                    mp_free_armor 1;
-<br>                    mp_freezetime 3;
-<br>                    mp_weapons_allow_map_placed 1;
-<br>                    mp_humanteam any;
-<br>                    mp_restartgame 1;
-<br>                    mp_round_restart_delay 3;
-<br>                    mp_roundtime 80250;
-<br>                    mp_maxrounds 30;
-<br>                    mp_halftime 1;
-<br>                    mp_warmup_end;
+                    <br>bot_kick;
+                    <br>exec gamemode_competitive;
+                    <br>mp_free_armor 1;
+                    <br>mp_freezetime 3;
+                    <br>mp_weapons_allow_map_placed 1;
+                    <br>mp_humanteam any;
+                    <br>mp_restartgame 1;
+                    <br>mp_round_restart_delay 3;
+                    <br>mp_roundtime 80250;
+                    <br>mp_maxrounds 30;
+                    <br>mp_halftime 1;
+                    <br>mp_warmup_end;
 <br>
-<br>                    sv_infite_ammo 2;
-<br>                    sv_alltalk 1;
-<br>                    sv_deadtalk 1;
+                    <br>sv_infite_ammo 2;
+                    <br>sv_alltalk 1;
+                    <br>sv_deadtalk 1;
 <br>
-<br>                    mp_restart 2;
+                    <br>mp_restart 2;
 <br>
-<br>                    clear; 
-<br>                    echo #########################
-<br>                    echo 1v1 CONFIGURATION LOADED
-<br>                    echo #########################
-<br>                    echo mp_t_default_secondary weapon_usp_silencer
-<br>                    echo mp_t_default_primary ""
-<br>                    mp_restart 1
+                    <br>clear; 
+                    <br>echo #########################
+                    <br>echo 1v1 CONFIGURATION LOADED
+                    <br>echo #########################
+                    <br>echo mp_t_default_secondary weapon_usp_silencer
+                    <br>echo mp_t_default_primary ""
+                    <br>mp_restart 1
                 </div>
                 <div class="copySnippet">
                     Copy to clipboard

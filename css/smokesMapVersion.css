@@ -1,43 +1,42 @@
-.smokeMapBox {
-    position: absolute;
+.mapBox {
+    position: fixed;
     height: 100%;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.smokeMapImg {
-    height: 100vh;
+.mapMainImg {
+    height: 80%;
 }
 
-.mapSmokeIcon {
+.smokeIcon {
     position: absolute;
-    display: flex;
+    /* top: 50%; */
     cursor: pointer;
     color: #d6d6d6;
     opacity: 0.5;
-    transition: 0.4s;
 }
 
-.mapSmokeIcon:hover {
+.smokeIcon:hover {
     opacity: 0.8;
     transition: 0.4s;
 }
 
-.smokeCount {
+.nadeCount {
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 0.8em;
     position: absolute;
-    display: flex;
-    left: 20%;
+    /* display: flex; */
+    right: 50%;
     top: 50%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
     transform: translateY(-50%);
     color: black;
     z-index: 1;
 }
 
 .bendras {
-    display: flex;
-    /* position: absolute; */
+    /* display: flex; */
+    /* position: relative; */
 }

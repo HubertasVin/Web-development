@@ -56,6 +56,10 @@ p {
     background-color: rgb(184, 184, 184);
 }
 
+.cfgCopy p {
+    margin: 0;
+}
+
 .copySnippet {
     cursor: pointer;
     text-align: center;
@@ -69,4 +73,25 @@ p {
 
 .copySnippet:hover {
     background-color: rgb(29, 204, 204);
+}
+
+.explanation {
+    position: relative;
+    float: right;
+    bottom: 50px;
+    padding: 10px 50px;
+    background-color: azure;
+    transition: all 0.3s ease 0s;
+}
+
+.explanation:hover {
+    background-color: bisque;
+}
+
+.cfgExplanation li {
+    /* position: relative; */
+    /* left: 20%; */
+    list-style: none;
+    margin: 0;
+    float: right;
 }
