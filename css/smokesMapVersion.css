@@ -14,12 +14,12 @@
     display: flex;
     cursor: pointer;
     color: #d6d6d6;
-    opacity: 0.5;
+    opacity: 0.8;
     transition: 0.4s;
 }
 
 .mapSmokeIcon:hover {
-    opacity: 0.8;
+    opacity: 1;
     transition: 0.4s;
 }
 
@@ -37,7 +37,7 @@
     z-index: 1;
 }
 
-.bendras {
+.smokeIconHolder {
     display: flex;
     /* position: absolute; */
 }
