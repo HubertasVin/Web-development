@@ -65,10 +65,23 @@
             <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 80%; right: 74%;" onclick="alert('you clicked on a smoke')">
             <div class="nadeCount" >5</div>
         </div>
+        <div class="smokeMapBox">
+            <img class="smokeMapImg" src="../images/overviews/mirage_overview.webp" draggable="false">
+
+            <div class="smokeIconHolder">
+                <div class="fas fa-cloud fa-2x mapSmokeIcon" style="bottom: 80%;right: 74%;" onclick="getData()">
+                    <div class="smokeCount" id="testJSON"></div>12</div>
+                </div>
+            </div>
+            <div class="smokeIconHolder">
+                <div class="fas fa-cloud fa-2x mapSmokeIcon" style="bottom: 79%;right: 74%;" onclick="alert('you clicked on a smoke')">
+                    <div class="smokeCount">12</div>
+                </div>
             </div>
         </div>
     </main>
 
     <script src="../JS/scripts.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
 </body>
 </html>

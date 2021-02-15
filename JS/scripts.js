@@ -6,6 +6,7 @@ let prev = document.getElementById('prevImg');
 let img = document.getElementById('imgSrc');
 
 
+
 function showPopup(popupId) {
     document.getElementById(popupId).style.visibility = "visible";
     document.getElementById(popupId).style.opacity = "1";
@@ -24,6 +25,8 @@ function hidePopup(popupId) {
 document.addEventListener("keydown", event => {
         if (event.key === 'Escape' || document.body.style.visibility === "hidden") {
             hidePopup('OverpassMonsterSmoke1');
+            index = 0;
+            img.src = images[index];
         }
 }, false);
 
@@ -47,6 +50,12 @@ function previousImage() {
     img.src = images[index];
 }
 
+
+function getData() {
+    require(['../JSON/mirage_smokes.json'], function(data) {
+        document.getElementById(testJSON).innerHTML = data.number;
+    });
+}
 
 // function playVideo() {
 //     img.remove();
