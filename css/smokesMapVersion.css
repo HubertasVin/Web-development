@@ -1,4 +1,4 @@
-.mapBox {
+.pageBox {
     position: fixed;
     height: 100%;
     left: 50%;
@@ -27,17 +27,12 @@
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 0.8em;
-    position: absolute;
-    /* display: flex; */
-    right: 50%;
-    top: 50%;
-    /* transform: translateX(-50%); */
-    transform: translateY(-50%);
+    position: relative;
+    transform: translateY(-100%);
     color: black;
     z-index: 1;
 }
 
 .smokeIconHolder {
-    display: flex;
-    /* position: absolute; */
+    /* display: flex; */
 }

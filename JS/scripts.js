@@ -52,9 +52,13 @@ function previousImage() {
 
 
 function getData() {
-    require(['../JSON/mirage_smokes.json'], function(data) {
-        document.getElementById(testJSON).innerHTML = data.number;
-    });
+    fetch("../JSON/mirage_smokes.json")
+        .then((resp) => {
+            return resp.json();
+        })
+        .then((data) => {
+            console.log(data);
+        })
 }
 
 // function playVideo() {
