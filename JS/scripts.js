@@ -5,13 +5,23 @@ let next = document.getElementById('nextImg');
 let prev = document.getElementById('prevImg');
 let img = document.getElementById('imgSrc');
 
-
+function escapePopup(event) {
+    if (event.key === 'Escape') {
+        hidePopup(this);
+        index = 0;
+        img.src = images[index];
+        console.log("paspausta");
+    }
+}
 
 function showPopup(popupId) {
     document.getElementById(popupId).style.visibility = "visible";
     document.getElementById(popupId).style.opacity = "1";
-    // document.getElementById('imgSrc').style.visibility = "visible";
     document.body.style.overflow = "hidden";
+    // document.getElementById('imgSrc').style.visibility = "visible";
+
+    // Nuotraukos isjungimas, paspaudus Escape mygtuka
+    document.addEventListener("keydown", escapePopup.bind(popupId), false);
 }
 
 function hidePopup(popupId) {
@@ -19,16 +29,12 @@ function hidePopup(popupId) {
     document.getElementById(popupId).style.opacity = "0";
     // document.getElementById('videoSrc').style.visibility = "hidden";
     document.body.style.overflow = "visible";
+
+    document.getElement
+    document.removeEventListener("keydown", escapePopup.bind(popupId), false)
 }
 
-// Nuotraukos isjungimas, paspaudus Escape mygtuka
-document.addEventListener("keydown", event => {
-        if (event.key === 'Escape' || document.body.style.visibility === "hidden") {
-            hidePopup('OverpassMonsterSmoke1');
-            index = 0;
-            img.src = images[index];
-        }
-}, false);
+
 
 // Nuotrauku galerijos next ir previous mygtukai
 function nextImage() {
