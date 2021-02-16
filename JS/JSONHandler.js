@@ -5,6 +5,6 @@ function getData() {
         })
         .then((data) => {
             console.log(data);
-            document.getElementById('testJSON').innerHTML = data.map[0].mirage[0].bBench[0].numberOfSmokes;
+            document.getElementById('testJSON').innerHTML = data.map[0].mirage[0].bench[0].locationB;
         });
 }

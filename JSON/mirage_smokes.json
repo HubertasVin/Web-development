@@ -4,10 +4,19 @@
     [{
         "mirage": 
         [{
-            "bBench": [{
-                "numberOfSmokes": "2",
-                "imgSrc": "../images/Smokes/Overpass/overpass_monster1_after.jpg"
-            }]
+            "bench": 
+            [
+                {"NOS": "2"},
+                {
+                    "stages": [
+                        {
+                            "id": 1,
+                            "desc": "jumpthrow",
+                            "imgSrc": "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                        }
+                    ]
+                }
+            ]
         }]
     }]
 }
