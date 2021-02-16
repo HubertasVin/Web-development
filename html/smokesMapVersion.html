@@ -7,8 +7,10 @@
     <script src="https://kit.fontawesome.com/e5aefc04fe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/CSS" href="../css/style.css">
     <link rel="stylesheet" type="text/CSS" href="../css/smokesMapVersion.css">
+    
+    <script src="../JS/pagePreloader.js"></script>
 </head>
-<body>
+<body onload="preloadPage()">
     <header class="pageTop">
         <img class="logo" src="../images/Ecofg logo.png"></img>
         <nav>
@@ -61,15 +63,16 @@
         <!--  pats puslapis  -->
         <div class="pageBox">
             <!--  nuotrauka puslapio  -->
-            <img class="mapMainImg" src="../images/overviews/mirage_overview.webp">
+            <img id="mapMainImg" draggable="false">
 
             <!--  smoke'ai  -->
-            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 80%;right: 74%;" onclick="getData()">
-                <div class="nadeCount" id="testJSON">12</div></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 80%;right: 74%;">
+                <div class="nadeCount" id="testJSON"></div>
             </div>
         </div>
     </main>
 
     <script src="../JS/scripts.js"></script>
+    <script src="../JS/JSONHandler.js"></script>
 </body>
 </html>
