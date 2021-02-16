@@ -7,8 +7,6 @@ let next = document.getElementById('nextImg');
 let prev = document.getElementById('prevImg');
 let img = document.getElementById('imgSrc');
 
-console.log(itemId);
-
 function escapePopup(event) {
     if (event.key === 'Escape') {
         hidePopup(this);
