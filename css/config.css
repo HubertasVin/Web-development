@@ -12,12 +12,12 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 2em;
 }
 
 h3 {
-    font-size: 1.3em;
-    font-weight: 600;
+    font-size: 1.4em;
+    font-weight: 400;
 }
 
 p {
@@ -105,5 +105,17 @@ p {
     user-select: none;
     font-style: italic;
     font-size: 0.8em;
+}
+
+/*   reikia nes (ol ul) duoda tuščia skrituliukia prie kiekvieno (li)   */
+.commands {
+    list-style: none;
+}
+.commands li:before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: rgb(0, 0, 0); /* Change the color */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 

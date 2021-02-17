@@ -25,7 +25,6 @@
         <p>Quick Navigation</p>
         <div class="rightSide"><a>Practice</a></div>
         <div class="rightSide"><a>1 vs 1</a></div>
-        <div class="rightSide"><a>5 vs 5</a></div>
     </nav>
 
     <!--  Šono navigacija i skirtingus map'us  -->
@@ -80,42 +79,86 @@
             <h2>Creating a cfg file</h2>
             <ol>
                 <li>Find the directory of cfg files from the link above.</li>
-                <li>After navigating to the directory, create a random.txt text document and put the commands in there. You can copy paste this jumpthrow bind in here or add your own.</li>
-                <div class="bendras">
-                    <div class="cfgCopy">alias "+jumpthrow" "+jump;-attack"; alias "-jumpthrow" "-jump"; bind x "+jumpthrow"; </div>
-                    <div class="copySnippet">
-                        Copy to clipboard
-                    </div>
-                </div>
+                <li>After navigating to the directory, create a random.txt</li>
+                <li>Open and add your commands</li>
+                <p style="font-weight: bold; font-size: 1.2em">Make sure to edit the bind keys, it may interfere with your existing key bindings!</p>
                 <li>Press save as and make the extension .cfg</li>
             </ol>
             <h3>CS:GO useful commands</h3>
             <ul class="commands">
-                <li></li>
+                <li>alias "+jumpthrow" "+jump;-attack"; alias "-jumpthrow" "-jump"; bind [KEY] "+jumpthrow";</li>
+                <p>Jump throw bind. Withouth this, your jumpthrow nades will not be consistent.</p>
+                <li>fps_max 120</li>
+                <p>Sets the max framerate of CS:GO. fps_max 0 unlocks framerate limit</p>
+                <li>cl_radar_always_centered</li>
+                <p>Allows you to see all of the map in radar.</p>
+                <li>cl_use_opens_buy_menu 0</li>
+                <p>Doesn't allow you to use "use" (default E) key to open buy menu.</p>
+                <li>+cl_show_team_equipment</li>
+                <p>Allows you to see your teamate equipment.</p>
+                <li>cl_lefthand</li>
+                <p>Use left hand instead of default right</p>
+                <li>voice_enable 0</li>
+                <p>If you're sick of hearing your teamates, use this.</p>
+                <li>bind [KEY] "r_cleardecals"</li>
+                <p>After pressing the key, clears all blood splatters and residual particles which may interfere with vision.</p>
             </ul>
+            <h3>Your cfg file may look something like this</h3>
+            <div class="bendras">
+                <div class="cfgCopy">
+                    <p>alias "+jumpthrow" "+jump;-attack"; alias "-jumpthrow" "-jump"; bind x "+jumpthrow";</p>
+                    <p>fps_max 120</p>
+                    <p>bind v "r_cleardecals"</p>
+                    <p>cl_use_opens_buy_menu 0</p>
+                </div>
+                <div class="copySnippet">
+                    Copy to clipboard
+                </div>
+            </div>
+            <h3>How to launch them</h3>
+            <p>If you won't add these cfg files to the launcher options, they will not run automatically. To do so manually in game you have to:</p>
+            <ol>
+                <li>Launch the game.</li>
+                <li>Enable the Developer console in settings.</li>
+                <li>Press the backtick button (`) near your (ESC) button.</li>
+                <li>Type: "exec [FileName].cfg"</li>
+            </ol>
             <h2>Launcher options</h2>
             <h3>Launching cfg files on startup</h3>
             <p>You can add any cfg file to autoload when starting CS:GO by editing the launcher options. <br> You can find them in steam by right clicking on CS:GO and pressing properties. Then you will see called Launch Options. All that's left is to add your commands</p>
-            <h3>Launch options commands</h3>
+            <h3>Launch option commands</h3>
             <ul class="commands">
                 <li>+exec [filename].cfg</li>
                 <p>Will execute your created cfg file.</p>
                 <li>-nojoy</li>
                 <p>Will remove joystick support from the game, which may free up RAM.</p>
                 <li>-novid</li>
-                <p>Skips the intro video</p>
+                <p>Skips the intro video.</p>
+                <li>-language</li>
+                <p>Sets the language for your game.</p>
+                <li>-tickrate 128</li>
+                <p style="margin-bottom: 0;">Sets the tickrate for offline matches (against bots).</p>
+                <p style="font-size: 1em; margin-left: -1em; margin-top: 0; font-weight: bold;">Warning! The default is 64. This may interfere with nade practice.</p>
+                <li>-windowed or -fullscreen</li>
+                <p>Loads the game in windowed or fullscreen mode.</p>
             </ul>
             <p>That's it! Now every time you start CS:GO these specific commands will be launched.</p>
 
             
-            <p>Your launch options should now look something like this</p>
-            <h4>nuotrauka</h4>
-            <img src="" alt="">
+            <h3>Your launch options may look something like this</h3>
+            <div class="bendras">
+                <div class="cfgCopy">
+                    <p>-nojoy -novid +exec starting.cfg</p>
+                </div>
+                <div class="copySnippet">
+                    Copy to clipboard
+                </div>
+            </div>
         </section>
 
-        <h2>Private practice</h2>
+        <h2>Command sets</h2>
         <ol>
-            <li>1. Map overview practice</li>
+            <li> Nade practice</li>
             <div class="bendras">
                 <div class="cfgCopy">
                     <p>sv_cheats 1</p>
@@ -132,8 +175,7 @@
                     <p>sv_infinite_ammo 1</p>
                     <p>ammo_grenade_limit_total 5</p>
                     <p>bot_kick</p>
-                    <p>mp_warmup_end</p>
-                    <p>mp_solid_teammates 0</p><br>
+                    <p>mp_warmup_end</p><br>
 
                     <p>// trajectories</p>
                     <p>sv_grenade_trajectory 1</p>
@@ -141,26 +183,19 @@
                     <p>sv_showimpacts 1</p>
                     <p>sv_showimpacts_time 10</p><br>
 
-                    <p>// bhop</p>
-                    <p>sv_enablebunnyhopping 1</p>
-                    <p>sv_autobunnyhopping 1</p>
-                    <p>mp_restartgame 1</p><br>
-
                     <p>// binds</p>
-                    <p>bind alt noclip</p>
+                    <p>bind alt noclip</p><br>
+
+                    <p>mp_restartgame 1</p>
                     </ul>
                 </div>
                 <div class="copySnippet">
                     Copy to clipboard
                 </div>
             </div>
-            <h2>Command Explanations</h2>
-            <ul class="commands">
-                <li>something</li>
-            </ul>
 
 
-            <li>2. 1 vs 1</li>
+            <li> 1 vs 1</li>
             <div class="bendras">
                 <div class="cfgCopy">
                     <p>bot_kick;</p>
@@ -185,14 +220,19 @@
                     Copy to clipboard
                 </div>
             </div>
-            <li>3. friendly 5 vs 5</li>
         </ol>
-        <section>
-            <h2>Other useful commands</h2>
-            <ul>
-                <li></li>
-            </ul>
-        </section>
+        <h3>Additional commands</h3>
+        <ul class="commands">
+            <li>sv_enablebunnyhopping 1<br>
+                sv_autobunnyhopping 1<br></li>
+            <p>enables bunny hopping.</p>
+            <li>mp_solid_teammates 0</li>
+            <p>enables to walk through teamates.</p>
+            <li>net_graph 1</li>
+            <p>Shows detailed description of the game (framerate, tickrate, ping...).</p>
+            <li>god</li>
+            <p>Makes you an undying god.</p>
+        </ul>
     </main>
     <footer>
 
