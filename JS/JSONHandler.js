@@ -5,6 +5,11 @@ function getData() {
         })
         .then((data) => {
             console.log(data);
-            document.getElementById('testJSON').innerHTML = data.map[0].mirage[0].bench[0].locationB;
+
+            let myTest = "<div class='smokeBoxMap'><h3>from CT spawn</h3><h4></h4><img src='../images/Smokes/Overpass/overpass_monster1_after.jpg'></img></div>";
+            let result;
+            for (i = 0; i < 3; i++) { 
+            }
+            document.getElementById('testJSON').innerHTML = result;
         });
 }

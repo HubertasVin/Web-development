@@ -31,3 +31,29 @@
     color: black;
     z-index: 1;
 }
+
+.smokesListMap {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 0vw;
+    row-gap: 1vw;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+.smokeBoxMap {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    width: 20vh;
+    padding-bottom: 10px;
+    background-color: #f0eeeb;
+    border: #3D3D3D 2px solid;
+    border-radius: 3px;
+}
+
+.smokeBoxMap img {
+    -webkit-user-drag: none;
+    width: 94%;
+    border-radius: 3px;
+}
