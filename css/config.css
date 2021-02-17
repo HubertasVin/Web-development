@@ -1,59 +1,76 @@
 main {
     text-align: start;
-}
-
-/*   kur visas content bus   */
-.confContent {
     width: 60%;
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(216, 212, 212);
     margin: 5vh auto;
     padding: 1.5vh 3vw;
+    font-family: "PT Sans Caption";
 }
 
-/*   laikinam didesnes raides   */
+h1, h2, h3, h4 {
+    font-family: "Patua One";
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
 p {
-    font-size: 1.1em;
+    font-size: 1em;
     text-align: left;
 }
 
+
 .highlight {
-    background-color: rgb(172, 207, 233);
-    padding: 3px 10px;
-    font-weight: bold;
+    margin: 5px 10px;
+    font-weight: 800;
+    font-size: 1.2em;
 }
 
 .goTo {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 50px;
-    position: fixed;
-    top: 50%;
-    right: 0;
-    /*   transform kad būtų lygiai vidury   */
+    gap: 0.8em;
+    position: absolute;
+    top: 40%;
+    right: 5%;
     transform: translateY(-50%);
+    background-color: #f5f1dc;
+    padding: 0.5em;
+    border: 3px solid rgb(102, 102, 102);
+    z-index: 1;
+    text-align: center;
+
+}
+
+.goTo p {
+    margin: 0;
+    padding: 0.5em;
+    font-weight: 700;
 }
 
 .rightSide {
-    padding: 2vh 3vw;
-    background-color:yellowgreen;
+    padding: 0.6em 0em;
+    background-color:rgb(209, 218, 95);
     transition: all 0.3s ease 0s;
+    border-radius: 15%;
+    width: 90%;
+    justify-self: center;
 }
 .rightSide:hover {
-    background-color:rgb(129, 167, 119);
-}
-
-.olStyle {
-    padding: 0;
-    list-style: none;
-}
-.olStyle li {
-    margin-top: 8%;
+    background-color:rgb(182, 201, 107);
 }
 
 .cfgCopy {
+    margin: 10px 0px;
     padding: 1%;
-    border: 4px double black;
-    background-color: rgb(184, 184, 184);
+    box-shadow: 1px 1px 5px 1px black;
+    background-color: rgb(200, 221, 207);
 }
 
 .cfgCopy p {
@@ -63,35 +80,30 @@ p {
 .copySnippet {
     cursor: pointer;
     text-align: center;
-    float: right;
+    align-self: flex-end;
     width: 20%;
     padding: 1% 2%;
     margin-top: 0.5%;
-    background-color: rgb(122, 224, 224);
+    background-color: rgb(226, 228, 143);
+    border: 2px solid rgb(95, 95, 95);
+    /* border-radius: 10%; */
     transition: all 0.3s ease 0s;
 }
 
 .copySnippet:hover {
-    background-color: rgb(29, 204, 204);
+    background-color: rgb(230, 208, 17);
 }
 
-.explanation {
-    position: relative;
-    float: right;
-    bottom: 50px;
-    padding: 10px 50px;
-    background-color: azure;
-    transition: all 0.3s ease 0s;
+.bendras {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0em;
 }
 
-.explanation:hover {
-    background-color: bisque;
+.commands p {
+    margin-left: 1em;
+    user-select: none;
+    font-style: italic;
+    font-size: 0.8em;
 }
 
-.cfgExplanation li {
-    /* position: relative; */
-    /* left: 20%; */
-    list-style: none;
-    margin: 0;
-    float: right;
-}

@@ -67,8 +67,9 @@
             <img id="mapMainImg" draggable="false">
 
             <!--  smoke'ai  -->
-            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 77%;right: 80%;" onclick="showPopup('OverpassMonsterSmoke1')">
-                <div class="nadeCount" id="testJSON"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 77%;right: 80%;" onclick="showPopup('OverpassMonsterSmoke1'); getData()">
+                <!--  dubliuojasi ID, gal reiktu class naudoti  -->
+                <!-- <div class="nadeCount" id="testJSON"></div> -->
             </div>
 
             
@@ -79,11 +80,12 @@
             <div class="popup">
                 <p class="smokeTitle">Monster-Tracks smoke</p>
                 <section class="smokesListMap" id="testJSON">
-                    <div class="smokeBoxMap">
+                    <!--  įdėjau į JSONHandler  -->
+                    <!-- <div class="smokeBoxMap">
                         <h3>from CT spawn</h3>
                         <h4></h4>
                         <img src="../images/Smokes/Overpass/overpass_monster1_after.jpg"></img>
-                    </div>
+                    </div> -->
                 </section>
                 <i class="fas fa-times fa-2x" id="imgCloseIcon" onclick="hidePopup('OverpassMonsterSmoke1')"></i>
             </div>

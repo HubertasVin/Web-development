@@ -1,3 +1,5 @@
+"use strict";
+
 function preloadPage() {
     // const params = new URLSearchParams(window.location.search);
     // let currentMap = params.get('map');
