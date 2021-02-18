@@ -287,7 +287,6 @@ main {
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 0;
     visibility: hidden;
-    z-index: 2;
     transition: all 0.1s ease 0s;
 }
 

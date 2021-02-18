@@ -67,7 +67,7 @@
             <img id="mapMainImg" draggable="false">
 
             <!--  smoke'ai  -->
-            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 77%;right: 80%;" onclick="showPopup('OverpassMonsterSmoke1'); getData()">
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 77%;right: 80%;" onclick="showPopup('mainPopup'); getData('bench')">
                 <!--  dubliuojasi ID, gal reiktu class naudoti  -->
                 <!-- <div class="nadeCount" id="testJSON"></div> -->
             </div>
@@ -76,23 +76,37 @@
         </div>
 
         <!-- popup'as -->
-        <div class="popupBackground" id="OverpassMonsterSmoke1">
+        <div class="popupBackground" id="smokePopup">
+            <div class="popup" id="imgPopup">
+                <p class="smokeTitle"></p>
+                <div class="popupPhoto" id="popupPhoto">
+                    <img id="imgSrc" src="../images/Smokes/Overpass/overpass_monster1_after.jpg"/>
+                    <!-- <video id="videoSrc" src="../images/videos/stock_video.mp4" style="visibility: hidden;" controls autoplay></video> -->
+                    <a class="fas fa-chevron-left imgPrev" id="nextImg" onclick="previousImage()"></a>
+                    <a class="fas fa-chevron-right imgNext" id="prevImg" onclick="nextImage()"></a>
+
+                    <div class="smokeDescription">
+                        <div class="watchVideo popupText" id="playVid" onclick="playVideo()"><i class="fas fa-play"></i> watch the video</div>
+                        <p class="smokeInstructions" id="smokeInstructions"><p>
+                        <div class="favorite popupText"><i class="fas fa-star"></i> favorite</div>
+                    </div>
+                </div>
+                <i class="fas fa-times fa-2x" id="imgCloseIcon" onclick="hidePopup('smokePopup'); showPopup('mainPopup')"></i>
+            </div>
+        </div>
+
+        <div class="popupBackground" id="mainPopup">
             <div class="popup">
                 <p class="smokeTitle">Monster-Tracks smoke</p>
                 <section class="smokesListMap" id="testJSON">
-                    <!--  įdėjau į JSONHandler  -->
-                    <!-- <div class="smokeBoxMap">
-                        <h3>from CT spawn</h3>
-                        <h4></h4>
-                        <img src="../images/Smokes/Overpass/overpass_monster1_after.jpg"></img>
-                    </div> -->
                 </section>
-                <i class="fas fa-times fa-2x" id="imgCloseIcon" onclick="hidePopup('OverpassMonsterSmoke1')"></i>
+                <i class="fas fa-times fa-2x" id="imgCloseIcon" onclick="hidePopup('mainPopup', true); clearPopup('smokeBoxMap')"></i>
             </div>
         </div>
     </main>
 
     <script src="../JS/scripts.js"></script>
-    <script src="../JS/JSONHandler.js"></script>
+    <script src="../JS/JSONPopupHandler.js"></script>
+    <script src="../JS/JSONImageLoader.js"></script>
 </body>
 </html>

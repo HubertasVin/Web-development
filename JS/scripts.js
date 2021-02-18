@@ -26,11 +26,13 @@ function showPopup(popupId) {
     document.addEventListener("keydown", escapePopup.bind(popupId), false);
 }
 
-function hidePopup(popupId) {
+function hidePopup(popupId, overflow) {
     document.getElementById(popupId).style.visibility = "hidden";
     document.getElementById(popupId).style.opacity = "0";
     // document.getElementById('videoSrc').style.visibility = "hidden";
-    document.body.style.overflow = "visible";
+    if (overflow === true) {
+        document.body.style.overflow = "visible";
+    }
 
     document.removeEventListener("keydown", escapePopup.bind(popupId), false);
 }
