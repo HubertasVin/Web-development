@@ -1,0 +1,35 @@
+{
+    "mirage":
+    [
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 80%;right: 80%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;bench&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 84%;right: 74%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;appsPush&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 83.7%;right: 68%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;appsOneWay&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 83.5%;right: 62%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;appsDeep&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 81%;right: 52%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;alleyBlock&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 79%;right: 74.5%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;BSiteDefault&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 79%;right: 63%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;shortCloseApps&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 74.5%;right: 63%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;shortFarApps&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 75%;right: 57%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;shortDeep&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 72%;right: 69%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;BBackRight&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 73%;right: 74.5%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;BBackMid&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 68%;right: 80%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;kitchenDoor&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 68%;right: 72%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;kitchenDoor&quot;)'></div>",
+
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 69%;right: 50%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;shortMid&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 62%;right: 57%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;window&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 58%;right: 47%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;midCon&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 65.5%;right: 35%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;midTopCross&quot;)'></div>",
+
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 52%;right: 47%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;ACon&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 49%;right: 52%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;jungleDeep&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 47%;right: 47%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;jungleCon&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 47.5%;right: 43%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;stairs&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 45.5%;right: 35%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;rampOutOneWay&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 48%;right: 29.5%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;ramp&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 46.2%;right: 24%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;rampDeep&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 35%;right: 52%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;ticket&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 40%;right: 49%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;trippleBox&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 39%;right: 43%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;ASite&quot;)'></div>",
+        "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 37%;right: 33%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;palace&quot;)'></div>"
+    ]
+}

@@ -10,7 +10,7 @@
     
     <script src="../JS/pagePreloader.js"></script>
 </head>
-<body onload="preloadPage()">
+<body onload="preloadPage(); getIconData()">
     <header class="pageTop">
         <img class="logo" src="../images/Ecofg logo.png"></img>
         <nav>
@@ -61,17 +61,47 @@
 
     <main style="background-color: #222222;">
         <!--  pats puslapis  -->
-        <div class="pageBox">
+        <div class="pageBox" id="pageBox">
             
             <!--  nuotrauka puslapio  -->
             <img id="mapMainImg" draggable="false">
+            <div id="smokeIconHolder">
 
             <!--  smoke'ai  -->
-            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 77%;right: 80%;" onclick="showPopup('mainPopup'); getData('bench')">
-                <!--  dubliuojasi ID, gal reiktu class naudoti  -->
-                <!-- <div class="nadeCount" id="testJSON"></div> -->
-            </div>
+            <!-- B site -->
+            <!-- <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 80%;right: 80%;" onclick="showPopup('mainPopup'); getData('bench')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 84%;right: 74%;" onclick="showPopup('mainPopup'); getData('appsPush')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 83.7%;right: 68%;" onclick="showPopup('mainPopup'); getData('appsOneWay')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 83.5%;right: 62%;" onclick="showPopup('mainPopup'); getData('appsDeep')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 81%;right: 52%;" onclick="showPopup('mainPopup'); getData('alleyBlock')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 79%;right: 74.5%;" onclick="showPopup('mainPopup'); getData('BSiteDefault')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 79%;right: 63%;" onclick="showPopup('mainPopup'); getData('shortCloseApps')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 74.5%;right: 63%;" onclick="showPopup('mainPopup'); getData('shortFarApps')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 75%;right: 57%;" onclick="showPopup('mainPopup'); getData('shortDeep')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 72%;right: 69%;" onclick="showPopup('mainPopup'); getData('BBackRight')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 73%;right: 74.5%;" onclick="showPopup('mainPopup'); getData('BBackMid')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 68%;right: 80%;" onclick="showPopup('mainPopup'); getData('kitchenDoor')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 68%;right: 72%;" onclick="showPopup('mainPopup'); getData('kitchenDoor')"></div> -->
 
+            <!-- mid -->
+            <!-- <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 69%;right: 50%;" onclick="showPopup('mainPopup'); getData('shortMid')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 62%;right: 57%;" onclick="showPopup('mainPopup'); getData('window')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 58%;right: 47%;" onclick="showPopup('mainPopup'); getData('midCon')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 65.5%;right: 35%;" onclick="showPopup('mainPopup'); getData('midTopCross')"></div> -->
+
+            <!-- A site -->
+            <!-- <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 52%;right: 47%;" onclick="showPopup('mainPopup'); getData('ACon')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 49%;right: 52%;" onclick="showPopup('mainPopup'); getData('jungleDeep')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 47%;right: 47%;" onclick="showPopup('mainPopup'); getData('jungleCon')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 47.5%;right: 43%;" onclick="showPopup('mainPopup'); getData('stairs')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 45.5%;right: 35%;" onclick="showPopup('mainPopup'); getData('rampOutOneWay')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 48%;right: 29.5%;" onclick="showPopup('mainPopup'); getData('ramp')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 46.2%;right: 24%;" onclick="showPopup('mainPopup'); getData('rampDeep')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 35%;right: 52%;" onclick="showPopup('mainPopup'); getData('ticket')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 40%;right: 49%;" onclick="showPopup('mainPopup'); getData('trippleBox')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 39%;right: 43%;" onclick="showPopup('mainPopup'); getData('ASite')"></div>
+            <div class="fas fa-cloud fa-2x smokeIcon" style="bottom: 37%;right: 33%;" onclick="showPopup('mainPopup'); getData('palace')"></div> -->
+            </div>
             
         </div>
 
@@ -108,5 +138,6 @@
     <script src="../JS/scripts.js"></script>
     <script src="../JS/JSONPopupHandler.js"></script>
     <script src="../JS/JSONImageLoader.js"></script>
+    <script src="../JS/smokeIconHandler.js"></script>
 </body>
 </html>

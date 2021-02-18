@@ -1,7 +1,7 @@
 "use strict";
 
 function getDataImg(loc, id) {
-    fetch("../JSON/mirage_smokes.json")
+    fetch("../JSON/smokeInfo.json")
         .then((resp) => {
             return resp.json();
         })

@@ -1,8 +1,7 @@
 "use strict";
 
-
 function getData(loc) {
-    fetch("../JSON/mirage_smokes.json")
+    fetch("../JSON/smokeInfo.json")
         .then((resp) => {
             return resp.json();
         })
