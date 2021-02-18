@@ -10,6 +10,7 @@ let img = document.getElementById('imgSrc');
 function escapePopup(event) {
     if (event.key === 'Escape') {
         hidePopup(this);
+        clearPopup('smokeBoxMap');
         index = 0;
         img.src = images[index];
         console.log("paspausta");
