@@ -16,11 +16,9 @@ function loadIcons(data) {
 
 function mirageIconLoad(data) {
     let result = "";
-    for (let i = 0; i <= 27; i++) {
+    for (let i = 0; i < Object.keys(data.mirage).length; i++) {
         result += data.mirage[i];
     }
 
     document.getElementById('smokeIconHolder').innerHTML = result;
-
-    console.log(Object.keys(data.mirage));
 }

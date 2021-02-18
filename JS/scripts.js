@@ -11,8 +11,7 @@ function escapePopup(event) {
     if (event.key === 'Escape') {
         hidePopup(this);
         clearPopup('smokeBoxMap');
-        index = 0;
-        img.src = images[index];
+        img.src = images[0];
         console.log("paspausta");
     }
 }
@@ -24,7 +23,7 @@ function showPopup(popupId) {
     // document.getElementById('imgSrc').style.visibility = "visible";
 
     // Nuotraukos isjungimas, paspaudus Escape mygtuka
-    document.addEventListener("keydown", escapePopup.bind(popupId), false);
+    document.addEventListener("keydown", escapePopup.bind(popupId));
 }
 
 function hidePopup(popupId, overflow) {
@@ -35,7 +34,7 @@ function hidePopup(popupId, overflow) {
         document.body.style.overflow = "visible";
     }
 
-    document.removeEventListener("keydown", escapePopup.bind(popupId), false);
+    document.removeEventListener("keydown", escapePopup.bind(popupId));
 }
 
 
