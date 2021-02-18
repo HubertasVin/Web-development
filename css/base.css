@@ -63,10 +63,8 @@ p {
 .rightSide {
     padding: 0.6em 0em;
     background-color: #b4b4b4;
-    /* background-color: #5D7156; */
-    /* background-image: url(../images/textures/concrete-wall.png); */
     transition: all 0.3s ease 0s;
-    border-radius: 15%;
+    border-radius: 0.5em;
     width: 90%;
     justify-self: center;
 }
@@ -78,10 +76,7 @@ p {
     margin: 10px 0px;
     padding: 1%;
     box-shadow: 1px 1px 5px 1px black;
-    /* background-color: #8BA792; */
     background-color: #959ab9;
-    /* background-color: #7C809B; */
-    /* background-color: rgb(200, 221, 207); */
 }
 
 .cfgCopy p {
@@ -96,8 +91,6 @@ p {
     padding: 1% 2%;
     margin-top: 0.5%;
     background-color: #5695bd;
-    /* background-color: #477998; */
-    /* background-color: rgb(224, 222, 98); */
     border: 2px solid rgb(95, 95, 95);
     transition: all 0.3s ease 0s;
 }

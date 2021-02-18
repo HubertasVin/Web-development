@@ -6,15 +6,15 @@
     <title>Geras projektas</title>
     <script src="https://kit.fontawesome.com/e5aefc04fe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/CSS" href="../css/style.css">
-    <link rel="stylesheet" href="../css/config.css">
+    <link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
     <header class="pageTop">
         <img class="logo" src="../images/Ecofg logo.png"></img>
         <nav>
             <ul class="navLinks">
-                <li><a href="#" class="topWords">Settings</a></li>
-                <li><a href="#" class="topWords">Tips and tricks</a></li>
+                <li><a href="settings.html" class="topWords">Settings</a></li>
+                <li><a href="TipsAndTricks.html" class="topWords">Tips and tricks</a></li>
                 <li><a href="configs.html" class="topWords">Configs</a></li>
             </ul>
         </nav>
@@ -28,7 +28,6 @@
     </nav>
 
     <!--  Šono navigacija i skirtingus map'us  -->
-    <nav class="mapIconList title">Nades: </nav>
     <nav class="mapIconList">
         <span class="icon">
             <a href="smokes.html"><img mapName="Mirage" src="../images/mapIcons/mirage_icon.webp"/></a>
@@ -81,10 +80,10 @@
                 <li>Find the directory of cfg files from the link above.</li>
                 <li>After navigating to the directory, create a random.txt</li>
                 <li>Open and add your commands</li>
-                <p style="font-weight: bold; font-size: 1.2em">Make sure to edit the bind keys, it may interfere with your existing key bindings!</p>
                 <li>Press save as and make the extension .cfg</li>
             </ol>
             <h3>CS:GO useful commands</h3>
+            <p style="font-weight: bold; font-size: 1.2em">Make sure to edit the bind keys, it may interfere with your existing key bindings!</p>
             <ul class="commands">
                 <li>alias "+jumpthrow" "+jump;-attack"; alias "-jumpthrow" "-jump"; bind [KEY] "+jumpthrow";</li>
                 <p>Jump throw bind. Withouth this, your jumpthrow nades will not be consistent.</p>
@@ -103,7 +102,7 @@
                 <li>bind [KEY] "r_cleardecals"</li>
                 <p>After pressing the key, clears all blood splatters and residual particles which may interfere with vision.</p>
             </ul>
-            <h3>Your cfg file may look something like this</h3>
+            <h3>Your launcher cfg file may look something like this</h3>
             <div class="bendras">
                 <div class="cfgCopy">
                     <p>alias "+jumpthrow" "+jump;-attack"; alias "-jumpthrow" "-jump"; bind x "+jumpthrow";</p>
