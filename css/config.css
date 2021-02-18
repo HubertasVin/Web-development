@@ -1,7 +1,12 @@
+body {
+    background-image: url(../images/textures/45-degree-fabric-light.png);
+    background-color: #2D3047;
+}
+
 main {
     text-align: start;
     width: 60%;
-    background-color: rgb(216, 212, 212);
+    background-color: #d8d4d4;
     margin: 5vh auto;
     padding: 1.5vh 3vw;
     font-family: "PT Sans Caption";
@@ -38,9 +43,10 @@ p {
     gap: 0.8em;
     position: absolute;
     top: 40%;
-    right: 5%;
+    right: 4%;
     transform: translateY(-50%);
-    background-color: #f5f1dc;
+    background-image: url(../images/textures/45-degree-fabric-light.png);
+    background-color: #d8d4d4;
     padding: 0.5em;
     border: 3px solid rgb(102, 102, 102);
     z-index: 1;
@@ -56,21 +62,26 @@ p {
 
 .rightSide {
     padding: 0.6em 0em;
-    background-color:rgb(209, 218, 95);
+    background-color: #b4b4b4;
+    /* background-color: #5D7156; */
+    /* background-image: url(../images/textures/concrete-wall.png); */
     transition: all 0.3s ease 0s;
     border-radius: 15%;
     width: 90%;
     justify-self: center;
 }
 .rightSide:hover {
-    background-color:rgb(182, 201, 107);
+    background-color:#919191;
 }
 
 .cfgCopy {
     margin: 10px 0px;
     padding: 1%;
     box-shadow: 1px 1px 5px 1px black;
-    background-color: rgb(200, 221, 207);
+    /* background-color: #8BA792; */
+    background-color: #959ab9;
+    /* background-color: #7C809B; */
+    /* background-color: rgb(200, 221, 207); */
 }
 
 .cfgCopy p {
@@ -84,14 +95,15 @@ p {
     width: 20%;
     padding: 1% 2%;
     margin-top: 0.5%;
-    background-color: rgb(226, 228, 143);
+    background-color: #5695bd;
+    /* background-color: #477998; */
+    /* background-color: rgb(224, 222, 98); */
     border: 2px solid rgb(95, 95, 95);
-    /* border-radius: 10%; */
     transition: all 0.3s ease 0s;
 }
 
 .copySnippet:hover {
-    background-color: rgb(230, 208, 17);
+    background-color: #457491;
 }
 
 .bendras {
@@ -107,15 +119,7 @@ p {
     font-size: 0.8em;
 }
 
-/*   reikia nes (ol ul) duoda tuščia skrituliukia prie kiekvieno (li)   */
-.commands {
-    list-style: none;
-}
-.commands li:before {
-    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: rgb(0, 0, 0); /* Change the color */
-    display: inline-block; /* Needed to add space between the bullet and the text */
-    width: 1em; /* Also needed for space (tweak if needed) */
-    margin-left: -1em; /* Also needed for space (tweak if needed) */
+.cfgCopy .commands li {
+    margin-top: 0.3em;
 }
 
