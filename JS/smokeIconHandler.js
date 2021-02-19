@@ -11,6 +11,10 @@ function getIconData() {
 function loadIcons(data) {
     if (localStorage.getItem('currentMap') === "mirage") {
         mirageIconLoad(data);
+        console.log("mirage");
+    } else {
+        document.getElementById('smokeIconHolder').innerHTML = "";
+        console.log("not mirage");
     }
 }
 
