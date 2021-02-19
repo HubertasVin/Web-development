@@ -13,11 +13,9 @@ function updatePage(mapToUpdateTo) {
     switch (mapToUpdateTo) {
         case "mirage":
             document.getElementById("mapMainImg").src = "../images/overviews/mirage_overview.webp";
-            getIconData();
             break;
         case "inferno":
             document.getElementById("mapMainImg").src = "../images/overviews/inferno_overview.webp";
-            getIconData();
             break;
         case "overpass":
             document.getElementById("mapMainImg").src = "../images/overviews/overpass_overview.webp";
@@ -41,6 +39,7 @@ function updatePage(mapToUpdateTo) {
             document.getElementById("mapMainImg").src = "../images/overviews/mirage_overview.webp";
             break;
     }
+    getIconData();
 
     localStorage.setItem('currentMap', mapToUpdateTo);
 }

@@ -10,7 +10,7 @@
     
     <script src="../JS/pagePreloader.js"></script>
 </head>
-<body onload="preloadPage(); getIconData()">
+<body onload="preloadPage()">
     <header class="pageTop">
         <img class="logo" src="../images/Ecofg logo.png"></img>
         <nav>
@@ -26,7 +26,7 @@
     <!--  Šono navigacija i skirtingus map'us  -->
     <nav class="mapIconList">
         <span class="icon">
-            <a onclick="updatePage('mirage')"><img mapName="Mirage" src="../images/mapIcons/mirage_icon.webp"/></a>
+            <a onclick="updatePage('mirage')"><img src="../images/mapIcons/mirage_icon.webp"/></a>
             <p>Mirage</p>
         </span>
         <span class="icon">
@@ -73,9 +73,9 @@
         <!-- popup'as -->
         <div class="popupBackground" id="smokePopup">
             <div class="popup" id="imgPopup">
-                <p class="smokeTitle"></p>
+                <p class="smokeTitle" id="galleryTitle"></p>
                 <div class="popupPhoto" id="popupPhoto">
-                    <img id="imgSrc" src="../images/Smokes/Overpass/overpass_monster1_after.jpg"/>
+                    <img id="imgSrc"/>
                     <!-- <video id="videoSrc" src="../images/videos/stock_video.mp4" style="visibility: hidden;" controls autoplay></video> -->
                     <a class="fas fa-chevron-left imgPrev" id="nextImg" onclick="previousImage()"></a>
                     <a class="fas fa-chevron-right imgNext" id="prevImg" onclick="nextImage()"></a>

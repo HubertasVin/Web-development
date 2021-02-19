@@ -1,11 +1,12 @@
 "use strict";
 
-let images = ['../images/Smokes/Overpass/overpass_monster1_after.jpg', '../images/Smokes/Overpass/overpass_monster1_before1.jpg', '../images/Smokes/Overpass/overpass_monster2_before2.jpg']
 let index = 0;
 
 let next = document.getElementById('nextImg');
 let prev = document.getElementById('prevImg');
 let img = document.getElementById('imgSrc');
+let instr = document.getElementById('smokeInstructions');
+let title = document.getElementById('galleryTitle');
 
 function escapePopup(event) {
     if (event.key === 'Escape') {
@@ -47,6 +48,7 @@ function nextImage() {
         index = 0;
     }
     img.src = images[index];
+    instr.innerHTML = instructions[index];
 }
 
 
