@@ -12,15 +12,14 @@ main {
     font-family: "PT Sans Caption";
 }
 
-h1, h2, h3, h4 {
-    font-family: "Patua One";
-}
-
 h2 {
     font-size: 2em;
+    font-family: "Bree serif";
+    font-weight: 700;
 }
 
 h3 {
+    font-family: "Patua One";
     font-size: 1.4em;
     font-weight: 400;
 }
@@ -30,6 +29,8 @@ p {
     text-align: left;
 }
 
+
+/*   CONFIG PAGE PRADŽIA   */
 
 .highlight {
     margin: 5px 10px;
@@ -116,3 +117,19 @@ p {
     margin-top: 0.3em;
 }
 
+/*   CONFIG PABAIGA   */
+
+/*   TIPS AND TRICKS PRADŽIA   */
+
+.tips li {
+    font-weight: 800;
+    font-size: 1.4em;
+    margin-top: 2em;
+}
+
+.peeking li {
+    font-size: 1em;
+    font-weight: 600;
+    list-style: none;
+    margin-top: 1.2em;
+}
