@@ -59,8 +59,9 @@ function previousImage() {
         index = images.length - 1;
     }
     img.src = images[index];
+    instr.innerHTML = instructions[index];
 }
-    
+
 
 
 // function playVideo() {
