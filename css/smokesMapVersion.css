@@ -34,6 +34,7 @@
 .smokesListMap {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    align-items: center;
     column-gap: 0vw;
     row-gap: 1vw;
     margin-left: 100px;
@@ -44,15 +45,24 @@
     display: inline-block;
     cursor: pointer;
     user-select: none;
+    align-self: center;
     width: 20vh;
     padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #f0eeeb;
     border: #3D3D3D 2px solid;
     border-radius: 3px;
+    transition: all 0.2s ease 0s;
 }
 
 .smokeBoxMap img {
     -webkit-user-drag: none;
     width: 94%;
     border-radius: 3px;
+}
+
+.smokeBoxMap:hover {
+    width: 18vh;
+    transition: all 0.2s ease 0s;
 }

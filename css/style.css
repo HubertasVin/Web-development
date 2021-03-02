@@ -81,9 +81,8 @@ h4 {
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
-    background-image: url(../images/textures/beige-paper.png);
-    background-color: #e09317;
-    /* background-color: #e6a337; */
+    /* background-image: url(../images/textures/beige-paper.png); */
+    background-color: #DE9B35;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     z-index: 1;
@@ -181,7 +180,7 @@ h4 {
 /*   home mygtuko stilius   */
 #homeBtn {
     padding: 0.5% 1.5%;
-    background-color: #fddb3a;
+    background-color: #DE9B35;
     color: #1a1c20;
     border: none;
     border-radius: 50px;
@@ -191,7 +190,7 @@ h4 {
 }
 #homeBtn:hover {
     border-radius: 14px;
-    background-color: #FED50B;
+    background-color: #E2A850;
     transition: all 0.3s ease 0s;
 }
 
@@ -287,7 +286,7 @@ main {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
     opacity: 0;
     visibility: hidden;
     z-index: 2;
@@ -304,7 +303,7 @@ main {
     margin: auto;
     width: 90vw;
     height: 90vh;
-    background-color: #f1ece7;
+    background-color: rgba(241, 236, 231, 0.95);
     vertical-align: middle;
     border-radius: 5px;
 }
