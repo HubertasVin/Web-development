@@ -1,3 +1,26 @@
+/* Filtru navigacija */
+.filterList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10%;
+    align-items: center;
+    position: fixed;
+    top: 15%;
+    height: 60px;
+    padding: 0 0.7%;
+    background-color: #F0EDE9FA;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.filterList a {
+    display: inline-grid;
+    position: relative;
+    align-items: center;
+    margin-left: 10%;
+    top: 50%;
+}
+
 .pageBox {
     position: absolute;
     height: 100%;
@@ -50,19 +73,19 @@
     padding-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
+    background-image: url(../images/textures/concrete-wall.png);
     background-color: #f0eeeb;
     border: #3D3D3D 2px solid;
     border-radius: 3px;
-    transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0.1s;
+}
+
+.smokeBoxMap:hover {
+    width: 18vh;
 }
 
 .smokeBoxMap img {
     -webkit-user-drag: none;
     width: 94%;
     border-radius: 3px;
-}
-
-.smokeBoxMap:hover {
-    width: 18vh;
-    transition: all 0.2s ease 0s;
 }
