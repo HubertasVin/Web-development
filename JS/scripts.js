@@ -64,8 +64,8 @@ function previousImage() {
 
 
 
-// function playVideo() {
-//     img.remove();
-//     document.getElementById('videoSrc').style.visibility = "visible";
-//     document.getElementById('imgSrc').style.visibility = "hidden";
-// }
+function playVideo() {
+    img.remove();
+    document.getElementById('videoSrc').style.visibility = "visible";
+    document.getElementById('imgSrc').style.visibility = "hidden";
+}

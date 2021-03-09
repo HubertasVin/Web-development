@@ -91,7 +91,19 @@
                 <p class="smokeTitle" id="galleryTitle"></p>
                 <div class="popupPhoto" id="popupPhoto">
                     <img id="imgSrc"/>
-                    <!-- <video id="videoSrc" src="../images/videos/stock_video.mp4" style="visibility: hidden;" controls autoplay></video> -->
+                    <video id="videoSrc" src="../images/videos/stock_video.mp4" style="visibility: hidden;" autoplay></video>
+
+                    <div class="videoControlBar">
+                        <div class="controls">
+                            <button id="play-pause"></button>
+                        </div>
+                        <div class="progressBar">
+                            <div class="progressCompl">
+
+                            </div>
+                        </div>
+                    </div>
+
                     <a class="fas fa-chevron-left imgPrev" id="nextImg" onclick="previousImage()"></a>
                     <a class="fas fa-chevron-right imgNext" id="prevImg" onclick="nextImage()"></a>
 
