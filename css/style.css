@@ -370,7 +370,7 @@ main {
 }
 
 .controls button:before {
-    content: '\f04b';
+    content: '\f28b';
     font-family: 'FontAwesome';
     width: 30px;
     height: 30px;
@@ -382,10 +382,10 @@ main {
 }
 
 .controls button.play:before {
-    content: "\f04b";
+    content: "\f144";
 }
 .controls button.pause:before {
-    content: "\f04c";
+    content: "\f28b";
 }
 
 .progressBar {
