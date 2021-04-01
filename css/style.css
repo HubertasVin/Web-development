@@ -32,7 +32,7 @@ h2 {
 h3 {
     font-family: 'Montserrat';
     font-weight: 800;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     line-height: 0px;
     font-size: 0.7vw;
     color: #1C1E21;
@@ -45,6 +45,8 @@ h4 {
     letter-spacing: 1px;
     line-height: 0px;
     font-size: 0.65vw;
+    margin-top: -10px;
+    margin-bottom: 5px;
     color: #41444b;
 }
 
@@ -81,9 +83,8 @@ h4 {
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
-    background-image: url(../images/textures/beige-paper.png);
-    background-color: #e09317;
-    /* background-color: #e6a337; */
+    /* background-image: url(../images/textures/beige-paper.png); */
+    background-color: #DE9B35;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     z-index: 1;
@@ -128,7 +129,7 @@ h4 {
     justify-content: space-between;
     align-items: center;
     padding: 0.5% 5%;
-    background-color: #f0ede9fa;
+    background-color: #F0EDE9FA;
 }
 
 /*   <a> tag tekstu stilius, neskaitant "home" mygtuko   */
@@ -141,7 +142,7 @@ h4 {
 
 .logo {
     cursor: pointer;
-    width: 5%;
+    width: 8%;
 }
 
 .placeholder {
@@ -172,7 +173,7 @@ h4 {
     transition: all 0.3s ease 0s;
     background-color: #e4e2e0fa;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 7px;
 }
 .navLinks li a:hover {
     color: rgba(253, 219, 58, 0.8);
@@ -181,7 +182,7 @@ h4 {
 /*   home mygtuko stilius   */
 #homeBtn {
     padding: 0.5% 1.5%;
-    background-color: #fddb3a;
+    background-color: #DE9B35;
     color: #1a1c20;
     border: none;
     border-radius: 50px;
@@ -191,7 +192,7 @@ h4 {
 }
 #homeBtn:hover {
     border-radius: 14px;
-    background-color: #FED50B;
+    background-color: #E2A850;
     transition: all 0.3s ease 0s;
 }
 
@@ -287,7 +288,7 @@ main {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
     opacity: 0;
     visibility: hidden;
     z-index: 2;
@@ -304,7 +305,7 @@ main {
     margin: auto;
     width: 90vw;
     height: 90vh;
-    background-color: #f1ece7;
+    background-color: rgba(241, 236, 231, 0.95);
     vertical-align: middle;
     border-radius: 5px;
 }
@@ -336,13 +337,67 @@ main {
 .popupPhoto {
     display: flex;
     position: relative;
-    max-width: 70vw;
+    max-width: 65vw;
     margin: 0 auto;
     box-shadow: 1px 1px 20px 1px black;
+    overflow: hidden;
+}
+
+.popupPhoto:hover .videoControlBar {
+    transform: translateY(0);
 }
 
 .popupPhoto img, video {
     width: 100%;
+}
+
+.videoControlBar {
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translateY(100%) translateY(-72px);
+    transition: all 0.1s ease;
+}
+
+.controls button {
+    background: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.controls button:before {
+    content: '\f28b';
+    font-family: 'FontAwesome';
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 10%;
+    margin-bottom: -15%;
+}
+
+.controls button.play:before {
+    content: "\f144";
+}
+.controls button.pause:before {
+    content: "\f28b";
+}
+
+.progressBar {
+    height: 5px;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.progressCompl {
+    height: 5px;
+    width: 100px;
+    background-color: orangered;
 }
 
 /*   popup pirmyn ir atgal rodykles   */

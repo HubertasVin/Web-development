@@ -59,12 +59,5 @@ function previousImage() {
         index = images.length - 1;
     }
     img.src = images[index];
+    instr.innerHTML = instructions[index];
 }
-    
-
-
-// function playVideo() {
-//     img.remove();
-//     document.getElementById('videoSrc').style.visibility = "visible";
-//     document.getElementById('imgSrc').style.visibility = "hidden";
-// }

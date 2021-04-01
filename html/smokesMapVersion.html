@@ -12,7 +12,7 @@
 </head>
 <body onload="preloadPage()">
     <header class="pageTop">
-        <img class="logo" src="../images/Ecofg logo.png"></img>
+        <img class="logo" src="../images/CSGO-Essentials logo.webp"></img>
         <nav>
             <ul class="navLinks">
                 <li><a href="settings.html" class="topWords">Settings</a></li>
@@ -22,6 +22,21 @@
         </nav>
         <a class="topWords" id="homeBtn" href="index.html">Home</a>
     </header>
+    <!-- Virsutine navigacija filtrams -->
+    <nav class="filterList">
+        <span class="filter">
+            <a><i class="fas fa-cloud fa-2x"></i></a>
+        </span>
+        <span class="filter">
+            <a><i class="fas fa-fire fa-2x"></i></a>
+        </span>
+        <span class="filter">
+            <a><i class="fas fa-bolt fa-2x"></i></a>
+        </span>
+        <span class="filter">
+            <a><i class="fas fa-bomb fa-2x"></i></a>
+        </span>
+    </nav>
 
     <!--  Šono navigacija i skirtingus map'us  -->
     <nav class="mapIconList">
@@ -76,14 +91,26 @@
                 <p class="smokeTitle" id="galleryTitle"></p>
                 <div class="popupPhoto" id="popupPhoto">
                     <img id="imgSrc"/>
-                    <!-- <video id="videoSrc" src="../images/videos/stock_video.mp4" style="visibility: hidden;" controls autoplay></video> -->
+                    <video id="videoSrc" src="../images/videos/stock_video.mp4" style="visibility: hidden;" autoplay></video>
+
+                    <div class="videoControlBar">
+                        <div class="controls">
+                            <button id="play-pause" onclick="togglePlayPause()"></button>
+                        </div>
+                        <div class="progressBar">
+                            <div class="progressCompl">
+
+                            </div>
+                        </div>
+                    </div>
+
                     <a class="fas fa-chevron-left imgPrev" id="nextImg" onclick="previousImage()"></a>
                     <a class="fas fa-chevron-right imgNext" id="prevImg" onclick="nextImage()"></a>
 
                     <div class="smokeDescription">
                         <div class="watchVideo popupText" id="playVid" onclick="playVideo()"><i class="fas fa-play"></i> watch the video</div>
                         <p class="smokeInstructions" id="smokeInstructions"><p>
-                        <div class="favorite popupText"><i class="fas fa-star"></i> favorite</div>
+                        <!-- <div class="favorite popupText"><i class="fas fa-star"></i> favorite</div> -->
                     </div>
                 </div>
                 <i class="fas fa-times fa-2x" id="imgCloseIcon" onclick="hidePopup('smokePopup'); showPopup('mainPopup')"></i>
@@ -104,5 +131,6 @@
     <script src="../JS/JSONPopupHandler.js"></script>
     <script src="../JS/JSONImageLoader.js"></script>
     <script src="../JS/smokeIconHandler.js"></script>
+    <script src="../JS/videoHandler.js"></script>
 </body>
 </html>

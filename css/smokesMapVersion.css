@@ -1,3 +1,47 @@
+/* Filtru navigacija */
+.filterList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10%;
+    align-items: center;
+    position: fixed;
+    top: 20%;
+    height: 45px;
+    padding: 0 0.6%;
+    background-color: #F0EDE9FA;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.filterList a {
+    display: inline-grid;
+    position: relative;
+    align-items: center;
+    margin-right: -2px;
+    top: 50%;
+}
+
+.filterList [class^="fas fa-cloud"], [class^="fas fa-fire"], [class^="fas fa-bolt"], [class^="fas fa-bomb"] {
+    font-size: 27px;
+}
+
+.filterList [class^="fas fa-cloud"] {
+    color: #6b6b6b;
+}
+.filterList [class^="fas fa-fire"] {
+    color: #c0280d;
+}
+.filterList [class^="fas fa-bolt"] {
+    color: #eecf20;
+}
+.filterList [class^="fas fa-bomb"] {
+    color: #081600;
+}
+
+[class^="fas fa-cloud fa-2x"] {
+    font-size: 37px;
+}
+
 .pageBox {
     position: absolute;
     height: 100%;
@@ -34,6 +78,7 @@
 .smokesListMap {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    align-items: center;
     column-gap: 0vw;
     row-gap: 1vw;
     margin-left: 100px;
@@ -44,15 +89,32 @@
     display: inline-block;
     cursor: pointer;
     user-select: none;
+    align-self: center;
     width: 20vh;
     padding-bottom: 10px;
-    background-color: #f0eeeb;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../images/textures/concrete-wall.png);
+    background-color: #f5f5f5;
     border: #3D3D3D 2px solid;
-    border-radius: 3px;
+    border-radius: 10px;
+    transition: all 0.2s ease 0.1s;
+}
+
+.smokeBoxMap:hover {
+    width: 18vh;
+}
+
+.smokeBoxMap [class^="fas fa-arrow-alt-circle-up"] {
+    font-size: 20px;
+}
+
+.smokeBoxMap .placeholder {
+    padding-top: 20px;
 }
 
 .smokeBoxMap img {
     -webkit-user-drag: none;
     width: 94%;
-    border-radius: 3px;
+    border-radius: 5px;
 }
