@@ -2,15 +2,25 @@
 .filterList {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 10%;
+    column-gap: 1%;
     align-items: center;
     position: fixed;
-    top: 20%;
-    height: 45px;
-    padding: 0 0.6%;
+    top: 15%;
+    width: max-content;
+    /* height: 45px; */
+    /* padding: 0 0.6%; */
     background-color: #F0EDE9FA;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+.filter {
+    padding: 10% 10%;
+    /* height: max-content; */
+    /* justify-self: center; */
+}
+
+.filter:hover {
+    background-color: aqua;
 }
 
 .filterList a {
@@ -19,6 +29,11 @@
     align-items: center;
     margin-right: -2px;
     top: 50%;
+}
+
+.filterList a:hover {
+
+    background-color: aqua;
 }
 
 .filterList [class^="fas fa-cloud"], [class^="fas fa-fire"], [class^="fas fa-bolt"], [class^="fas fa-bomb"] {
