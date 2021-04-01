@@ -160,6 +160,7 @@ p {
 
 /*   Komandų komentarai, įdedamas į ul arba ol   */
 .commands p {
+    margin-top: 0.4em;
     margin-left: 1em;
     user-select: none;
     font-style: italic;
@@ -196,6 +197,21 @@ p {
 
 /*   SETTINGS PRADŽIA   */
 
+.maxFPS {
+    font-size: 1.4em;
+}
+
+.maxFPS p {
+    margin-left: 1em;
+    margin-top: 0.3em;
+    user-select: none;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.maxFPS span {
+    font-weight: bold;
+}
 
 
 /*   SETTINGS PABAIGA   */
