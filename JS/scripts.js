@@ -6,7 +6,6 @@ let next = document.getElementById('nextImg');
 let prev = document.getElementById('prevImg');
 let img = document.getElementById('imgSrc');
 let instr = document.getElementById('smokeInstructions');
-let title = document.getElementById('galleryTitle');
 
 function escapePopup(event) {
     if (event.key === 'Escape') {
@@ -20,6 +19,7 @@ function escapePopup(event) {
 function showPopup(popupId) {
     document.getElementById(popupId).style.visibility = "visible";
     document.getElementById(popupId).style.opacity = "1";
+    // side bar panaikina
     document.body.style.overflow = "hidden";
     // document.getElementById('imgSrc').style.visibility = "visible";
 
@@ -47,8 +47,8 @@ function nextImage() {
     } else {
         index = 0;
     }
-    img.src = images[index];
-    instr.innerHTML = instructions[index];
+    document.getElementById('imgSrc').src = images[index];
+    document.getElementById('smokeInstructions').innerHTML = instructions[index];
 }
 
 
@@ -58,6 +58,6 @@ function previousImage() {
     } else {
         index = images.length - 1;
     }
-    img.src = images[index];
-    instr.innerHTML = instructions[index];
+    document.getElementById('imgSrc').src = images[index];
+    document.getElementById('smokeInstructions').innerHTML = instructions[index];
 }

@@ -1,34 +1,33 @@
 "use strict";
 
-let images = [];
-let instructions = [];
+let images;
+let instructions;
 
-function getDataImg(loc, id) {
+function getDataImg(loc) {
     fetch("../JSON/smokeInfo.json")
         .then((resp) => {
             return resp.json();
         })
         .then((data) => {
-            loadImages(loc, id, data);
+            if (localStorage.getItem('currentMap') === "mirage") {
+                mirageGalleryLoad(loc, data);
+            }
         });
 }
 
-function loadImages(loc, id, data) {
-    if (localStorage.getItem('currentMap') === "mirage") {
-        mirageGalleryLoad(loc, id, data);
-    }
-}
+function mirageGalleryLoad(loc, data) {
+    if (loc == 0) {
+        images = data.mirage.bench[loc].img;
+        instructions = data.mirage.bench[loc].thrdesc;
 
-function mirageGalleryLoad(loc, id, data) {
-    if (loc === "bench") {
-        for (let i = 0; i < Object.keys(data.mirage[0].bench[id].img).length; i++) {
-            images[i] = data.mirage[0].bench[id].img[i];
-            instructions[i] = data.mirage[0].bench[id].thrdesc[i];
-        }
         img.src = images[0];
-        instr.innerHTML = instructions[0];
-        title.innerHTML = data.mirage[0].bench[id].to + " Smoke " + data.mirage[0].bench[0].from;
 
-        console.log(images);
+        // šits sutvarko popup. Kažkur kitur reiks numest
+        // panaikina praeitus smokebox
+        document.getElementById('JSONinfo').innerHTML = "";
+        // įdeda rodyklytes
+        document.getElementById('popupPhoto').innerHTML += "<a class='fas fa-chevron-left imgPrev' id='nextImg' onclick='previousImage()'></a><a class='fas fa-chevron-right imgNext' id='prevImg' onclick='nextImage()'></a><div class='smokeDescription'><div class='watchVideo popupText' id='playVid' onclick='playVideo()'><i class='fas fa-play'></i> watch the video</div><p class='smokeInstructions' id='smokeInstructions'><p></div>";
+        
+        document.getElementById('smokeInstructions').innerHTML = instructions[0];
     }
 }

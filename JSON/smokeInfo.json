@@ -1,12 +1,10 @@
 {
-    "numberOfMaps": 8,
-    "mirage":
-    [{
+    "mirage": 
+    {
         "bench":
         [
             {
-                "to": "Bench",
-                "from": "From Alley ",
+                "from": "From Alley",
                 "desc": "jumpthrow",
                 "oneway": true,
                 "img": 
@@ -23,8 +21,7 @@
                 ]
             },
             {
-                "to": "Bench",
-                "from": "From Alley ",
+                "from": "From Alley",
                 "desc": "jumpthrow",
                 "oneway": false,
                 "img": 
@@ -40,14 +37,11 @@
                     "2. Stand-up and jumpthrow"
                 ]
             }
-        ]
-    },
-    {
+        ],
         "alleyBlock":
         [
             {
-                "to": "alleyBlock",
-                "from": "... ",
+                "from": "somewhere",
                 "desc": "jumpthrow",
                 "oneway": true,
                 "img": 
@@ -64,5 +58,9 @@
                 ]
             }
         ]
-    }]
+    },
+    "Inferno":
+    {
+        
+    }
 }
