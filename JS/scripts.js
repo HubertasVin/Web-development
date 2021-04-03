@@ -61,3 +61,12 @@ function previousImage() {
     document.getElementById('imgSrc').src = images[index];
     document.getElementById('smokeInstructions').innerHTML = instructions[index];
 }
+
+function chColor(id) {
+    let target = document.getElementById(id);
+    if (target.style.backgroundColor == "") {
+        target.style.backgroundColor = 'rgb(128, 0, 128)';
+    } else {
+        target.style.backgroundColor = "";
+    }
+}

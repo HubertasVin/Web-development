@@ -15,7 +15,7 @@ function getData(loc) {
 function mirageSmokeLoad(loc, data) {
     let result = "";
     for (let i = 0; i < Object.keys(data.mirage[loc].smokes).length; i++) {
-        result += "<div class='smokeBoxMap' id='smokeBoxMap' onclick='getDataImg(" + loc + ";" + i + ")'><h3>" + data.mirage[loc].smokes[i].from + "<i class='fas fa-cloud fa-1x'></i></h3><h4>";
+        result += "<div class='smokeBoxMap' id='smokeBoxMap' onclick='getDataImg(" + loc + "," + i + ")'><h3>" + data.mirage[loc].smokes[i].from + "<i class='fas fa-cloud fa-1x'></i></h3><h4>";
 
         if (data.mirage[loc].smokes[i].oneway == true) {
             result += "<i class='fas fa-arrow-alt-circle-up fa-1x' title='One-Way Smoke'></i></h4><img src='" + data.mirage[loc].smokes[i].img[1] + "'></img></div>";
@@ -26,8 +26,8 @@ function mirageSmokeLoad(loc, data) {
     document.getElementById('JSONinfo').innerHTML = result;
 }
 
-
-function clearPopup(id) {
-    const div = document.getElementById(id);
-    div.innerHTML = "";
+// reiktu transition
+function clearPopup() {
+    document.getElementById('JSONinfo').innerHTML = "";
+    document.getElementById('popupPhoto').innerHTML = "<img id='imgSrc'/>";
 }
