@@ -1,66 +1,80 @@
 {
-    "mirage": 
-    {
-        "bench":
-        [
-            {
-                "from": "From Alley",
-                "desc": "jumpthrow",
-                "oneway": true,
-                "img": 
-                [
-                    "../images/Smokes/Overpass/overpass_monster1_after.jpg", 
-                    "../images/Smokes/Overpass/overpass_monster1_before1.jpg", 
-                    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
-                ],
-                "thrdesc":
-                [
-                    "result",
-                    "1. Crouch",
-                    "2. Stand-up and jumpthrow"
-                ]
-            },
-            {
-                "from": "From Alley",
-                "desc": "jumpthrow",
-                "oneway": false,
-                "img": 
-                [
-                    "../images/Smokes/Overpass/overpass_monster1_after.jpg", 
-                    "../images/Smokes/Overpass/overpass_monster1_before1.jpg", 
-                    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
-                ],
-                "thrdesc":
-                [
-                    "result",
-                    "1. Crouch",
-                    "2. Stand-up and jumpthrow"
-                ]
-            }
-        ],
-        "alleyBlock":
-        [
-            {
-                "from": "somewhere",
-                "desc": "jumpthrow",
-                "oneway": true,
-                "img": 
-                [
-                    "../images/Smokes/Overpass/overpass_monster1_after.jpg", 
-                    "../images/Smokes/Overpass/overpass_monster1_before1.jpg", 
-                    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
-                ],
-                "thrdesc":
-                [
-                    "result...",
-                    "1. Crouch...",
-                    "2. Stand-up and jumpthrow..."
-                ]
-            }
-        ]
-    },
-    "Inferno":
-    {
-        
-    }
+    "mirage":[
+        {
+            "smokes":[
+                {
+                    "from": "1.1",
+                    "desc": "jumpthrow",
+                    "oneway": true,
+                    "img": 
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg", 
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg", 
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "result",
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow"
+                    ]
+                },
+                {
+                    "from": "1.2",
+                    "desc": "jumpthrow",
+                    "oneway": false,
+                    "img": 
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg", 
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg", 
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "result",
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow"
+                    ]
+                }
+            ]
+        },
+        {
+            "smokes":[
+                {
+                    "from": "2.1",
+                    "desc": "jumpthrow",
+                    "oneway": false,
+                    "img": 
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg", 
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg", 
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "result",
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow"
+                    ]
+                },
+                {
+                    "from": "2.2",
+                    "desc": "jumpthrow",
+                    "oneway": true,
+                    "img": 
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg", 
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg", 
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "result",
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow"
+                    ]
+                }
+            ]
+        }
+    ]
 }
