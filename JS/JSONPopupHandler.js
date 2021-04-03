@@ -28,6 +28,6 @@ function mirageSmokeLoad(loc, data) {
 
 // reiktu transition
 function clearPopup() {
-    document.getElementById('JSONinfo').innerHTML = "";
+    document.getElementById('iframe').innerHTML = "";
     document.getElementById('popupPhoto').innerHTML = "<img id='imgSrc'/>";
 }

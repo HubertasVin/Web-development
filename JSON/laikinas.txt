@@ -28,3 +28,7 @@ smokeIcons.json inferno:
         "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: 57%;right: 19.5%;' onclick='showPopup(&quot;mainPopup&quot;); getData(&quot;arch&quot;)'></div>"
     ]
 }
+
+for (let i = 0; i < Object.keys(data.mirage.bottom).length; i++) {
+            result += "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: " + data.mirage.bottom[i] + "%" + ";right: " + data.mirage.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
+        }

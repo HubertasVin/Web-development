@@ -5,37 +5,33 @@ let index = 0;
 let next = document.getElementById('nextImg');
 let prev = document.getElementById('prevImg');
 let img = document.getElementById('imgSrc');
+let vid = document.getElementById('iframe');
 let instr = document.getElementById('smokeInstructions');
+let popupId = document.getElementById('mainPopup');
 
 function escapePopup(event) {
     if (event.key === 'Escape') {
-        hidePopup(this);
+        hidePopup('mainPopup');
         clearPopup('smokeBoxMap');
-        img.src = images[0];
-        console.log("paspausta");
     }
 }
 
-function showPopup(popupId) {
-    document.getElementById(popupId).style.visibility = "visible";
-    document.getElementById(popupId).style.opacity = "1";
+function showPopup() {
+    popupId.style.visibility = "visible";
+    popupId.style.opacity = "1";
     // side bar panaikina
     document.body.style.overflow = "hidden";
-    // document.getElementById('imgSrc').style.visibility = "visible";
 
     // Nuotraukos isjungimas, paspaudus Escape mygtuka
-    document.addEventListener("keydown", escapePopup.bind(popupId));
+    document.addEventListener("keydown", escapePopup);
 }
 
-function hidePopup(popupId, overflow) {
-    document.getElementById(popupId).style.visibility = "hidden";
-    document.getElementById(popupId).style.opacity = "0";
-    // document.getElementById('videoSrc').style.visibility = "hidden";
-    if (overflow === true) {
-        document.body.style.overflow = "visible";
-    }
+function hidePopup() {
+    popupId.style.visibility = "hidden";
+    popupId.style.opacity = "0";
+    document.body.style.overflow = "visible";
 
-    document.removeEventListener("keydown", escapePopup.bind(popupId));
+    document.removeEventListener("keydown", escapePopup);
 }
 
 

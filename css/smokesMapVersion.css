@@ -7,7 +7,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    left: 10%;
+    left: 3.5cm;
     color: white;
 }
 
@@ -77,6 +77,8 @@
     cursor: pointer;
     color: #d6d6d6;
     opacity: 0.8;
+    transform: translate(50%, 50%);
+    font-size: 1em;
 }
 
 .smokeIcon:hover {
@@ -133,4 +135,9 @@
     -webkit-user-drag: none;
     width: 94%;
     border-radius: 5px;
+}
+
+#iframe iframe {
+    width: 75%;
+    height: 80%;
 }

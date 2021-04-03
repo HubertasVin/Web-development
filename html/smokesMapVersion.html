@@ -89,52 +89,21 @@
         <div class="popupBackground" id="mainPopup">
             <div class="popup">
                 <p class="smokeTitle">Monster-Tracks smoke</p>
+                <span id="iframe"></span>
                 <div class="popupPhoto" id="popupPhoto">
                     <img id="imgSrc"/>
                 </div>
                 <section class="smokesListMap" id="JSONinfo">
                 </section>
-                <i class="fas fa-times fa-2x" id="imgCloseIcon" onclick="hidePopup('mainPopup', true); clearPopup('JSONinfo')"></i>
+                <i class="fas fa-times fa-2x" id="imgCloseIcon" onclick="hidePopup(); clearPopup('JSONinfo')"></i>
             </div>
         </div>
-
-        <!-- <div class="popupBackground" id="smokePopup">
-            <div class="popup">
-                <p class="smokeTitle"></p>
-                <div class="popupPhoto">
-                    <img id="imgSrc"/>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zInlDBuwu4k" 
-                    ="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                    <!-- <video id="videoSrc" src="../images/videos/stock_video.mp4" style="visibility: hidden;" autoplay></video> -->
-
-                    <!-- <div class="videoControlBar">
-                        <div class="controls">
-                            <button id="play-pause" onclick="togglePlayPause()"></button>
-                        </div>
-                        <div class="progressBar">
-                            <div class="progressCompl">
-
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <!-- <a class="fas fa-chevron-left imgPrev" id="nextImg" onclick="previousImage()"></a>
-                    <a class="fas fa-chevron-right imgNext" id="prevImg" onclick="nextImage()"></a>
-
-                    <div class="smokeDescription">
-                        <div class="watchVideo popupText" id="playVid" onclick="playVideo()"><i class="fas fa-play"></i> watch the video</div>
-                        <p class="smokeInstructions" id="smokeInstructions"><p>
-                    </div>
-                </div>
-                <i class="fas fa-times fa-2x" id="imgCloseIcon" onclick="hidePopup('smokePopup'); showPopup('mainPopup')"></i>
-            </div>
-        </div> -->
     </main>
 
     <script src="../JS/scripts.js"></script>
     <script src="../JS/JSONPopupHandler.js"></script>
     <script src="../JS/JSONImageLoader.js"></script>
     <script src="../JS/smokeIconHandler.js"></script>
-    <!-- <script src="../JS/videoHandler.js"></script> -->
+    <script src="../JS/videoHandler.js"></script>
 </body>
 </html>

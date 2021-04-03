@@ -82,7 +82,7 @@ h4 {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    width: 50px;
+    width: 1.3cm;
     /* background-image: url(../images/textures/beige-paper.png); */
     background-color: #DE9B35;
     border-top-right-radius: 10px;
@@ -303,8 +303,8 @@ main {
     left: 0;
     right: 0;
     margin: auto;
-    width: 90vw;
-    height: 90vh;
+    width: 85em;
+    height: 43em;;
     background-color: rgba(241, 236, 231, 0.95);
     vertical-align: middle;
     border-radius: 5px;
@@ -337,7 +337,7 @@ main {
 .popupPhoto {
     display: flex;
     position: relative;
-    max-width: 65vw;
+    max-width: 75%;
     margin: 0 auto;
     box-shadow: 1px 1px 20px 1px black;
     overflow: hidden;
@@ -349,55 +349,6 @@ main {
 
 .popupPhoto img, video {
     width: 100%;
-}
-
-.videoControlBar {
-    display: flex;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.7);
-    transform: translateY(100%) translateY(-72px);
-    transition: all 0.1s ease;
-}
-
-.controls button {
-    background: none;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-}
-
-.controls button:before {
-    content: '\f28b';
-    font-family: 'FontAwesome';
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    font-size: 20px;
-    color: #ffffff;
-    padding: 10%;
-    margin-bottom: -15%;
-}
-
-.controls button.play:before {
-    content: "\f144";
-}
-.controls button.pause:before {
-    content: "\f28b";
-}
-
-.progressBar {
-    height: 5px;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-.progressCompl {
-    height: 5px;
-    width: 100px;
-    background-color: orangered;
 }
 
 /*   popup pirmyn ir atgal rodykles   */
