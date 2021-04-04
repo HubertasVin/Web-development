@@ -58,11 +58,69 @@ function previousImage() {
     document.getElementById('smokeInstructions').innerHTML = instructions[index];
 }
 
+// filtru spalva pakeicia onclick (changeColor)
 function chColor(id) {
     let target = document.getElementById(id);
     if (target.style.backgroundColor == "") {
         target.style.backgroundColor = 'rgb(128, 0, 128)';
     } else {
         target.style.backgroundColor = "";
+    }
+}
+
+let check = false;
+let settingsId = document.getElementById('settingsId');
+let settingOpacity = 0;
+
+// display neveikia su transition ;(
+function openMenu() {
+    settingsId.style.display = 'block';
+    setTimeout(() => {
+        settingsId.classList.add('transition');
+    }, 10);
+    
+    settingsId.style.opacity = '1';
+    // jeigu be check, iskart suveiktu closeMenu ir uzdarytu settings
+    document.body.setAttribute("onclick", "closeMenu()");
+}
+
+function closeMenu() {
+    if (check) {
+        setTimeout(() => {
+            settingsId.style.display = 'none';
+        }, 300);
+        document.body.removeAttribute("onclick");
+        settingsId.classList.remove('transition');
+        settingsId.style.opacity = '0';
+        check = false;
+    } else {
+        check = true;
+    }
+}
+
+let userTheme = false;
+let loadVideoOnly = false;
+
+// nustatymu onclick pakeitimai (prastai padariau kol kas)
+function settingChange(setting) {
+    // closeMenu kitaip suveiks ir uždarys settings
+    check = false;
+    if (setting == "userTheme") {
+        if (!userTheme) {
+            userTheme = true;
+            document.getElementById('userTheme').innerHTML = "Dark theme: true";
+        } else {
+            userTheme = false;
+            document.getElementById('userTheme').innerHTML = "Dark theme: false";
+        }
+    }
+    if (setting == "loadVideoOnly") {
+        if (!loadVideoOnly) {
+            loadVideoOnly = true;
+            document.getElementById('loadVideoOnly').innerHTML = "Load video only: true";
+        } else {
+            loadVideoOnly = false;
+            document.getElementById('loadVideoOnly').innerHTML = "Load video only: false";
+        }
     }
 }

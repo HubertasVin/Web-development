@@ -10,17 +10,21 @@
     
     <script src="../JS/pagePreloader.js"></script>
 </head>
-<body onload="preloadPage()">
+<!--  preload ir settings menu uzdarys kai kur nors paspaus  -->
+<body onload="preloadPage()" onclick="closeMenu()">
     <header class="pageTop">
         <img class="logo" src="../images/CSGO-Essentials logo.webp"></img>
-        <nav>
-            <ul class="navLinks">
-                <li><a href="settings.html" class="topWords">Settings</a></li>
-                <li><a href="TipsAndTricks.html" class="topWords">Tips and tricks</a></li>
-                <li><a href="configs.html" class="topWords">Configs</a></li>
-            </ul>
-        </nav>
+        <ul class="navLinks">
+            <li><a href="settings.html" class="topWords">Settings</a></li>
+            <li><a href="TipsAndTricks.html" class="topWords">Tips and tricks</a></li>
+            <li><a href="configs.html" class="topWords">Configs</a></li>
+        </ul>
         <a class="topWords" id="homeBtn" href="index.html">Home</a>
+        <i class="fas fa-cog fa-2x" id="settingsButton" onclick="openMenu()"></i>
+        <div class="settings" id="settingsId">
+            <div id="userTheme" onclick="settingChange('userTheme')">Dark theme: false</div>
+            <div id="loadVideoOnly" onclick="settingChange('loadVideoOnly')">Load video only: false</div>
+        </div>
     </header>
     <!-- Virsutine navigacija filtrams -->
     <nav class="filterList">

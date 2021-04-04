@@ -69,11 +69,6 @@ h4 {
     background: #797979; 
 }
 
-/*   kai tamsus background, žodžiai būtų balti   */
-.white {
-    color: rgb(235, 235, 235);
-}
-
 
 /*   Navigacijos pozicija ir background spalva   */
 .mapIconList {
@@ -196,6 +191,53 @@ h4 {
     transition: all 0.3s ease 0s;
 }
 
+
+/*   settings mygtukas   */
+#settingsButton {
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+#settingsButton:hover {
+    cursor: pointer;
+}
+
+/*   DISPLAY NELEIDZIA TRANSITION ;(((   */
+.settings {
+    display: none;
+    position: absolute;
+    right: 0cm;
+    top: 2cm;
+    z-index: 3;
+    background-color: rgb(192, 192, 192);
+    width: 6cm;
+    user-select: none;
+    /* opacity: 0; */
+    transition: 0.3s;
+}
+
+.transition {
+    right: 2cm;
+    /* opacity: 1; */
+}
+
+.settings div:not(:last-child) {
+    border-bottom: rgb(225, 230, 165) 3px solid;
+}
+
+.settings div {
+    padding: 1em;
+}
+
+.settings div:hover {
+    cursor: pointer;
+    background-color: #d6d6d6;
+}
+
+
+
+
 .smokeModeSwitch {
     position: relative;
 }
@@ -228,15 +270,9 @@ h4 {
     left: -1.25vh;
 }
 
-.smokeModeSwitch input:checked + .slider {
-}
-
 .smokeModeSwitch input:checked + .slider:before {
     transform: translateX(3vh);
     background-color: #D62828;
-}
-
-.slider.round {
 }
 
 .slider.round::before {
