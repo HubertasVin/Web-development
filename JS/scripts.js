@@ -12,7 +12,7 @@ let popupId = document.getElementById('mainPopup');
 function escapePopup(event) {
     if (event.key === 'Escape') {
         hidePopup('mainPopup');
-        clearPopup('smokeBoxMap');
+        clearPopup();
     }
 }
 
@@ -62,7 +62,8 @@ function previousImage() {
 function chColor(id) {
     let target = document.getElementById(id);
     if (target.style.backgroundColor == "") {
-        target.style.backgroundColor = 'rgb(128, 0, 128)';
+        target.style.backgroundColor = "#c98b2f";
+        target.style.borderRadius = "10px";
     } else {
         target.style.backgroundColor = "";
     }

@@ -7,7 +7,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    left: 3.5cm;
+    left: 1.94cm;
     color: white;
 }
 
@@ -15,9 +15,10 @@
 .filters {
     display: flex;
     flex-direction: column;
-    border-radius: 0.7em;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     align-items: center;
-    border: 2px red solid;
+    background-color: #DE9B35;
 }
 
 /*   išvienodinu ilgius tarp type ir tick   */
@@ -26,19 +27,40 @@
     padding: 0.1em 0;
 }
 
+.tick {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 0.9em;
+    cursor: pointer;
+    user-select: none;
+}
+}
+#tick1 {
+    color: #4a9fff;
+}
+#tick2 {
+    color: #76ff82;
+}
+
 /*   mažiukas border   */
 .filters span:not(:last-child) {
-    border-bottom: 1px aqua solid;
+    border-bottom: 2px #222222 solid;
 }
 
 /*   tarpai tarp tick ir type filtrų   */
+.filterType {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 0.8em;
+}
 .filterType:not(:first-child) {
     margin-top: 1em;
 }
 
 /*   filtrų hover   */
-.filters span:hover {
-    background-color: rgb(128, 0, 128);
+.filters i:hover {
+    background-color: #c98b2f;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -78,7 +100,7 @@
     color: #d6d6d6;
     opacity: 0.8;
     transform: translate(50%, 50%);
-    font-size: 1em;
+    font-size: 2.2em;
 }
 
 .smokeIcon:hover {

@@ -28,14 +28,13 @@
     </header>
     <!-- Virsutine navigacija filtrams -->
     <nav class="filterList">
-        <span class="filterType">Type</span>
         <div class="filters">
-            <span id="type1" onclick="chColor('type1')"><i class="fas fa-cloud fa-2x"></i></span>
-            <span id="type2" onclick="chColor('type2')"><i class="fas fa-fire fa-2x"></i></span>
-            <span id="type3" onclick="chColor('type3')"><i class="fas fa-bolt fa-2x"></i></span>
-            <span id="type4" onclick="chColor('type4')"><i class="fas fa-bomb fa-2x"></i></span>
+            <span onclick="chColor('type1')"><i id="type1" class="fas fa-cloud fa-2x"></i></span>
+            <span onclick="chColor('type2')"><i id="type2" class="fas fa-fire fa-2x"></i></span>
+            <span onclick="chColor('type3')"><i id="type3" class="fas fa-bolt fa-2x"></i></span>
+            <span onclick="chColor('type4')"><i id="type4" class="fas fa-bomb fa-2x"></i></span>
         </div>
-        <span class="filterType">Tick</span>
+        <span class="filterType">tps</span>
         <div class="filters">
             <span class="tick" id="tick1" onclick="chColor('tick1')">64</span>
             <span class="tick" id="tick2" onclick="chColor('tick2')">128</span>
@@ -97,9 +96,8 @@
                 <div class="popupPhoto" id="popupPhoto">
                     <img id="imgSrc"/>
                 </div>
-                <section class="smokesListMap" id="JSONinfo">
-                </section>
-                <i class="fas fa-times fa-2x" id="imgCloseIcon" onclick="hidePopup(); clearPopup('JSONinfo')"></i>
+                <section class="smokesListMap" id="JSONinfo"></section>
+                <i class="fas fa-times fa-2x" id="imgCloseIcon" onclick="hidePopup(); clearPopup()"></i>
             </div>
         </div>
     </main>
