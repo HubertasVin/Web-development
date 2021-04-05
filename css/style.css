@@ -196,10 +196,6 @@ h4 {
 #settingsButton {
     padding: 5px;
     border-radius: 10px;
-    transition: 0.3s;
-}
-
-#settingsButton:hover {
     cursor: pointer;
 }
 

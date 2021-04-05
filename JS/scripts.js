@@ -8,11 +8,11 @@ let img = document.getElementById('imgSrc');
 let vid = document.getElementById('iframe');
 let instr = document.getElementById('smokeInstructions');
 let popupId = document.getElementById('mainPopup');
+let mapMainImg = document.getElementById("mapMainImg");
 
 function escapePopup(event) {
     if (event.key === 'Escape') {
         hidePopup('mainPopup');
-        clearPopup();
     }
 }
 
@@ -32,6 +32,9 @@ function hidePopup() {
     document.body.style.overflow = "visible";
 
     document.removeEventListener("keydown", escapePopup);
+        setTimeout(() => {
+            clearPopup();
+        }, 100);
 }
 
 
