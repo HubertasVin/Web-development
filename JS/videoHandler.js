@@ -1,29 +1,27 @@
 "use strict";
 
-// let videoSrc = document.getElementById('videoSrc');
-// let barCompl = document.querySelector('.progressCompl');
-// let controlBtn = document.getElementById('play-pause');
+let playingVideo = true;
+let closingVideo = false;
 
-function playVideo() {
+function playVideo(loc, id) {
     // panaikina nuotrauka ir ideda video
-    clearPopup();
-    document.getElementById('iframe').innerHTML = "<img id='imgSrc'/><iframe id='iframe' src='https://www.youtube.com/embed/zInlDBuwu4k?loop=1&modestbranding=1' frameborder='0' allowfullscreen></iframe>";
+    if (playingVideo) {
+        playingVideo = false;
+        closingVideo = true;
+        clearPopup();
+        document.getElementById('iframe').innerHTML = "<iframe id='iframe' src='https://www.youtube.com/embed/zInlDBuwu4k?loop=1&modestbranding=1' frameborder='0' allowfullscreen></iframe>";
+        photoVideoSwap.className = "far fa-image fa-2x";
+        photoVideoBtn.setAttribute("onclick", "quitVideo(" + loc + "," + id + ")");
+    }
 }
 
-// function togglePlayPause() {
-//     if (videoSrc.paused) {
-//         controlBtn.className = 'pause';
-//         videoSrc.play();
-//     } else {
-//         controlBtn.className = 'play';
-//         videoSrc.pause();
-//     }
-// }
-
-// videoSrc.addEventListener('timeupdate', function(){
-//     let barPos = videoSrc.currentTime / videoSrc.duration;
-//     barCompl.style.width = barPos * 100 + "%";
-//     if (videoSrc.ended) {
-//         controlBtn.className = 'play';
-//     }
-// })
+function quitVideo(loc, id) {
+    if (closingVideo) {
+        playingVideo = true;
+        closingVideo = false;
+        clearPopup();
+        getDataImg(loc, id);
+        photoVideoSwap.className = "fas fa-film fa-2x";
+        photoVideoBtn.setAttribute("onclick", "playVideo(" + loc + "," + id + ")");
+    }
+}

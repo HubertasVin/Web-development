@@ -80,8 +80,8 @@ h4 {
     width: 1.3cm;
     /* background-image: url(../images/textures/beige-paper.png); */
     background-color: #DE9B35;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 0.6em;
+    border-bottom-right-radius: 0.6em;
     z-index: 1;
 }
 
@@ -140,26 +140,19 @@ h4 {
     width: 8%;
 }
 
-.placeholder {
-    width: 5vh;
-}
-
 /*   pageTop vidurys  */
 .navLinks {
     display: flex;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 2vh 14vw;
+    padding: 2vh 16vw;
     justify-content: center;
-    /* border-image: url("../images/city-skyscraper.png"); */
-    /* border: 10px solid transparent; */
-    /* border-color: rgba(0, 0, 0, 0.01); */
 }
 
 /*   pageTop vidurio tekstas (list items)   */
 .navLinks li {
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0 2vw;
     list-style: none;
 }
 
@@ -180,22 +173,21 @@ h4 {
     background-color: #DE9B35;
     color: #1a1c20;
     border: none;
-    border-radius: 50px;
+    border-radius: 1em;
     cursor: pointer;
-    transition: background-color 0.3s ease 0s;
-    transition: border-radius 0.5s ease 0s;
+    transition: background-color 0.3s,
+                border-radius 0.5s;
 }
 #homeBtn:hover {
-    border-radius: 14px;
+    border-radius: 0.9em;
     background-color: #E2A850;
-    transition: all 0.3s ease 0s;
+    transition: 0.3s;
 }
 
 
 /*   settings mygtukas   */
 #settingsButton {
-    padding: 5px;
-    border-radius: 10px;
+    border-radius: 1em;
     cursor: pointer;
 }
 
@@ -203,19 +195,17 @@ h4 {
 .settings {
     display: none;
     position: absolute;
-    right: 0cm;
-    top: 2cm;
+    right: 0;
+    top: 10%;
     z-index: 3;
     background-color: rgb(192, 192, 192);
-    width: 6cm;
+    width: 15%;
     user-select: none;
-    /* opacity: 0; */
     transition: 0.3s;
 }
 
 .transition {
-    right: 2cm;
-    /* opacity: 1; */
+    right: 5%;
 }
 
 .settings div:not(:last-child) {
@@ -288,6 +278,7 @@ main {
     z-index: 1;
 }
 
+/*   nebenaudosim   */
 /*   bendras block'ų (popup'ų) stilius   */
 .smokesList {
     display: grid;
@@ -298,6 +289,7 @@ main {
     margin-right: 50px;
 }
 
+/*   nenaudosim   */
 /*   Kiekvieno block'o stilius   */
 .smokeBox {
     display: inline-block;
@@ -324,7 +316,7 @@ main {
     opacity: 0;
     visibility: hidden;
     z-index: 2;
-    transition: all 0.1s ease 0s;
+    transition: all 0.2s ease 0s;
 }
 
 /*   popup pozicija ir stilius   */
@@ -336,10 +328,15 @@ main {
     right: 0;
     margin: auto;
     width: 85em;
-    height: 43em;;
+    height: 43em;
     background-color: rgba(241, 236, 231, 0.95);
     vertical-align: middle;
     border-radius: 5px;
+}
+
+#popup {
+    transform: scale(0);
+    transition: transform 0.2s ease 0s;
 }
 
 /*   popup uždarymo mygtukas   */
@@ -348,6 +345,14 @@ main {
     cursor: pointer;
     float: right;
     right: 15px;
+    top: 10px;
+}
+#imgBackIcon {
+    position: absolute;
+    cursor: pointer;
+    float: right;
+    visibility: hidden;
+    left: 15px;
     top: 10px;
 }
 
@@ -393,7 +398,7 @@ main {
     margin-top: -50px;
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.5em;
     user-select: none;
     -webkit-user-select: none;
 }
@@ -429,9 +434,17 @@ main {
 }
 
 /*   watch video ir favorite bendras tekstas   */
-.popupText {
+
+.smokeInstructions {
+    margin: 0 0.5em;
+    letter-spacing: 1pt;
+}
+
+#photoVideoBtn {
+    position: absolute;
     display: inline-block;
     cursor: pointer;
+    visibility: hidden;
 
     font-family: 'Montserrat';
     font-weight: 700;
@@ -439,21 +452,14 @@ main {
     font-style: italic;
     font-size: 0.8em;
 
-    /* margin: 0.5em 0em 2em 3%; */
-    padding: 0.4% 1%;
-    height: 1%;
-    border-radius: 8px;
-    color: black;
-}
-
-.smokeInstructions {
-    margin: 0;
-    letter-spacing: 1pt;
-}
-
-.watchVideo {
+    top: 7em;
+    right: 1.5em;
+    padding: 0.4% 0.8%;
     margin-right: 3%;
+    /* height: 3%; */
+    border-radius: 0.4em;
     background-color: #0085da;
+    color: black;
 }
 
 

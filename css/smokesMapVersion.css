@@ -7,7 +7,8 @@
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    left: 1.94cm;
+    left: 2.5cm;
+    /* left: 1.94cm; */
     color: white;
 }
 
@@ -15,8 +16,7 @@
 .filters {
     display: flex;
     flex-direction: column;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 0.6em;
     align-items: center;
     background-color: #DE9B35;
 }
@@ -34,7 +34,7 @@
     cursor: pointer;
     user-select: none;
 }
-}
+
 #tick1 {
     color: #4a9fff;
 }
@@ -64,10 +64,6 @@
     cursor: pointer;
 }
 
-/* .filters [class^="fas fa-cloud"], [class^="fas fa-fire"], [class^="fas fa-bolt"], [class^="fas fa-bomb"] {
-    width: 100%;
-    height: 100%;
-} */
 
 .filterList [class^="fas fa-cloud"] {
     color: #6b6b6b;
@@ -81,6 +77,7 @@
 .filterList [class^="fas fa-bomb"] {
     color: #081600;
 }
+
 
 /*   Puslapis   */
 .pageBox {
@@ -120,7 +117,7 @@
 
 .smokesListMap {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     align-items: center;
     column-gap: 2%;
     margin: 0 3em;
@@ -128,35 +125,58 @@
 }
 
 .smokeBoxMap {
+    position: relative;
     display: inline-block;
     cursor: pointer;
     user-select: none;
     align-self: center;
-    width: 10em;
-    padding-bottom: 1em;
-    background-image: url(../images/textures/concrete-wall.png);
-    background-color: #f5f5f5;
+    width: 100%;
+    background-color: #e4e4e4;
     border: #3D3D3D 2px solid;
-    border-radius: 1em;
+    border-radius: 0.4em;
     transition: all 0.2s ease 0.1s;
 }
 
 .smokeBoxMap:hover {
-    width: 9em;
+    transform: scale(0.95);
+}
+
+.smokeBoxMap h3 {
+    position: relative;
+    margin: 1em 0 2em;
+    line-height: inherit;
+    font-size: .85em;
+    z-index: 2;
 }
 
 .smokeBoxMap [class^="fas fa-arrow-alt-circle-up"] {
-    font-size: 20px;
+    font-size: 1.2em;
+    color: #aa9227;
 }
 
-.smokeBoxMap .placeholder {
-    padding-top: 20px;
+.smokeBoxMap [class^="fas fa-cloud fa-10x"] {
+    position: absolute;
+    top: 8.5%;
+    left: 0;
+    right: 0;
+    color: #5e5e5e;
+    font-size: 11rem;
+    opacity: 0.4;
 }
 
 .smokeBoxMap img {
+    position: relative;
     -webkit-user-drag: none;
-    width: 94%;
+    width: 85%;
     border-radius: 5px;
+}
+
+#views {
+    position: relative;
+    font-size: .6em;
+    text-align: start;
+    margin: 1em 0 1em 1em;
+    z-index: 1000;
 }
 
 #iframe iframe {

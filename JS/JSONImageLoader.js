@@ -22,10 +22,14 @@ function mirageGalleryLoad(loc, id, data) {
     instructions = data.mirage[loc].smokes[id].thrdesc;
 
     document.getElementById('imgSrc').src = images[0];
+    document.getElementById('photoVideoBtn').style.visibility = "visible";
+    document.getElementById('imgBackIcon').style.visibility = "visible";
+    document.getElementById('photoVideoBtn').setAttribute("onclick", "playVideo(" + loc + "," + id + ")");
+    document.getElementById('imgBackIcon').setAttribute("onclick", "backPage(" + loc + ");");
 
     // šits sutvarko popup. Kažkur kitur reiks numest
     // įdeda rodyklytes
-    document.getElementById('popupPhoto').innerHTML += "<a class='fas fa-chevron-left imgPrev' id='nextImg' onclick='previousImage()'></a><a class='fas fa-chevron-right imgNext' id='prevImg' onclick='nextImage()'></a><div class='smokeDescription'><div class='watchVideo popupText' onclick='playVideo()'><i class='fas fa-play'></i> watch the video</div><p class='smokeInstructions' id='smokeInstructions'><p></div>";
+    document.getElementById('popupPhoto').innerHTML += "<a class='fas fa-caret-left imgPrev' id='nextImg' onclick='previousImage()'></a><a class='fas fa-caret-right imgNext' id='prevImg' onclick='nextImage()'></a><div class='smokeDescription'><p class='smokeInstructions' id='smokeInstructions'><p></div>";
 
     // kad neliktu box, kai paspaudi
     document.getElementById('JSONinfo').innerHTML = "";

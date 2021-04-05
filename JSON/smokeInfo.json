@@ -3,31 +3,31 @@
         {
             "smokes":[
                 {
-                    "from": "1.1",
+                    "from": "From alley",
                     "desc": "jumpthrow",
                     "oneway": true,
                     "img": 
                     [
-                        "../images/Smokes/Overpass/overpass_monster1_after.jpg", 
                         "../images/Smokes/Overpass/overpass_monster1_before1.jpg", 
-                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
                     ],
                     "thrdesc":
                     [
-                        "result",
+                        "result result result result result result result result result result result result result result result result result result result result result result result result result result result result result result",
                         "1. Crouch",
                         "2. Stand-up and jumpthrow"
                     ]
                 },
                 {
-                    "from": "1.2",
+                    "from": "From CT",
                     "desc": "jumpthrow",
                     "oneway": false,
                     "img": 
                     [
-                        "../images/Smokes/Overpass/overpass_monster1_after.jpg", 
                         "../images/Smokes/Overpass/overpass_monster1_before1.jpg", 
-                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
                     ],
                     "thrdesc":
                     [

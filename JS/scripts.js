@@ -7,8 +7,11 @@ let prev = document.getElementById('prevImg');
 let img = document.getElementById('imgSrc');
 let vid = document.getElementById('iframe');
 let instr = document.getElementById('smokeInstructions');
-let popupId = document.getElementById('mainPopup');
-let mapMainImg = document.getElementById("mapMainImg");
+let mainPopup = document.getElementById('mainPopup');
+let mapMainImg = document.getElementById('mapMainImg');
+let photoVideoBtn = document.getElementById('photoVideoBtn');
+let imgBackIcon = document.getElementById('imgBackIcon');
+let photoVideoSwap = document.getElementById('photoVideoSwap');
 
 function escapePopup(event) {
     if (event.key === 'Escape') {
@@ -17,24 +20,37 @@ function escapePopup(event) {
 }
 
 function showPopup() {
-    popupId.style.visibility = "visible";
-    popupId.style.opacity = "1";
-    // side bar panaikina
+    mainPopup.style.visibility = "visible";
+    mainPopup.style.opacity = "1";
     document.body.style.overflow = "hidden";
+    document.getElementById('popup').style.transform = "scale(1)";
 
     // Nuotraukos isjungimas, paspaudus Escape mygtuka
     document.addEventListener("keydown", escapePopup);
 }
 
 function hidePopup() {
-    popupId.style.visibility = "hidden";
-    popupId.style.opacity = "0";
     document.body.style.overflow = "visible";
+    document.getElementById('popup').style.transform = "scale(0)";
+    mainPopup.style.visibility = "hidden";
+    photoVideoBtn.style.visibility = "hidden";
+    imgBackIcon.style.visibility = "hidden";
+    mainPopup.style.opacity = "0";
+    quitVideo();
 
     document.removeEventListener("keydown", escapePopup);
         setTimeout(() => {
             clearPopup();
+            photoVideoBtn.style.visibility = "hidden";
         }, 100);
+}
+
+function backPage(loc) {
+    clearPopup();
+    getData(loc);
+    quitVideo();
+    photoVideoBtn.style.visibility = "hidden";
+    imgBackIcon.style.visibility = "hidden";
 }
 
 
@@ -72,33 +88,41 @@ function chColor(id) {
     }
 }
 
-let check = false;
+let checkClose = false;
+let checkOpen = true;
 let settingsId = document.getElementById('settingsId');
 let settingOpacity = 0;
 
 // display neveikia su transition ;(
+// galbut veiks  su scale
 function openMenu() {
-    settingsId.style.display = 'block';
-    setTimeout(() => {
-        settingsId.classList.add('transition');
-    }, 10);
-    
-    settingsId.style.opacity = '1';
-    // jeigu be check, iskart suveiktu closeMenu ir uzdarytu settings
-    document.body.setAttribute("onclick", "closeMenu()");
+    if (checkOpen) {
+        settingsId.style.display = 'block';
+        setTimeout(() => {
+            settingsId.classList.add('transition');
+        }, 10);
+        
+        settingsId.style.opacity = '1';
+        // jeigu be check, iskart suveiktu closeMenu ir uzdarytu settings
+        document.body.setAttribute("onclick", "closeMenu()");
+        document.getElementById('settingsButton').removeAttribute("onclick", "openMenu()");
+        checkOpen = false;
+    }
 }
 
 function closeMenu() {
-    if (check) {
+    if (checkClose) {
         setTimeout(() => {
             settingsId.style.display = 'none';
         }, 300);
         document.body.removeAttribute("onclick");
         settingsId.classList.remove('transition');
         settingsId.style.opacity = '0';
-        check = false;
+        checkClose = false;
+        checkOpen = true;
     } else {
-        check = true;
+        checkClose = true;
+        document.getElementById('settingsButton').setAttribute("onclick", "openMenu()");
     }
 }
 
@@ -108,7 +132,7 @@ let loadVideoOnly = false;
 // nustatymu onclick pakeitimai (prastai padariau kol kas)
 function settingChange(setting) {
     // closeMenu kitaip suveiks ir uždarys settings
-    check = false;
+    checkClose = false;
     if (setting == "userTheme") {
         if (!userTheme) {
             userTheme = true;

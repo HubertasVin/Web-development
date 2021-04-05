@@ -15,13 +15,13 @@ function getData(loc) {
 function mirageSmokeLoad(loc, data) {
     let result = "";
     for (let i = 0; i < Object.keys(data.mirage[loc].smokes).length; i++) {
-        result += "<div class='smokeBoxMap' id='smokeBoxMap' onclick='getDataImg(" + loc + "," + i + ")'><h3>" + data.mirage[loc].smokes[i].from + "<i class='fas fa-cloud fa-1x'></i></h3><h4>";
+        result += "<div class='smokeBoxMap' id='smokeBoxMap' onclick='getDataImg(" + loc + "," + i + ")'><h3>" + data.mirage[loc].smokes[i].from + "";
 
         if (data.mirage[loc].smokes[i].oneway == true) {
-            result += "<i class='fas fa-arrow-alt-circle-up fa-1x' title='One-Way Smoke'></i></h4><img src='" + data.mirage[loc].smokes[i].img[1] + "'></img></div>";
-        } else {
-            result += "<div class='placeholder'></div></h4><img src='" + data.mirage[loc].smokes[i].img[1] + "'></img></div>";
+            result += "<i class='fas fa-arrow-alt-circle-up fa-1x' title='One-Way Smoke'></i>";
         }
+
+        result += "</h3><i class='fas fa-cloud fa-10x'></i><img src='" + data.mirage[loc].smokes[i].img[0] + "'></img><h3 id='views'>views</h3></div>";
     }
     document.getElementById('JSONinfo').innerHTML = result;
 }

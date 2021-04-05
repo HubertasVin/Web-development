@@ -11,7 +11,7 @@
 <!--  preload ir settings menu uzdarys kai kur nors paspaus  -->
 <body onload="preloadPage()" onclick="closeMenu()">
     <header class="pageTop">
-        <script language="javascript" type="text/javascript" src="subHTML/pageTop.txt"></script>
+        <script language="javascript" type="text/javascript" src="subHTML/pageTop.js"></script>
     </header>
     <!-- Virsutine navigacija filtrams -->
     <nav class="filterList">
@@ -21,7 +21,7 @@
             <span onclick="chColor('type3')"><i id="type3" class="fas fa-bolt fa-2x"></i></span>
             <span onclick="chColor('type4')"><i id="type4" class="fas fa-bomb fa-2x"></i></span>
         </div>
-        <span class="filterType">tps</span>
+        <span class="filterType">ticks</span>
         <div class="filters">
             <span class="tick" id="tick1" onclick="chColor('tick1')">64</span>
             <span class="tick" id="tick2" onclick="chColor('tick2')">128</span>
@@ -30,7 +30,7 @@
 
     <!--  Šono navigacija i skirtingus map'us  -->
     <nav class="mapIconList">
-        <script language="javascript" type="text/javascript" src="subHTML/mapIconList.txt"></script>
+        <script language="javascript" type="text/javascript" src="subHTML/mapIconList.js"></script>
     </nav>
 
     <main style="background-color: #222222;">
@@ -46,14 +46,16 @@
 
         <!-- popup'as -->
         <div class="popupBackground" id="mainPopup">
-            <div class="popup">
-                <p class="smokeTitle">Monster-Tracks smoke</p>
+            <div class="popup" id="popup">
+                <p class="smokeTitle">Bench smoke</p>
                 <span id="iframe"></span>
                 <div class="popupPhoto" id="popupPhoto">
                     <img id="imgSrc"/>
                 </div>
+                <div id='photoVideoBtn' onclick='playVideo()'><i class="fas fa-film fa-2x" id="photoVideoSwap"></i></div>
                 <section class="smokesListMap" id="JSONinfo"></section>
                 <i class="fas fa-times fa-2x" id="imgCloseIcon" onclick="hidePopup(); clearPopup()"></i>
+                <i class="fas fa-arrow-left fa-2x" id="imgBackIcon" onclick="backPage()"></i>
             </div>
         </div>
     </main>
