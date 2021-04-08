@@ -54,6 +54,7 @@ p {
     background-color: rgb(40, 40, 40);
     border: none;
     padding: 0.6em 1.5em;
+    color: white;
 }
 .about:hover {
     transition: all 0.3s ease 0s;

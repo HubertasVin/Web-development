@@ -212,15 +212,21 @@ h4 {
     border-bottom: rgb(225, 230, 165) 3px solid;
 }
 
-.settings div {
+.settings div div {
     padding: 1em;
 }
 
-.settings div:hover {
+.settings div div:hover {
     cursor: pointer;
-    background-color: #d6d6d6;
+    background-color: #80bd6e;
 }
 
+
+.group::before, .group::after {
+    content: "";
+    display: block;
+    margin: 0.5em;
+}
 
 
 
@@ -289,6 +295,7 @@ main {
     margin-right: 50px;
 }
 
+
 /*   nenaudosim   */
 /*   Kiekvieno block'o stilius   */
 .smokeBox {
@@ -327,8 +334,8 @@ main {
     left: 0;
     right: 0;
     margin: auto;
-    width: 85em;
-    height: 43em;
+    width: 90%;
+    height: 90%;
     background-color: rgba(241, 236, 231, 0.95);
     vertical-align: middle;
     border-radius: 5px;

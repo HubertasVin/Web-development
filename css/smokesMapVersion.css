@@ -8,7 +8,6 @@
     transform: translate(-50%, -50%);
     text-align: center;
     left: 2.5cm;
-    /* left: 1.94cm; */
     color: white;
 }
 
@@ -21,8 +20,37 @@
     background-color: #DE9B35;
 }
 
+/*   borderiai   */
+#type1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#type4 {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#tick1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#tick2 {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#tick1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #4a9fff;
+}
+#tick2 {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #76ff82;
+}
+
 /*   išvienodinu ilgius tarp type ir tick   */
-.filters span i, .tick {
+.filters span i, .filters span div {
     width: 3rem;
     padding: 0.1em 0;
 }
@@ -33,13 +61,6 @@
     font-size: 0.9em;
     cursor: pointer;
     user-select: none;
-}
-
-#tick1 {
-    color: #4a9fff;
-}
-#tick2 {
-    color: #76ff82;
 }
 
 /*   mažiukas border   */
@@ -58,9 +79,8 @@
 }
 
 /*   filtrų hover   */
-.filters i:hover {
-    background-color: #c98b2f;
-    border-radius: 10px;
+.filters i:hover, .filters div:hover {
+    background-color: #b97b1d;
     cursor: pointer;
 }
 

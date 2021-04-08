@@ -77,12 +77,19 @@ function previousImage() {
     document.getElementById('smokeInstructions').innerHTML = instructions[index];
 }
 
+let typeActive = "type1";
+
 // filtru spalva pakeicia onclick (changeColor)
 function chColor(id) {
     let target = document.getElementById(id);
+
+    if (id.includes("type")) {
+        document.getElementById(typeActive).style.backgroundColor = "";
+        typeActive = id;
+    }
+
     if (target.style.backgroundColor == "") {
-        target.style.backgroundColor = "#c98b2f";
-        target.style.borderRadius = "10px";
+        target.style.backgroundColor = "#b97b1d";
     } else {
         target.style.backgroundColor = "";
     }
@@ -142,13 +149,13 @@ function settingChange(setting) {
             document.getElementById('userTheme').innerHTML = "Dark theme: false";
         }
     }
-    if (setting == "loadVideoOnly") {
+    if (setting == "loadVideoFirst") {
         if (!loadVideoOnly) {
             loadVideoOnly = true;
-            document.getElementById('loadVideoOnly').innerHTML = "Load video only: true";
+            document.getElementById('loadVideoFirst').innerHTML = "Load video first: true";
         } else {
             loadVideoOnly = false;
-            document.getElementById('loadVideoOnly').innerHTML = "Load video only: false";
+            document.getElementById('loadVideoFirst').innerHTML = "Load video first: false";
         }
     }
 }
