@@ -16,15 +16,15 @@
     <!-- Virsutine navigacija filtrams -->
     <nav class="filterList">
         <div class="filters">
-            <span onclick="chColor('type1')"><i id="type1" style="background-color: #b97b1d;" class="fas fa-cloud fa-2x"></i></span>
+            <span onclick="chColor('type1')"><i id="type1" class="fas fa-cloud fa-2x active"></i></span>
             <span onclick="chColor('type2')"><i id="type2" class="fas fa-fire fa-2x"></i></span>
             <span onclick="chColor('type3')"><i id="type3" class="fas fa-bolt fa-2x"></i></span>
             <span onclick="chColor('type4')"><i id="type4" class="fas fa-bomb fa-2x"></i></span>
         </div>
         <span class="filterType">ticks</span>
         <div class="filters">
-            <span class="tick" onclick="chColor('tick1')"><div id="tick1">64</div></span>
-            <span class="tick" onclick="chColor('tick2')"><div id="tick2">128</div></span>
+            <span class="tick" onclick="chColor('tick1')"><div id="tick1" class="active">64</div></span>
+            <span class="tick" onclick="chColor('tick2')"><div id="tick2" class="active">128</div></span>
         </div>
     </nav>
 
@@ -52,7 +52,10 @@
                 <div class="popupPhoto" id="popupPhoto">
                     <img id="imgSrc"/>
                 </div>
-                <div id='photoVideoBtn' onclick='playVideo()'><i class="fas fa-film fa-2x" id="photoVideoSwap"></i></div>
+                <div id='photoVideoBtn' onclick='playVideo()'>
+                    <div id="btnDescription">Play video</div>
+                    <i class="fas fa-film fa-2x" id="photoVideoSwap"></i>
+                </div>
                 <section class="smokesListMap" id="JSONinfo"></section>
                 <i class="fas fa-times fa-2x" id="imgCloseIcon" onclick="hidePopup(); clearPopup()"></i>
                 <i class="fas fa-arrow-left fa-2x" id="imgBackIcon" onclick="backPage()"></i>

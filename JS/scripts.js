@@ -84,14 +84,14 @@ function chColor(id) {
     let target = document.getElementById(id);
 
     if (id.includes("type")) {
-        document.getElementById(typeActive).style.backgroundColor = "";
+        document.getElementById(typeActive).classList.remove("active");
         typeActive = id;
     }
 
-    if (target.style.backgroundColor == "") {
-        target.style.backgroundColor = "#b97b1d";
+    if (target.classList.contains("active")) {
+        target.classList.remove("active");
     } else {
-        target.style.backgroundColor = "";
+        target.classList.add("active");
     }
 }
 
@@ -134,7 +134,7 @@ function closeMenu() {
 }
 
 let userTheme = false;
-let loadVideoOnly = false;
+let loadVideoFirst = false;
 
 // nustatymu onclick pakeitimai (prastai padariau kol kas)
 function settingChange(setting) {
@@ -150,11 +150,11 @@ function settingChange(setting) {
         }
     }
     if (setting == "loadVideoFirst") {
-        if (!loadVideoOnly) {
-            loadVideoOnly = true;
+        if (!loadVideoFirst) {
+            loadVideoFirst = true;
             document.getElementById('loadVideoFirst').innerHTML = "Load video first: true";
         } else {
-            loadVideoOnly = false;
+            loadVideoFirst = false;
             document.getElementById('loadVideoFirst').innerHTML = "Load video first: false";
         }
     }

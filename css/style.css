@@ -198,18 +198,16 @@ h4 {
     right: 0;
     top: 10%;
     z-index: 3;
-    background-color: rgb(192, 192, 192);
+    background-color: rgb(201, 201, 201);
     width: 15%;
     user-select: none;
+    border-top: 3px solid #b69e17;
+    border-bottom: 3px solid #b69e17;
     transition: 0.3s;
 }
 
 .transition {
     right: 5%;
-}
-
-.settings div:not(:last-child) {
-    border-bottom: rgb(225, 230, 165) 3px solid;
 }
 
 .settings div div {
@@ -218,14 +216,14 @@ h4 {
 
 .settings div div:hover {
     cursor: pointer;
-    background-color: #80bd6e;
+    background-color: #9fa09a;
 }
 
 
 .group::before, .group::after {
     content: "";
     display: block;
-    margin: 0.5em;
+    margin: 0.2em;
 }
 
 
@@ -450,25 +448,26 @@ main {
 #photoVideoBtn {
     position: absolute;
     display: inline-block;
-    cursor: pointer;
     visibility: hidden;
+    top: 48%;
+    transform: translateY(-50%);
+    right: 4%;
 
     font-family: 'Montserrat';
     font-weight: 700;
     font-weight: bold;
     font-style: italic;
     font-size: 0.8em;
-
-    top: 7em;
-    right: 1.5em;
-    padding: 0.4% 0.8%;
-    margin-right: 3%;
-    /* height: 3%; */
-    border-radius: 0.4em;
-    background-color: #0085da;
-    color: black;
 }
 
+#photoVideoBtn i {
+    margin-top: 0.2em;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    padding: 0.2em 0.4em;
+    background-color: #DE9B35;
+    border: 2px solid  rgb(102, 102, 102);
+}
 
 
 /* FOOTER */

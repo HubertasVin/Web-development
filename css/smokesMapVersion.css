@@ -15,37 +15,37 @@
 .filters {
     display: flex;
     flex-direction: column;
-    border-radius: 0.6em;
+    border-radius: 0.6rem;
     align-items: center;
     background-color: #DE9B35;
 }
 
 /*   borderiai   */
 #type1 {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
 }
 #type4 {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
 }
 #tick1 {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
 }
 #tick2 {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
 }
 
 #tick1 {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
     color: #4a9fff;
 }
 #tick2 {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
     color: #76ff82;
 }
 
@@ -80,8 +80,12 @@
 
 /*   filtrų hover   */
 .filters i:hover, .filters div:hover {
-    background-color: #b97b1d;
+    background-color: #b67623;
     cursor: pointer;
+}
+
+.active {
+    background-color: #a76604;
 }
 
 

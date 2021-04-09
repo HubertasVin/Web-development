@@ -4,22 +4,8 @@ let images;
 let instructions;
 
 function getDataImg(loc, id) {
-    fetch("../JSON/smokeInfo.json")
-        .then((resp) => {
-            return resp.json();
-        })
-        .then((data) => {
-            if (localStorage.getItem('currentMap') === "mirage") {
-                mirageGalleryLoad(loc, id, data);
-            } else {
-
-            }
-        });
-}
-
-function mirageGalleryLoad(loc, id, data) {
-    images = data.mirage[loc].smokes[id].img;
-    instructions = data.mirage[loc].smokes[id].thrdesc;
+    images = JSONdata.mirage[loc].smokes[id].img;
+    instructions = JSONdata.mirage[loc].smokes[id].thrdesc;
 
     document.getElementById('imgSrc').src = images[0];
     document.getElementById('photoVideoBtn').style.visibility = "visible";
