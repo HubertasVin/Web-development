@@ -9,15 +9,20 @@ function getData(loc) {
         })
         .then((data) => {
             JSONdata = data;
-            if (localStorage.getItem('currentMap') === "mirage") {
-                mirageSmokeLoad(loc)
-            }
+            if (localStorage.getItem('currentMap') === "mirage")
+                map = JSONdata.mirage;
+            else if (localStorage.getItem('currentMap') === "inferno")
+                map = JSONdata.inferno;
+            smokeLoad(loc)
         });
 }
 
-function mirageSmokeLoad(loc) {
+function smokeLoad(loc) {
     let result = "";
-    for (let i = 0; i < Object.keys(JSONdata.mirage[loc].smokes).length; i++) {
+
+    document.getElementById('smokeTitle').innerHTML = map[loc].title;
+    
+    for (let i = 0; i < Object.keys(map[loc].smoke).length; i++) {
         result += "<div class='smokeBoxMap' id='smokeBoxMap' ";
 
         // iškart užkraus video jeigu per settings pasirinkai  taip
@@ -28,15 +33,15 @@ function mirageSmokeLoad(loc) {
         }
 
         // box apibudinimas
-        result += "><h3>" + JSONdata.mirage[loc].smokes[i].from;
+        result += "><h3>" + map[loc].smoke[i].from;
 
         // ar one way
-        if (JSONdata.mirage[loc].smokes[i].oneway == true) {
+        if (map[loc].smoke[i].oneway == true) {
             result += "<i class='fas fa-arrow-alt-circle-up fa-1x' title='One-Way Smoke'></i>";
         }
 
         // nuotrauka ir views
-        result += "</h3><i class='fas fa-cloud fa-10x'></i><img src='" + JSONdata.mirage[loc].smokes[i].img[0] + "'></img><h3 id='views'>views</h3></div>";
+        result += "</h3><i class='fas fa-cloud fa-10x'></i><img src='" + map[loc].smoke[i].img[0] + "'></img><h3 id='views'>views</h3></div>";
     }
     document.getElementById('JSONinfo').innerHTML = result;
 }
@@ -45,5 +50,7 @@ function clearPopup() {
     document.getElementById('JSONinfo').innerHTML = "";
     document.getElementById('iframe').innerHTML = "";
     document.getElementById('popupPhoto').innerHTML = "<img id='imgSrc'/>";
+    document.removeEventListener("keydown", browseImagesKeyEvent);
+    document.getElementById('popupPhoto').style.boxShadow = "";
 }
 

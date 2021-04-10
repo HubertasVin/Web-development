@@ -131,7 +131,7 @@ h4 {
 .topWords {
     font-family: "Comfortaa";
     font-weight: 700;
-    color:rgb(10, 10, 10);
+    color:#0a0a0a;
     text-decoration: none;
 }
 
@@ -191,24 +191,26 @@ h4 {
     cursor: pointer;
 }
 
-/*   DISPLAY NELEIDZIA TRANSITION ;(((   */
+/*   DISPLAY NELEIDZIA TRANSITION   */
 .settings {
     display: none;
     position: absolute;
     right: 0;
     top: 10%;
+    right: 5%;
     z-index: 3;
-    background-color: rgb(201, 201, 201);
+    background-color: #e4e2e0fa;
     width: 15%;
+    opacity: 0.9;
     user-select: none;
     border-top: 3px solid #b69e17;
     border-bottom: 3px solid #b69e17;
     transition: 0.3s;
 }
 
-.transition {
+/* .transition {
     right: 5%;
-}
+} */
 
 .settings div div {
     padding: 1em;
@@ -362,7 +364,7 @@ main {
 }
 
 /*   popup pavadinimo pozicija   */
-.smokeTitle {
+#smokeTitle {
     display: inline-block;
     font-family: 'Montserrat';
     font-weight: 600;
@@ -381,7 +383,6 @@ main {
     position: relative;
     max-width: 75%;
     margin: 0 auto;
-    box-shadow: 1px 1px 20px 1px black;
     overflow: hidden;
 }
 
@@ -451,7 +452,8 @@ main {
     visibility: hidden;
     top: 48%;
     transform: translateY(-50%);
-    right: 4%;
+    right: 3%;
+    width: 7%;
 
     font-family: 'Montserrat';
     font-weight: 700;

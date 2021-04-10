@@ -1,7 +1,8 @@
 {
     "mirage":[
         {
-            "smokes":[
+            "title": "Bench",
+            "smoke":[
                 {
                     "from": "From alley",
                     "desc": "jumpthrow",
@@ -18,7 +19,7 @@
                         "2. Stand-up and jumpthrow",
                         "result"
                     ],
-                    "videoSrc": "<iframe id='iframe' src='https://www.youtube.com/embed/zInlDBuwu4k?loop=1&modestbranding=1' frameborder='0' allowfullscreen></iframe>"
+                    "videoSrc": "<iframe src='https://www.youtube.com/embed/zInlDBuwu4k?loop=1&modestbranding=1' frameborder='0' allowfullscreen></iframe>"
                 },
                 {
                     "from": "From CT",
@@ -36,12 +37,22 @@
                         "2. Stand-up and jumpthrow",
                         "result"
                     ],
-                    "videoSrc": "<iframe id='iframe' src='https://www.youtube.com/embed/zInlDBuwu4k?loop=1&modestbranding=1' frameborder='0' allowfullscreen></iframe>"
+                    "videoSrc": "<iframe src='https://www.youtube.com/embed/zInlDBuwu4k?loop=1&modestbranding=1' frameborder='0' allowfullscreen></iframe>"
                 }
+            ],
+            "molotov": [
+                
+            ],
+            "flash": [
+
+            ],
+            "explosive": [
+
             ]
         },
         {
-            "smokes":[
+            "title": "Apps",
+            "smoke":[
                 {
                     "from": "2.1",
                     "desc": "jumpthrow",
@@ -58,7 +69,7 @@
                         "2. Stand-up and jumpthrow",
                         "result"
                     ],
-                    "videoSrc": "<iframe id='iframe' src='https://www.youtube.com/embed/zInlDBuwu4k?loop=1&modestbranding=1' frameborder='0' allowfullscreen></iframe>"
+                    "videoSrc": "<iframe src='https://www.youtube.com/embed/zInlDBuwu4k?loop=1&modestbranding=1' frameborder='0' allowfullscreen></iframe>"
                 },
                 {
                     "from": "2.2",
@@ -76,8 +87,17 @@
                         "2. Stand-up and jumpthrow",
                         "result"
                     ],
-                    "videoSrc": "<iframe id='iframe' src='https://www.youtube.com/embed/zInlDBuwu4k?loop=1&modestbranding=1' frameborder='0' allowfullscreen></iframe>"
+                    "videoSrc": "<iframe src='https://www.youtube.com/embed/zInlDBuwu4k?loop=1&modestbranding=1' frameborder='0' allowfullscreen></iframe>"
                 }
+            ],
+            "molotov": [
+                
+            ],
+            "flash": [
+
+            ],
+            "explosive": [
+                
             ]
         }
     ]

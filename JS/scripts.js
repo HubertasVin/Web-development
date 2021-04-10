@@ -48,6 +48,7 @@ function hidePopup() {
 function backPage(loc) {
     clearPopup();
     getData(loc);
+    // bug kai bandai grįžti iš video
     quitVideo();
     photoVideoBtn.style.visibility = "hidden";
     imgBackIcon.style.visibility = "hidden";
@@ -77,39 +78,83 @@ function previousImage() {
     document.getElementById('smokeInstructions').innerHTML = instructions[index];
 }
 
-let typeActive = "type1";
+// judėti tarp nuotraukų su rodyklytem
+function browseImagesKeyEvent(e) {
+    if (e.key == "ArrowRight") {
+        if(index < images.length - 1) {
+            index++;
+        } else {
+            index = 0;
+        }
+        document.getElementById('imgSrc').src = images[index];
+        document.getElementById('smokeInstructions').innerHTML = instructions[index];
+    }
+    if (e.key === "ArrowLeft") {
+        if(index > 0) {
+            index--;
+        } else {
+            index = images.length - 1;
+        }
+        document.getElementById('imgSrc').src = images[index];
+        document.getElementById('smokeInstructions').innerHTML = instructions[index];
+    }
+}
 
-// filtru spalva pakeicia onclick (changeColor)
-function chColor(id) {
+let typeActive = "type1";
+let tickActive = 2;
+
+// filtru spalva pakeicia onclick (changeFilter)
+function chFilter(id) {
     let target = document.getElementById(id);
 
     if (id.includes("type")) {
         document.getElementById(typeActive).classList.remove("active");
         typeActive = id;
+        if (target.classList.contains("active")) {
+            target.classList.remove("active");
+        } else {
+            target.classList.add("active");
+        }
+
+        if (id.includes("type1")) {
+            getIconData("smoke");
+        }
+        else if (id.includes("type2")) {
+            getIconData("molotov");
+        }
+        else if (id.includes("type3")) {
+            getIconData("flash");
+        }
+        else {
+            getIconData("explosive");
+        }
     }
 
-    if (target.classList.contains("active")) {
-        target.classList.remove("active");
-    } else {
-        target.classList.add("active");
+    if (id.includes("tick")) {
+        if (tickActive > 1 && target.classList.contains("active")) {
+            target.classList.remove("active");
+            tickActive--;
+        } else if (tickActive === 1 && !target.classList.contains("active")) {
+            target.classList.add("active");
+            tickActive++;
+        }
     }
 }
 
 let checkClose = false;
 let checkOpen = true;
 let settingsId = document.getElementById('settingsId');
-let settingOpacity = 0;
 
 // display neveikia su transition ;(
-// galbut veiks  su scale
+// galbut veiks su scale arba visibility
 function openMenu() {
     if (checkOpen) {
         settingsId.style.display = 'block';
-        setTimeout(() => {
-            settingsId.classList.add('transition');
-        }, 10);
+        // setTimeout(() => {
+        //     settingsId.classList.add('transition');
+        // }, 10);
         
-        settingsId.style.opacity = '1';
+        // settingsId.style.opacity = '1';
         // jeigu be check, iskart suveiktu closeMenu ir uzdarytu settings
         document.body.setAttribute("onclick", "closeMenu()");
         document.getElementById('settingsButton').removeAttribute("onclick", "openMenu()");
@@ -121,10 +166,10 @@ function closeMenu() {
     if (checkClose) {
         setTimeout(() => {
             settingsId.style.display = 'none';
-        }, 300);
+        }, 0);
         document.body.removeAttribute("onclick");
-        settingsId.classList.remove('transition');
-        settingsId.style.opacity = '0';
+        // settingsId.classList.remove('transition');
+        // settingsId.style.opacity = '0';
         checkClose = false;
         checkOpen = true;
     } else {

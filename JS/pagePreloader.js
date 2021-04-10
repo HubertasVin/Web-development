@@ -6,9 +6,7 @@ function preloadPage() {
     if ('null' === localStorage.getItem('currentMap')) {
         localStorage.setItem('currentMap', 'mirage');
     }
-    if (window.location.pathname === "/html/smokesMapVersion.html") {
-        updatePage(localStorage.getItem('currentMap'));
-    }
+    updatePage(localStorage.getItem('currentMap'));
 }
 
 function updatePage(mapToUpdateTo) {
@@ -46,5 +44,5 @@ function updatePage(mapToUpdateTo) {
             mapMainImg.src = "../images/overviews/mirage_overview.webp";
             break;
     }
-    getIconData();
+    getIconData("smoke");
 }

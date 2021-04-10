@@ -1,33 +1,28 @@
 "use strict";
 
 let smokeIconDiv = document.getElementById('smokeIconHolder');
+let map;
 
-function getIconData() {
+function getIconData(type) {
     fetch("../JSON/smokeIcons.json")
         .then((resp) => {
             return resp.json();
         })
         .then((data) => {
-            loadIcons(data);
+            // object galima įeiti ne tik su .type bet ir [type]
+            if (localStorage.getItem('currentMap') === "mirage")
+                map = data.mirage[type];
+            else if (localStorage.getItem('currentMap') === "inferno")
+                map = data.inferno[type];
+            loadIcons();
         });
 }
 
-function loadIcons(data) {
-        let result = "";
-    if (localStorage.getItem('currentMap') === "mirage") {
-        smokeIconDiv.innerHTML = "";
-
-        for (let i = 0; i < Object.keys(data.mirage.bottom).length; i++) {
-            result += "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: " + data.mirage.bottom[i] + "%" + ";right: " + data.mirage.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
-        }
-        smokeIconDiv.innerHTML = result;
+function loadIcons() {
+    smokeIconDiv.innerHTML = "";
+    let result = "";
+    for (let i = 0; i < Object.keys(map.bottom).length; i++) {
+        result += "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: " + map.bottom[i] + "%" + ";right: " + map.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
     }
-    //  else if (localStorage.getItem('currentMap') === "inferno") {
-    //     smokeIconDiv.innerHTML = "";
-        
-    //     for (let i = 0; i < Object.keys(data.inferno).length; i++) {
-    //         result += data.inferno[i];
-    //     }
-    //     smokeIconDiv.innerHTML = result;
-    // }
+    smokeIconDiv.innerHTML = result;
 }

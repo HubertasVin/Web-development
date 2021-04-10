@@ -9,22 +9,22 @@
     <link rel="stylesheet" type="text/CSS" href="../css/smokesMapVersion.css">
 </head>
 <!--  preload ir settings menu uzdarys kai kur nors paspaus  -->
-<body onload="preloadPage()" onclick="closeMenu()">
+<body onload="preloadPage()">
     <header class="pageTop">
         <script language="javascript" type="text/javascript" src="subHTML/pageTop.js"></script>
     </header>
     <!-- Virsutine navigacija filtrams -->
     <nav class="filterList">
         <div class="filters">
-            <span onclick="chColor('type1')"><i id="type1" class="fas fa-cloud fa-2x active"></i></span>
-            <span onclick="chColor('type2')"><i id="type2" class="fas fa-fire fa-2x"></i></span>
-            <span onclick="chColor('type3')"><i id="type3" class="fas fa-bolt fa-2x"></i></span>
-            <span onclick="chColor('type4')"><i id="type4" class="fas fa-bomb fa-2x"></i></span>
+            <span onclick="chFilter('type1')"><i id="type1" class="fas fa-cloud fa-2x active"></i></span>
+            <span onclick="chFilter('type2')"><i id="type2" class="fas fa-fire fa-2x"></i></span>
+            <span onclick="chFilter('type3')"><i id="type3" class="fas fa-bolt fa-2x"></i></span>
+            <span onclick="chFilter('type4')"><i id="type4" class="fas fa-bomb fa-2x"></i></span>
         </div>
         <span class="filterType">ticks</span>
         <div class="filters">
-            <span class="tick" onclick="chColor('tick1')"><div id="tick1" class="active">64</div></span>
-            <span class="tick" onclick="chColor('tick2')"><div id="tick2" class="active">128</div></span>
+            <span class="tick" onclick="chFilter('tick1')"><div id="tick1" class="active">64</div></span>
+            <span class="tick" onclick="chFilter('tick2')"><div id="tick2" class="active">128</div></span>
         </div>
     </nav>
 
@@ -47,7 +47,7 @@
         <!-- popup'as -->
         <div class="popupBackground" id="mainPopup">
             <div class="popup" id="popup">
-                <p class="smokeTitle">Bench smoke</p>
+                <p id="smokeTitle">undefined</p>
                 <span id="iframe"></span>
                 <div class="popupPhoto" id="popupPhoto">
                     <img id="imgSrc"/>
