@@ -4,11 +4,10 @@ let playingVideo = true;
 
 function playVideo(loc, id) {
     // panaikina nuotrauka ir ideda video
-    // photoVideoBtn.style.visibility = "visible";
-    // imgBackIcon.style.visibility = "visible";
     if (playingVideo) {
         clearPopup();
-        document.getElementById('iframe').innerHTML = JSONdata.mirage[loc].smoke[id].videoSrc;
+        document.getElementById('iframeContainer').style.display = "block";
+        document.getElementById('iframe').src = JSONdata.mirage[loc].smoke[id].videoSrc + "?loop=1&modestbranding=1";
         document.getElementById('btnDescription').innerHTML = "Photo";
         photoVideoSwap.className = "far fa-image fa-2x";
         photoVideoBtn.setAttribute("onclick", "quitVideo(" + loc + "," + id + "," + true + ")");
@@ -19,6 +18,7 @@ function playVideo(loc, id) {
 function quitVideo(loc, id, check) {
     if (!playingVideo) {
         clearPopup();
+        document.getElementById('iframeContainer').style.display = "none";
         // be check jei spaudi backPage nepanaikina rodyklytes ir icon
         if (check) {
             getDataImg(loc, id);

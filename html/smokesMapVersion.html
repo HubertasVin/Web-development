@@ -16,10 +16,10 @@
     <!-- Virsutine navigacija filtrams -->
     <nav class="filterList">
         <div class="filters">
-            <span onclick="chFilter('type1')"><i id="type1" class="fas fa-cloud fa-2x active"></i></span>
-            <span onclick="chFilter('type2')"><i id="type2" class="fas fa-fire fa-2x"></i></span>
-            <span onclick="chFilter('type3')"><i id="type3" class="fas fa-bolt fa-2x"></i></span>
-            <span onclick="chFilter('type4')"><i id="type4" class="fas fa-bomb fa-2x"></i></span>
+            <span onclick="chFilter('type1', 'smoke')"><i id="type1" class="fas fa-cloud fa-2x active"></i></span>
+            <span onclick="chFilter('type2', 'molotov')"><i id="type2" class="fas fa-fire fa-2x"></i></span>
+            <span onclick="chFilter('type3', 'flash')"><i id="type3" class="fas fa-bolt fa-2x"></i></span>
+            <span onclick="chFilter('type4', 'explosive')"><i id="type4" class="fas fa-bomb fa-2x"></i></span>
         </div>
         <span class="filterType">ticks</span>
         <div class="filters">
@@ -48,7 +48,9 @@
         <div class="popupBackground" id="mainPopup">
             <div class="popup" id="popup">
                 <p id="smokeTitle">undefined</p>
-                <span id="iframe"></span>
+                <div id="iframeContainer" style="display: none;">
+                    <iframe id="iframe" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
                 <div class="popupPhoto" id="popupPhoto">
                     <img id="imgSrc"/>
                 </div>

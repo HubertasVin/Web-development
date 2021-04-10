@@ -4,8 +4,8 @@ let images;
 let instructions;
 
 function getDataImg(loc, id) {
-    images = JSONdata.mirage[loc].smoke[id].img;
-    instructions = JSONdata.mirage[loc].smoke[id].thrdesc;
+    images = map[loc][typeActive][id].img;
+    instructions = map[loc][typeActive][id].thrdesc;
 
     document.getElementById('imgSrc').src = images[0];
     document.getElementById('photoVideoBtn').style.visibility = "visible";

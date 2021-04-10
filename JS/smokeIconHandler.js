@@ -3,7 +3,7 @@
 let smokeIconDiv = document.getElementById('smokeIconHolder');
 let map;
 
-function getIconData(type) {
+function getIconData() {
     fetch("../JSON/smokeIcons.json")
         .then((resp) => {
             return resp.json();
@@ -11,9 +11,9 @@ function getIconData(type) {
         .then((data) => {
             // object galima įeiti ne tik su .type bet ir [type]
             if (localStorage.getItem('currentMap') === "mirage")
-                map = data.mirage[type];
+                map = data.mirage[typeActive];
             else if (localStorage.getItem('currentMap') === "inferno")
-                map = data.inferno[type];
+                map = data.inferno[typeActive];
             loadIcons();
         });
 }

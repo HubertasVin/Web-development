@@ -48,7 +48,6 @@ function hidePopup() {
 function backPage(loc) {
     clearPopup();
     getData(loc);
-    // bug kai bandai grįžti iš video
     quitVideo();
     photoVideoBtn.style.visibility = "hidden";
     imgBackIcon.style.visibility = "hidden";
@@ -100,33 +99,24 @@ function browseImagesKeyEvent(e) {
     }
 }
 
-let typeActive = "type1";
+let typeActiveID = "type1";
+let typeActive = "smoke";
 let tickActive = 2;
 
 // filtru spalva pakeicia onclick (changeFilter)
-function chFilter(id) {
+function chFilter(id, type) {
     let target = document.getElementById(id);
 
     if (id.includes("type")) {
-        document.getElementById(typeActive).classList.remove("active");
-        typeActive = id;
+        document.getElementById(typeActiveID).classList.remove("active");
+        typeActiveID = id;
         if (target.classList.contains("active")) {
             target.classList.remove("active");
-        } else {
-            target.classList.add("active");
-        }
-
-        if (id.includes("type1")) {
-            getIconData("smoke");
-        }
-        else if (id.includes("type2")) {
-            getIconData("molotov");
-        }
-        else if (id.includes("type3")) {
-            getIconData("flash");
-        }
+        } 
         else {
-            getIconData("explosive");
+            target.classList.add("active");
+            typeActive = type;
+            getIconData(typeActive);
         }
     }
 

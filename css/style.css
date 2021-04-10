@@ -218,7 +218,7 @@ h4 {
 
 .settings div div:hover {
     cursor: pointer;
-    background-color: #9fa09a;
+    background-color: #DE9B35;
 }
 
 
@@ -381,7 +381,7 @@ main {
 .popupPhoto {
     display: flex;
     position: relative;
-    max-width: 75%;
+    max-width: 73%;
     margin: 0 auto;
     overflow: hidden;
 }

@@ -203,12 +203,13 @@
     z-index: 1000;
 }
 
-#iframe {
+#iframeContainer {
     height: 100%;
     width: 100%;
 }
 
-#iframe iframe {
+#iframe {
+    box-shadow: black 1px 1px 20px 1px;
     width: 75%;
     height: 80%;
 }

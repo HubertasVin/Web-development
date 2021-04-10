@@ -20,7 +20,7 @@ function getData(loc) {
 function smokeLoad(loc) {
     let result = "";
 
-    document.getElementById('smokeTitle').innerHTML = map[loc].title;
+    document.getElementById('smokeTitle').innerHTML = map[loc].title + " " + typeActive;
     
     for (let i = 0; i < Object.keys(map[loc].smoke).length; i++) {
         result += "<div class='smokeBoxMap' id='smokeBoxMap' ";

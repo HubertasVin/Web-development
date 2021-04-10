@@ -19,7 +19,7 @@
                         "2. Stand-up and jumpthrow",
                         "result"
                     ],
-                    "videoSrc": "<iframe src='https://www.youtube.com/embed/zInlDBuwu4k?loop=1&modestbranding=1' frameborder='0' allowfullscreen></iframe>"
+                    "videoSrc": "https://www.youtube.com/embed/zInlDBuwu4k"
                 },
                 {
                     "from": "From CT",
@@ -37,7 +37,7 @@
                         "2. Stand-up and jumpthrow",
                         "result"
                     ],
-                    "videoSrc": "<iframe src='https://www.youtube.com/embed/zInlDBuwu4k?loop=1&modestbranding=1' frameborder='0' allowfullscreen></iframe>"
+                    "videoSrc": "https://www.youtube.com/embed/zInlDBuwu4k"
                 }
             ],
             "molotov": [
@@ -69,7 +69,7 @@
                         "2. Stand-up and jumpthrow",
                         "result"
                     ],
-                    "videoSrc": "<iframe src='https://www.youtube.com/embed/zInlDBuwu4k?loop=1&modestbranding=1' frameborder='0' allowfullscreen></iframe>"
+                    "videoSrc": "https://www.youtube.com/embed/zInlDBuwu4k"
                 },
                 {
                     "from": "2.2",
@@ -87,7 +87,7 @@
                         "2. Stand-up and jumpthrow",
                         "result"
                     ],
-                    "videoSrc": "<iframe src='https://www.youtube.com/embed/zInlDBuwu4k?loop=1&modestbranding=1' frameborder='0' allowfullscreen></iframe>"
+                    "videoSrc": "https://www.youtube.com/embed/zInlDBuwu4k"
                 }
             ],
             "molotov": [
