@@ -49,6 +49,7 @@ function smokeLoad(loc) {
 function clearPopup() {
     document.getElementById('JSONinfo').innerHTML = "";
     document.getElementById('iframe').innerHTML = "";
+    document.getElementById('iframe').src = "";
     document.getElementById('popupPhoto').innerHTML = "<img id='imgSrc'/>";
     document.removeEventListener("keydown", browseImagesKeyEvent);
     document.getElementById('popupPhoto').style.boxShadow = "";

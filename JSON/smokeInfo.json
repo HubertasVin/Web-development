@@ -6,6 +6,7 @@
                 {
                     "from": "From alley",
                     "desc": "jumpthrow",
+                    "tickrate": "128 64",
                     "oneway": true,
                     "img": 
                     [
@@ -19,25 +20,7 @@
                         "2. Stand-up and jumpthrow",
                         "result"
                     ],
-                    "videoSrc": "https://www.youtube.com/embed/zInlDBuwu4k"
-                },
-                {
-                    "from": "From CT",
-                    "desc": "jumpthrow",
-                    "oneway": false,
-                    "img": 
-                    [
-                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg", 
-                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
-                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
-                    ],
-                    "thrdesc":
-                    [
-                        "1. Crouch",
-                        "2. Stand-up and jumpthrow",
-                        "result"
-                    ],
-                    "videoSrc": "https://www.youtube.com/embed/zInlDBuwu4k"
+                    "videoSrc": "https://www.youtube.com/embed/FRxuATvLRik"
                 }
             ],
             "molotov": [
@@ -51,7 +34,7 @@
             ]
         },
         {
-            "title": "Apps",
+            "title": "Apps push",
             "smoke":[
                 {
                     "from": "2.1",
@@ -69,7 +52,7 @@
                         "2. Stand-up and jumpthrow",
                         "result"
                     ],
-                    "videoSrc": "https://www.youtube.com/embed/zInlDBuwu4k"
+                    "videoSrc": "https://www.youtube.com/embed/vxQZJr3k3dE"
                 },
                 {
                     "from": "2.2",
