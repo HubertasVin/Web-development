@@ -85,7 +85,8 @@
 }
 
 .active {
-    background-color: #a76604;
+    /* background-color: #a76604; */
+    background-color: #945a04;
 }
 
 
@@ -118,7 +119,6 @@
 .smokeIcon {
     position: absolute;
     cursor: pointer;
-    color: #d6d6d6;
     opacity: 0.8;
     transform: translate(50%, 50%);
     font-size: 2.2em;
@@ -159,10 +159,11 @@
     border: #3D3D3D 2px solid;
     border-radius: 0.4em;
     transition: all 0.2s ease 0.1s;
+    transform: scale(0.9);
 }
 
 .smokeBoxMap:hover {
-    transform: scale(0.95);
+    transform: scale(0.85);
 }
 
 .smokeBoxMap h3 {

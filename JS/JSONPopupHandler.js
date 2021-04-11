@@ -20,30 +20,35 @@ function getData(loc) {
 function smokeLoad(loc) {
     let result = "";
 
-    document.getElementById('smokeTitle').innerHTML = map[loc].title + " " + typeActive;
+    if (typeof map[loc] === "undefined") {
+        document.getElementById('smokeTitle').innerHTML = "undefined";
+    } 
+    else {
+        document.getElementById('smokeTitle').innerHTML = map[loc].title + " " + typeActive;
     
-    for (let i = 0; i < Object.keys(map[loc].smoke).length; i++) {
-        result += "<div class='smokeBoxMap' id='smokeBoxMap' ";
+        for (let i = 0; i < Object.keys(map[loc].smoke).length; i++) {
+            result += "<div class='smokeBoxMap' id='smokeBoxMap' ";
 
-        // iškart užkraus video jeigu per settings pasirinkai  taip
-        if (!loadVideoFirst) {
-            result += "onclick='getDataImg(" + loc + "," + i + ")'";
-        } else {
-            result += "onclick='playVideo(" + loc + "," + i + ")'";
+            // iškart užkraus video jeigu per settings pasirinkai  taip
+            if (localStorage.getItem('loadVideoFirst') == "false") {
+                result += "onclick='getDataImg(" + loc + "," + i + ")'";
+            } else {
+                result += "onclick='playVideo(" + loc + "," + i + ")'";
+            }
+
+            // smoke'o dėžės pavadinimas
+            result += "><h3>" + "from\ " + map[loc].smoke[i].from;
+
+            // ar one way
+            if (map[loc].smoke[i].oneway == true) {
+                result += "<i class='fas fa-arrow-alt-circle-up fa-1x' title='One-Way Smoke'></i>";
+            }
+
+            // nuotrauka ir views
+            result += "</h3><i class='fas fa-cloud fa-10x'></i><img src='" + map[loc].smoke[i].img[0] + "'></img><h3 id='views'>views</h3></div>";
         }
-
-        // box apibudinimas
-        result += "><h3>" + map[loc].smoke[i].from;
-
-        // ar one way
-        if (map[loc].smoke[i].oneway == true) {
-            result += "<i class='fas fa-arrow-alt-circle-up fa-1x' title='One-Way Smoke'></i>";
-        }
-
-        // nuotrauka ir views
-        result += "</h3><i class='fas fa-cloud fa-10x'></i><img src='" + map[loc].smoke[i].img[0] + "'></img><h3 id='views'>views</h3></div>";
+        document.getElementById('JSONinfo').innerHTML = result;
     }
-    document.getElementById('JSONinfo').innerHTML = result;
 }
 
 function clearPopup() {
@@ -54,4 +59,3 @@ function clearPopup() {
     document.removeEventListener("keydown", browseImagesKeyEvent);
     document.getElementById('popupPhoto').style.boxShadow = "";
 }
-

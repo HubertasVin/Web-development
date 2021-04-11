@@ -7,7 +7,7 @@ function playVideo(loc, id) {
     if (playingVideo) {
         clearPopup();
         document.getElementById('iframeContainer').style.display = "block";
-        document.getElementById('iframe').src = JSONdata.mirage[loc].smoke[id].videoSrc + "?vq=hd1080&modestbranding=1&autoplay=1&loop=1";
+        document.getElementById('iframe').src = "https://www.youtube.com/embed/" + JSONdata.mirage[loc].smoke[id].videoSrc + "?vq=hd1080&modestbranding=1&autoplay=1&loop=1";
         document.getElementById('btnDescription').innerHTML = "Photo";
         photoVideoSwap.className = "far fa-image fa-2x";
         photoVideoBtn.setAttribute("onclick", "quitVideo(" + loc + "," + id + "," + true + ")");

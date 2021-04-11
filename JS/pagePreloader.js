@@ -44,5 +44,5 @@ function updatePage(mapToUpdateTo) {
             mapMainImg.src = "../images/overviews/mirage_overview.webp";
             break;
     }
-    getIconData("smoke");
+    getIconData();
 }

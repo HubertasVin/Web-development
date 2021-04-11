@@ -11,9 +11,9 @@ function getIconData() {
         .then((data) => {
             // object galima įeiti ne tik su .type bet ir [type]
             if (localStorage.getItem('currentMap') === "mirage")
-                map = data.mirage[typeActive];
+                map = data.mirage[localStorage.getItem("typeActive")];
             else if (localStorage.getItem('currentMap') === "inferno")
-                map = data.inferno[typeActive];
+                map = data.inferno[localStorage.getItem("typeActive")];
             loadIcons();
         });
 }
@@ -21,8 +21,27 @@ function getIconData() {
 function loadIcons() {
     smokeIconDiv.innerHTML = "";
     let result = "";
-    for (let i = 0; i < Object.keys(map.bottom).length; i++) {
-        result += "<div class='fas fa-cloud fa-2x smokeIcon' style='bottom: " + map.bottom[i] + "%" + ";right: " + map.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
+
+    if (localStorage.getItem("typeActive") === "smoke") {
+        for (let i = 0; i < Object.keys(map.bottom).length; i++) {
+            result += "<div class='fas fa-cloud fa-2x smokeIcon' style='color: #d6d6d6; bottom: " + map.bottom[i] + "%" + ";right: " + map.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
+        }
     }
+    else if (localStorage.getItem("typeActive") === "molotov") {
+        for (let i = 0; i < Object.keys(map.bottom).length; i++) {
+            result += "<div class='fas fa-fire fa-2x smokeIcon' style='color: #e02d0d; bottom: " + map.bottom[i] + "%" + ";right: " + map.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
+        }
+    }
+    else if (localStorage.getItem("typeActive") === "flash") {
+        for (let i = 0; i < Object.keys(map.bottom).length; i++) {
+            result += "<div class='fas fa-bolt fa-2x smokeIcon' style='color: #eecf20; bottom: " + map.bottom[i] + "%" + ";right: " + map.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
+        }
+    }
+    else {
+        for (let i = 0; i < Object.keys(map.bottom).length; i++) {
+            result += "<div class='fas fa-bomb fa-2x smokeIcon' style='color: #000000; bottom: " + map.bottom[i] + "%" + ";right: " + map.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
+        }
+    }
+
     smokeIconDiv.innerHTML = result;
 }

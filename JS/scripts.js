@@ -2,16 +2,17 @@
 
 let index = 0;
 
-let next = document.getElementById('nextImg');
-let prev = document.getElementById('prevImg');
-let img = document.getElementById('imgSrc');
-let vid = document.getElementById('iframe');
-let instr = document.getElementById('smokeInstructions');
-let mainPopup = document.getElementById('mainPopup');
-let mapMainImg = document.getElementById('mapMainImg');
-let photoVideoBtn = document.getElementById('photoVideoBtn');
-let imgBackIcon = document.getElementById('imgBackIcon');
-let photoVideoSwap = document.getElementById('photoVideoSwap');
+const next = document.getElementById('nextImg');
+const prev = document.getElementById('prevImg');
+const img = document.getElementById('imgSrc');
+const vid = document.getElementById('iframe');
+const instr = document.getElementById('smokeInstructions');
+const mainPopup = document.getElementById('mainPopup');
+const mapMainImg = document.getElementById('mapMainImg');
+const photoVideoBtn = document.getElementById('photoVideoBtn');
+const imgBackIcon = document.getElementById('imgBackIcon');
+const photoVideoSwap = document.getElementById('photoVideoSwap');
+const popupPhoto = document.getElementById('popupPhoto');
 
 function escapePopup(event) {
     if (event.key === 'Escape') {
@@ -99,53 +100,68 @@ function browseImagesKeyEvent(e) {
     }
 }
 
-let typeActiveID = "type1";
-let typeActive = "smoke";
-let tickActive = 2;
+
+// declare default jeigu nieko nėra
+if (localStorage.getItem('typeActive') ===  null) {
+    localStorage.setItem("typeActive", "smoke");
+    localStorage.setItem("typeActiveID", "type1");
+}
+if (localStorage.getItem('tick1') ===  null && localStorage.getItem('tick2') ===  null) {
+    localStorage.setItem("tick1", "true");
+    localStorage.setItem("tick2", "false");
+}
+
+// uždedam tas kas yra active
+document.getElementById(localStorage.getItem("typeActiveID")).classList.add("active");
+if (localStorage.getItem("tick1") === "true") {
+    document.getElementById("tick1").classList.add("active");
+}
+if (localStorage.getItem("tick2") === "true") {
+    document.getElementById("tick2").classList.add("active");
+}
 
 // filtru spalva pakeicia onclick (changeFilter)
 function chFilter(id, type) {
     let target = document.getElementById(id);
 
     if (id.includes("type")) {
-        document.getElementById(typeActiveID).classList.remove("active");
-        typeActiveID = id;
+        document.getElementById(localStorage.getItem("typeActiveID")).classList.remove("active");
+        localStorage.setItem("typeActiveID", id);
         if (target.classList.contains("active")) {
             target.classList.remove("active");
         } 
         else {
             target.classList.add("active");
-            typeActive = type;
-            getIconData(typeActive);
+            localStorage.setItem("typeActive", type);
+            getIconData();
         }
     }
 
     if (id.includes("tick")) {
-        if (tickActive > 1 && target.classList.contains("active")) {
+        // tick1 ir tick2 ir contains(active)
+        if (localStorage.getItem("tick1") === "true" && localStorage.getItem("tick2") === "true" && target.classList.contains("active"))
+        {
             target.classList.remove("active");
-            tickActive--;
-        } else if (tickActive === 1 && !target.classList.contains("active")) {
+            localStorage.setItem(id, "false");
+        } 
+        // tick1 arba tick2 ir NOT contains(active)
+        else if (localStorage.getItem("tick1") === "true" || localStorage.getItem("tick2") === "true" && !target.classList.contains("active"))
+        {
             target.classList.add("active");
-            tickActive++;
+            localStorage.setItem(id, "true");
         }
     }
 }
 
 let checkClose = false;
 let checkOpen = true;
-let settingsId = document.getElementById('settingsId');
+const settingsId = document.getElementById('settingsId');
 
 // display neveikia su transition ;(
 // galbut veiks su scale arba visibility
 function openMenu() {
     if (checkOpen) {
         settingsId.style.display = 'block';
-        // setTimeout(() => {
-        //     settingsId.classList.add('transition');
-        // }, 10);
-        
-        // settingsId.style.opacity = '1';
-        // jeigu be check, iskart suveiktu closeMenu ir uzdarytu settings
         document.body.setAttribute("onclick", "closeMenu()");
         document.getElementById('settingsButton').removeAttribute("onclick", "openMenu()");
         checkOpen = false;
@@ -158,8 +174,6 @@ function closeMenu() {
             settingsId.style.display = 'none';
         }, 0);
         document.body.removeAttribute("onclick");
-        // settingsId.classList.remove('transition');
-        // settingsId.style.opacity = '0';
         checkClose = false;
         checkOpen = true;
     } else {
@@ -168,28 +182,45 @@ function closeMenu() {
     }
 }
 
-let userTheme = false;
-let loadVideoFirst = false;
+
+
+if (localStorage.getItem('userTheme') ===  null) {
+    localStorage.setItem("userTheme", "false");
+}
+if (localStorage.getItem('loadVideoFirst') ===  null) {
+    localStorage.setItem("loadVideoFirst", "false");
+}
+
+if (localStorage.getItem('userTheme') === "false") {
+    document.getElementById('userTheme').innerHTML = "Dark theme: false";
+} else {
+    document.getElementById('userTheme').innerHTML = "Dark theme: true";
+}
+if (localStorage.getItem('loadVideoFirst') == "false") {
+    document.getElementById('loadVideoFirst').innerHTML = "Load video first: false";
+} else {
+    document.getElementById('loadVideoFirst').innerHTML = "Load video first: true";
+}
 
 // nustatymu onclick pakeitimai (prastai padariau kol kas)
 function settingChange(setting) {
     // closeMenu kitaip suveiks ir uždarys settings
     checkClose = false;
-    if (setting == "userTheme") {
-        if (!userTheme) {
-            userTheme = true;
+    if (setting === "userTheme") {
+        if (localStorage.getItem('userTheme') === "false") {
+            localStorage.setItem("userTheme", "true");
             document.getElementById('userTheme').innerHTML = "Dark theme: true";
         } else {
-            userTheme = false;
+            localStorage.setItem("userTheme", "false");
             document.getElementById('userTheme').innerHTML = "Dark theme: false";
         }
     }
-    if (setting == "loadVideoFirst") {
-        if (!loadVideoFirst) {
-            loadVideoFirst = true;
+    if (setting === "loadVideoFirst") {
+        if (localStorage.getItem('loadVideoFirst') == "false") {
+            localStorage.setItem("loadVideoFirst", "true");
             document.getElementById('loadVideoFirst').innerHTML = "Load video first: true";
         } else {
-            loadVideoFirst = false;
+            localStorage.setItem("loadVideoFirst", "false");
             document.getElementById('loadVideoFirst').innerHTML = "Load video first: false";
         }
     }

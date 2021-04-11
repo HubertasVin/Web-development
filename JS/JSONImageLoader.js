@@ -4,8 +4,8 @@ let images;
 let instructions;
 
 function getDataImg(loc, id) {
-    images = map[loc][typeActive][id].img;
-    instructions = map[loc][typeActive][id].thrdesc;
+    images = map[loc][localStorage.getItem("typeActive")][id].img;
+    instructions = map[loc][localStorage.getItem("typeActive")][id].thrdesc;
 
     document.getElementById('imgSrc').src = images[0];
     document.getElementById('photoVideoBtn').style.visibility = "visible";
