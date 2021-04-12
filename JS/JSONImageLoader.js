@@ -3,17 +3,16 @@
 let images;
 let instructions;
 
-function getDataImg(loc, id) {
-    images = map[loc][localStorage.getItem("typeActive")][id].img;
-    instructions = map[loc][localStorage.getItem("typeActive")][id].thrdesc;
+function getDataImg(loc, number) {
+    images = map[loc][number].img;
+    instructions = map[loc][number].thrdesc;
 
     document.getElementById('imgSrc').src = images[0];
     document.getElementById('photoVideoBtn').style.visibility = "visible";
     document.getElementById('imgBackIcon').style.visibility = "visible";
-    document.getElementById('photoVideoBtn').setAttribute("onclick", "playVideo(" + loc + "," + id + ")");
+    document.getElementById('photoVideoBtn').setAttribute("onclick", "playVideo(" + loc + "," + number + ")");
     document.getElementById('imgBackIcon').setAttribute("onclick", "backPage(" + loc + ");");
 
-    // šits sutvarko popup. Kažkur kitur reiks numest
     // įdeda rodyklytes
     document.getElementById('popupPhoto').innerHTML += "<a class='fas fa-caret-left imgPrev' id='nextImg' onclick='previousImage()'></a><a class='fas fa-caret-right imgNext' id='prevImg' onclick='nextImage()'></a><div class='smokeDescription'><p class='smokeInstructions' id='smokeInstructions'><p></div>";
 
@@ -27,5 +26,4 @@ function getDataImg(loc, id) {
     
     // instrukcijos
     document.getElementById('smokeInstructions').innerHTML = instructions[0];
-    
 }

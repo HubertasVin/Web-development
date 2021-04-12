@@ -1,0 +1,340 @@
+"title": "Apps push",
+"from": "alley",
+"tickrate": "128",
+"oneway": false,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "vxQZJr3k3dE"
+
+
+"title": "Apps one-way",
+"from": "apps",
+"tickrate": "128 64",
+"oneway": true,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "ehb-SP4j9Gs"
+
+
+"title": "Apps deep",
+"from": "B backsite",
+"tickrate": "128",
+"oneway": false,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "ajlzKiLe92s"
+
+
+"title": "Apps anti-push",
+"from": "CT spawn",
+"tickrate": "128",
+"oneway": false,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "ZX73iXoZXwo"
+
+
+"title": "B site middle",
+"from": "Catwalk",
+"tickrate": "128",
+"oneway": false,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "sJ6TfJTFKsY"
+
+
+"title": "B backsite middle",
+"from": "Alley",
+"tickrate": "128",
+"oneway": false,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "cAEpdLA9NhU"
+
+
+"title": "1st arch",
+"from": "Alley",
+"tickrate": "128 64",
+"oneway": false,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "VZbencJlPWY"
+
+
+"title": "2nd arch",
+"from": "Alley",
+"tickrate": "128 64",
+"oneway": false,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "ij1jcQDRzRo"
+
+
+"title": "Short deep",
+"from": "Alley",
+"tickrate": "128 64",
+"oneway": false,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "ENUc_TiuzcA"
+
+
+"title": "Market door",
+"from": "Alley",
+"tickrate": "128",
+"oneway": false,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "hZ4DdPuRblc"
+
+
+"title": "Market window",
+"from": "Alley",
+"tickrate": "128 64",
+"oneway": false,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "BfKpb967QoI"
+
+
+"title": "Catwalk closer to mid",
+"from": "Top-mid",
+"tickrate": "128 64",
+"oneway": false,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "funlMJ6_p1w"
+
+
+"title": "Catwalk closer to mid",
+"from": "Underpass",
+"tickrate": "128 64",
+"oneway": false,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "sNm9tnFDPCI"
+
+
+"title": "Window",
+"from": "T spawn",
+"tickrate": "128 64",
+"oneway": false,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "z_z8PjDxARo"
+
+
+"title": "Window",
+"from": "Top-mid",
+"tickrate": "128 64",
+"oneway": false,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "1IuoCjsaYQM"
+
+
+"title": "Lower connector",
+"from": "sidealley",
+"tickrate": "128 64",
+"oneway": false,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "DpXbWUudq7M"
+
+
+"title": "Upper connector",
+"from": "ticket booth",
+"tickrate": "128 64",
+"oneway": false,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "yBo3fB9x01E"
+
+
+"title": "Upper connector",
+"from": "chair",
+"tickrate": "128",
+"oneway": false,
+"img":
+[
+    "../images/Smokes/Overpass/overpass_monster1_after.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+    "../images/Smokes/Overpass/overpass_monster1_before2.jpg"
+],
+"thrdesc":
+[
+    "1. Crouch",
+    "2. Stand-up and jumpthrow",
+    "result"
+],
+"videoSrc": "W9OTi9zUiCo"

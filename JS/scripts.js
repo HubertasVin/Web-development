@@ -40,10 +40,10 @@ function hidePopup() {
     quitVideo();
 
     document.removeEventListener("keydown", escapePopup);
-        setTimeout(() => {
-            clearPopup();
-            photoVideoBtn.style.visibility = "hidden";
-        }, 100);
+    setTimeout(() => {
+        clearPopup();
+        photoVideoBtn.style.visibility = "hidden";
+    }, 100);
 }
 
 function backPage(loc) {
@@ -155,13 +155,12 @@ function chFilter(id, type) {
 
 let checkClose = false;
 let checkOpen = true;
-const settingsId = document.getElementById('settingsId');
 
 // display neveikia su transition ;(
 // galbut veiks su scale arba visibility
 function openMenu() {
     if (checkOpen) {
-        settingsId.style.display = 'block';
+        document.getElementById('settingsId').style.display = 'block';
         document.body.setAttribute("onclick", "closeMenu()");
         document.getElementById('settingsButton').removeAttribute("onclick", "openMenu()");
         checkOpen = false;
@@ -171,7 +170,7 @@ function openMenu() {
 function closeMenu() {
     if (checkClose) {
         setTimeout(() => {
-            settingsId.style.display = 'none';
+            document.getElementById('settingsId').style.display = 'none';
         }, 0);
         document.body.removeAttribute("onclick");
         checkClose = false;
