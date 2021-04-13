@@ -1,0 +1,216 @@
+/* Filtru navigacija */
+/*   Bendras, visų filtrų tėvas :)   */
+.filterList {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    left: 2.5cm;
+    color: white;
+}
+
+/*   atskiri filtrai: type ir tick   */
+.filters {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.6rem;
+    align-items: center;
+    background-color: #DE9B35;
+}
+
+/*   borderiai   */
+#type1 {
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
+}
+#type4 {
+    border-bottom-left-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+}
+#tick1 {
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
+}
+#tick2 {
+    border-bottom-left-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+}
+
+#tick1 {
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
+    color: #4a9fff;
+}
+#tick2 {
+    border-bottom-left-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+    color: #76ff82;
+}
+
+/*   išvienodinu ilgius tarp type ir tick   */
+.filters span i, .filters span div {
+    width: 3rem;
+    padding: 0.1em 0;
+}
+
+.tick {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 0.9em;
+    cursor: pointer;
+    user-select: none;
+}
+
+/*   mažiukas border   */
+.filters span:not(:last-child) {
+    border-bottom: 2px #222222 solid;
+}
+
+/*   tarpai tarp tick ir type filtrų   */
+.filterType {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 0.8em;
+}
+.filterType:not(:first-child) {
+    margin-top: 1em;
+}
+
+/*   filtrų hover   */
+.filters i:hover, .filters div:hover {
+    background-color: #b67623;
+    cursor: pointer;
+}
+
+.active {
+    /* background-color: #a76604; */
+    background-color: #945a04;
+}
+
+
+.filterList [class^="fas fa-cloud"] {
+    color: #6b6b6b;
+}
+.filterList [class^="fas fa-fire"] {
+    color: #c0280d;
+}
+.filterList [class^="fas fa-bolt"] {
+    color: #eecf20;
+}
+.filterList [class^="fas fa-bomb"] {
+    color: #081600;
+}
+
+
+/*   Puslapis   */
+.pageBox {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#mapMainImg {
+    height: 80%;
+}
+
+.smokeIcon {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(50%, 50%);
+    font-size: 2.2em;
+}
+
+.smokeIcon:hover {
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.nadeCount {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 0.8em;
+    position: relative;
+    transform: translateY(-100%);
+    color: black;
+    z-index: 1;
+}
+
+.smokesListMap {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    column-gap: 2%;
+    margin: 0 3em;
+    row-gap: 5%;
+}
+
+.smokeBoxMap {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    align-self: center;
+    width: 100%;
+    background-color: #e4e4e4;
+    border: #3D3D3D 2px solid;
+    border-radius: 0.4em;
+    transition: all 0.2s ease 0.1s;
+    transform: scale(0.9);
+}
+
+.smokeBoxMap:hover {
+    transform: scale(0.85);
+}
+
+.smokeBoxMap h3 {
+    position: relative;
+    margin: 1em 0 2em;
+    line-height: inherit;
+    font-size: .85em;
+    z-index: 2;
+}
+
+.smokeBoxMap [class^="fas fa-arrow-alt-circle-up"] {
+    font-size: 1.2em;
+    color: #aa9227;
+}
+
+.smokeBoxMap [class^="fas fa-cloud fa-10x"] {
+    position: absolute;
+    top: 8.5%;
+    left: 0;
+    right: 0;
+    color: #5e5e5e;
+    font-size: 11rem;
+    opacity: 0.4;
+}
+
+.smokeBoxMap img {
+    position: relative;
+    -webkit-user-drag: none;
+    width: 85%;
+    border-radius: 5px;
+}
+
+#views {
+    position: relative;
+    font-size: .6em;
+    text-align: start;
+    margin: 1em 0 1em 1em;
+    z-index: 1000;
+}
+
+#iframeContainer {
+    height: 100%;
+    width: 100%;
+}
+
+#iframe {
+    box-shadow: black 1px 1px 20px 1px;
+    width: 73.2%;
+    height: 84%;
+}

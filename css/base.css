@@ -1,0 +1,218 @@
+
+/*   background   */
+body {
+    background-image: url(../images/textures/45-degree-fabric-light.png);
+    background-color: #2D3047;
+}
+
+main {
+    text-align: start;
+    width: 60%;
+    background-color: #d8d4d4;
+    margin: 5vh auto;
+    padding: 1.5vh 3vw;
+    font-family: "PT Sans Caption";
+}
+
+h2 {
+    font-size: 2em;
+    font-family: "Bree serif";
+    font-weight: 700;
+}
+
+h3 {
+    font-family: "Patua One";
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: unset;
+}
+
+p {
+    font-size: 1em;
+    text-align: left;
+}
+
+
+/* INDEX MAIN */
+
+/*   supažindinimas su puslapiu pozicija ir spalva  */
+.introduction {
+    display: inline-block;
+    background-image: linear-gradient(to right, #b4b4b4, #d8d4d4);
+    padding: 1em;
+    text-align: left;
+}
+
+/*   teksto išsidėstymas prisistatyme   */
+.capsule {
+    width: 50%;
+    height: 80%;
+}
+
+/*   prisistatyme, mygtukas "about us"   */
+.about {
+    background-color: rgb(40, 40, 40);
+    border: none;
+    padding: 0.6em 1.5em;
+    color: white;
+}
+.about:hover {
+    transition: all 0.3s ease 0s;
+    background-color: rgb(100, 100, 100);
+}
+
+/*   po prisistatymo, ką pamatys šiame puslapyje, išsidėstimas   */
+.layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    width: 100%;
+    margin-bottom: 2em;
+    padding-left: 0;
+    text-align: center;
+}
+
+/*   išsidėstimo block'ai   */
+.layout li {
+    display: inline-block;
+    background-color: #959ab9;
+    height: 20em;
+}
+
+/*   CONFIG PAGE PRADŽIA   */
+
+/*   Naudojamas kaip path to cfg   */
+.highlight {
+    margin: 5px 10px;
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+/*   Šone greitoji navigacija   */
+.quickNavigation {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8em;
+    position: absolute;
+    top: 40%;
+    right: 4%;
+    transform: translateY(-50%);
+    background-image: url(../images/textures/45-degree-fabric-light.png);
+    background-color: #d8d4d4;
+    padding: 0.5em;
+    border: 3px solid rgb(102, 102, 102);
+    z-index: 1;
+    text-align: center;
+
+}
+
+.quickNavigation p {
+    margin: 0;
+    padding: 0.5em;
+    font-weight: 700;
+}
+
+.quickNavigation div {
+    padding: 0.6em 0em;
+    background-color: #b4b4b4;
+    transition: all 0.3s ease 0s;
+    border-radius: 0.5em;
+    width: 90%;
+    justify-self: center;
+}
+.quickNavigation div:hover {
+    background-color:#919191;
+}
+
+/*   sujungia cfgCopy ir copySnippet. Reikėjo, kad copySnippet būtų dešinėje pusėje, tiesiai po cfgCopy   */
+.bendras {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0em;
+}
+
+/*   Komandos, kurios kopijuos žmonės   */
+.cfgCopy {
+    margin: 10px 0px;
+    padding: 1%;
+    box-shadow: 1px 1px 5px 1px black;
+    background-color: #959ab9;
+}
+
+.cfgCopy p {
+    margin: 0;
+}
+/*   "copy to clipboard" mygtukas po cfgCopy   */
+.copySnippet {
+    cursor: pointer;
+    text-align: center;
+    align-self: flex-end;
+    width: 20%;
+    padding: 1% 2%;
+    margin-top: 0.5%;
+    background-color: #5695bd;
+    border: 2px solid rgb(95, 95, 95);
+    transition: all 0.3s ease 0s;
+}
+
+.copySnippet:hover {
+    background-color: #457491;
+}
+
+/*   Komandų komentarai, įdedamas į ul arba ol   */
+.commands p {
+    margin-top: 0.4em;
+    margin-left: 1em;
+    user-select: none;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+/*   cfgCopy komandų komentarai   */
+.cfgCopy .commands li {
+    margin-top: 0.3em;
+}
+
+/*   CONFIG PABAIGA   */
+
+
+
+/*   TIPS AND TRICKS PRADŽIA   */
+
+.tips li {
+    font-weight: 800;
+    font-size: 1.4em;
+    margin-top: 2em;
+}
+
+.peeking li {
+    font-size: 1em;
+    font-weight: 600;
+    list-style: none;
+    margin-top: 1.2em;
+}
+
+/*   TIPS AND TRICKS PABAIGA   */
+
+
+
+/*   SETTINGS PRADŽIA   */
+
+.maxFPS {
+    font-size: 1.4em;
+}
+
+.maxFPS p {
+    margin-left: 1em;
+    margin-top: 0.3em;
+    user-select: none;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.maxFPS span {
+    font-weight: bold;
+}
+
+
+/*   SETTINGS PABAIGA   */

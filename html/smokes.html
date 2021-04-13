@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Geras projektas</title>
+    <script src="https://kit.fontawesome.com/e5aefc04fe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/CSS" href="../css/style.css">
+</head>
+<body>
+    <header class="pageTop">
+        <img class="logo" src="../images/CSGO-Essentials logo.webp"></img>
+        <div class="placeholder"></div>
+        <nav>
+            <ul class="navLinks">
+                <li><a href="settings.html" class="topWords">Settings</a></li>
+                <li><a href="TipsAndTricks.html" class="topWords">Tips and tricks</a></li>
+                <li><a href="configs.html" class="topWords">Configs</a></li>
+            </ul>
+        </nav>
+        <label class="smokeModeSwitch">
+            <input type="checkbox"/>
+            <span class="slider round"></span>
+        </label>
+        <a class="topWords" id="homeBtn" href="index.html">Home</a>
+    </header>
+
+    <!--  Šono navigacija i skirtingus map'us  -->
+    <nav class="mapIconList">
+        <span class="icon">
+            <a href="#"><img mapName="Mirage" src="../images/mapIcons/mirage_icon.webp"/></a>
+            <p>Mirage</p>
+        </span>
+        <span class="icon">
+            <a href="#"><img src="../images/mapIcons/inferno_icon.webp"/></a>
+            <p>Inferno</p>
+        </span>
+        <span class="icon">
+            <a href="#"><img src="../images/mapIcons/overpass_icon.webp"/></a>
+            <p>Overpass</p>
+        </span>
+        <span class="icon">
+            <a href="#"><img src="../images/mapIcons/dust2_icon.webp"/></a>
+            <p>Dust&nbsp;2</p>
+        </span>
+        <span class="icon">
+            <a href="#"><img src="../images/mapIcons/cache_icon.webp"/></a>
+            <p>Cache</p>
+        </span>
+        <span class="icon">
+            <a href="#"><img src="../images/mapIcons/train_icon.webp"/></a>
+            <p>Train</p>
+        </span>
+        <span class="icon">
+            <a href="#"><img src="../images/mapIcons/nuke_icon.webp"/></a>
+            <p>Nuke</p>
+        </span>
+        <span class="icon">
+            <a href="#"><img src="../images/mapIcons/vertigo_icon.webp"/></a>
+            <p>Vertigo</p>
+        </span>
+    </nav>
+
+    <main>
+        <!--  Tam tikro map'o smoke'ai  -->
+        <h2>CSGO smokes</h2>
+        <section class="smokesList">
+            <div class="smokeBox" onclick="showPopup('OverpassMonsterSmoke1')"><h3 class="smokeName">Monster smoke</h3><h4 class="smokeSubtitle">from CT spawn</h4><img src="../images/Smokes/Overpass/overpass_monster1_after.jpg"></img></div>
+            <div class="popupBackground" id="OverpassMonsterSmoke1">
+                <div class="popup">
+                    <p class="smokeTitle">Monster-Tracks smoke</p>
+                    <div class="popupPhoto" id="popupPhoto">
+                        <img id="imgSrc" src="../images/Smokes/Overpass/overpass_monster1_after.jpg"/>
+                        <!-- <video id="videoSrc" src="../images/videos/stock_video.mp4" style="visibility: hidden;" controls autoplay></video> -->
+                        <a class="fas fa-chevron-left imgPrev" id="nextImg" onclick="previousImage()"></a>
+                        <a class="fas fa-chevron-right imgNext" id="prevImg" onclick="nextImage()"></a>
+
+                        <div class="smokeDescription">
+                            <div class="watchVideo popupText" id="playVid" onclick="playVideo()"><i class="fas fa-play"></i> watch the video</div>
+                            <p class="smokeInstructions">1. Crouch<p>
+                            <div class="favorite popupText"><i class="fas fa-star"></i> favorite</div>
+                        </div>
+                    </div>
+                    <i class="fas fa-times fa-2x" id="imgCloseIcon" onclick="hidePopup('OverpassMonsterSmoke1')"></i>
+                </div>
+            </div>
+
+            <!--  Tesinys  -->
+            <div class="smokeBox">
+                <h3>Monster smoke</h3>
+                <h4>from CT spawn</h4>
+                <img src="../images/mapIcons/overpass_icon.webp"></img>
+            </div>
+            <div class="smokeBox">
+                <h3>Monster smoke</h3>
+                <h4>from CT spawn</h4>
+                <img src="../images/mapIcons/overpass_icon.webp"></img>
+            </div>
+            <div class="smokeBox">
+                <h3>Monster smoke</h3>
+                <h4>from CT spawn</h4>
+                <img src="../images/mapIcons/overpass_icon.webp"></img>
+            </div>
+            <div class="smokeBox">
+                <h3>Monster smoke</h3>
+                <h4>from CT spawn</h4>
+                <img src="../images/mapIcons/overpass_icon.webp"></img>
+            </div>
+            <div class="smokeBox">
+                <h3>Monster smoke</h3>
+                <h4>from CT spawn</h4>
+                <img src="../images/mapIcons/overpass_icon.webp"></img>
+            </div>
+            <div class="smokeBox">
+                <h3>Monster smoke</h3>
+                <h4>from CT spawn</h4>
+                <img src="../images/mapIcons/overpass_icon.webp"></img>
+            </div>
+            <div class="smokeBox">
+                <h3>Monster smoke</h3>
+                <h4>from CT spawn</h4>
+                <img src="../images/mapIcons/overpass_icon.webp"></img>
+            </div>
+            <div class="smokeBox">
+                <h3>Monster smoke</h3>
+                <h4>from CT spawn</h4>
+                <img src="../images/mapIcons/overpass_icon.webp"></img>
+            </div>
+            <div class="smokeBox">
+                <h3>Monster smoke</h3>
+                <h4>from CT spawn</h4>
+                <img src="../images/mapIcons/overpass_icon.webp"></img>
+            </div>
+            <div class="smokeBox">
+                <h3>Monster smoke</h3>
+                <h4>from CT spawn</h4>
+                <img src="../images/mapIcons/overpass_icon.webp"></img>
+            </div>
+            <div class="smokeBox">
+                <h3>Monster smoke</h3>
+                <h4>from CT spawn</h4>
+                <img src="../images/mapIcons/overpass_icon.webp"></img>
+            </div>
+            <div class="smokeBox">
+                <h3>Monster smoke</h3>
+                <h4>from CT spawn</h4>
+                <img src="../images/mapIcons/overpass_icon.webp"></img>
+            </div>
+            <div class="smokeBox">
+                <h3>Monster smoke</h3>
+                <h4>from CT spawn</h4>
+                <img src="../images/mapIcons/overpass_icon.webp"></img>
+            </div>
+        </section>
+    </main>
+
+    <!--  Puslapio apačia (ateityje)   -->
+    <footer>
+        <h1 style="margin: 0;">Our footer</h1>
+    </footer>
+
+    <script src="../JS/scripts.js"></script>
+</body>
+</html>

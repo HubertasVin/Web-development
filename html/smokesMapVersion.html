@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Geras projektas</title>
+    <script src="https://kit.fontawesome.com/e5aefc04fe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/CSS" href="../css/style.css">
+    <link rel="stylesheet" type="text/CSS" href="../css/smokesMapVersion.css">
+</head>
+<!--  preload ir settings menu uzdarys kai kur nors paspaus  -->
+<body onload="preloadPage()">
+    <header class="pageTop">
+        <script language="javascript" type="text/javascript" src="subHTML/pageTop.js"></script>
+    </header>
+    <!-- Virsutine navigacija filtrams -->
+    <nav class="filterList">
+        <div class="filters">
+            <span onclick="chFilter('type1', 'smoke')"><i id="type1" class="fas fa-cloud fa-2x"></i></span>
+            <span onclick="chFilter('type2', 'molotov')"><i id="type2" class="fas fa-fire fa-2x"></i></span>
+            <span onclick="chFilter('type3', 'flash')"><i id="type3" class="fas fa-bolt fa-2x"></i></span>
+            <span onclick="chFilter('type4', 'explosive')"><i id="type4" class="fas fa-bomb fa-2x"></i></span>
+        </div>
+        <span class="filterType">ticks</span>
+        <div class="filters">
+            <span class="tick" onclick="chFilter('tick1')"><div id="tick1">64</div></span>
+            <span class="tick" onclick="chFilter('tick2')"><div id="tick2">128</div></span>
+        </div>
+    </nav>
+
+    <!--  Šono navigacija i skirtingus map'us  -->
+    <nav class="mapIconList">
+        <script language="javascript" type="text/javascript" src="subHTML/mapIconList.js"></script>
+    </nav>
+
+    <main style="background-color: #222222;">
+        <!--  pats puslapis  -->
+        <div class="pageBox" id="pageBox">
+            
+            <!--  nuotrauka puslapio  -->
+            <img id="mapMainImg" draggable="false">
+            <div id="smokeIconHolder">
+            </div>
+            
+        </div>
+
+        <!-- popup'as -->
+        <div class="popupBackground" id="mainPopup">
+            <div class="popup" id="popup">
+                <p id="smokeTitle"></p>
+                <div id="iframeContainer" style="display: none;">
+                    <iframe id="iframe" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="popupPhoto" id="popupPhoto">
+                    <img id="imgSrc"/>
+                </div>
+                <div id='photoVideoBtn' onclick='playVideo()'>
+                    <div id="btnDescription">Play video</div>
+                    <i class="fas fa-film fa-2x" id="photoVideoSwap"></i>
+                </div>
+                <section class="smokesListMap" id="JSONinfo"></section>
+                <i class="fas fa-times fa-2x" id="imgCloseIcon" onclick="hidePopup(); clearPopup()"></i>
+                <i class="fas fa-arrow-left fa-2x" id="imgBackIcon" onclick="backPage()"></i>
+            </div>
+        </div>
+    </main>
+
+    <script src="../JS/pagePreloader.js"></script>
+    <script src="../JS/scripts.js"></script>
+    <script src="../JS/JSONPopupHandler.js"></script>
+    <script src="../JS/JSONImageLoader.js"></script>
+    <script src="../JS/smokeIconHandler.js"></script>
+    <script src="../JS/videoHandler.js"></script>
+</body>
+</html>

@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+/*   Default elementų stilius   */
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #FEFFFE;
+}
+
+a {
+    cursor: pointer;
+}
+
+h1 {
+    font-family: 'Patua One', cursive;
+    letter-spacing: 5px;
+    font-size: 3vw;
+}
+
+h2 {
+    font-family: 'Patua One', cursive;
+    letter-spacing: 5px;
+    font-size: 1.75vw;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Montserrat';
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    line-height: 0px;
+    font-size: 0.7vw;
+    color: #1C1E21;
+    text-decoration: none;
+}
+
+h4 {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 0px;
+    font-size: 0.65vw;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    color: #41444b;
+}
+
+/*   puslapio scrollbar   */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #f3f3f3;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #868686; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #797979; 
+}
+
+
+/*   Navigacijos pozicija ir background spalva   */
+.mapIconList {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.3cm;
+    /* background-image: url(../images/textures/beige-paper.png); */
+    background-color: #DE9B35;
+    border-top-right-radius: 0.6em;
+    border-bottom-right-radius: 0.6em;
+    z-index: 1;
+}
+
+/*   Map'u nuotraukos   */
+.mapIconList img {
+    width: 100%;
+    margin-top: 5%;
+}
+
+.icon {
+    display: flex;
+}
+
+/*   Map'u komentaras   */
+.icon p {
+    position: absolute;
+    margin-top: 5px;
+    left: -60%;
+    opacity: 0;
+    background-color: rgb(204, 134, 20, 0.8);
+    color: #f3f3f3;
+    font-family: 'PT Sans Caption', sans-serif;
+    padding: 2px 4px;
+    border-radius: 5px;
+}
+.icon:hover p {
+    opacity: 1;
+    left: 120%;
+    transition: all 0.05s ease 0s;
+}
+
+
+
+/* PAGE TOP */
+
+/*   Visas page top display   */
+.pageTop {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5% 5%;
+    background-color: #F0EDE9FA;
+}
+
+/*   <a> tag tekstu stilius, neskaitant "home" mygtuko   */
+.topWords {
+    font-family: "Comfortaa";
+    font-weight: 700;
+    color:#0a0a0a;
+    text-decoration: none;
+}
+
+.logo {
+    cursor: pointer;
+    width: 8%;
+}
+
+/*   pageTop vidurys  */
+.navLinks {
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2vh 16vw;
+    justify-content: center;
+}
+
+/*   pageTop vidurio tekstas (list items)   */
+.navLinks li {
+    display: inline-block;
+    padding: 0 2vw;
+    list-style: none;
+}
+
+/*   (li a) ir (li a:hover) padaro, kad kai laikai pelę virš menu, auksine spalva tekstas būtų ir iš lėto pranyktu   */
+.navLinks li a {
+    transition: all 0.3s ease 0s;
+    background-color: #e4e2e0fa;
+    padding: 5px;
+    border-radius: 7px;
+}
+.navLinks li a:hover {
+    color: rgba(253, 219, 58, 0.8);
+}
+
+/*   home mygtuko stilius   */
+#homeBtn {
+    padding: 0.5% 1.5%;
+    background-color: #DE9B35;
+    color: #1a1c20;
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s,
+                border-radius 0.5s;
+}
+#homeBtn:hover {
+    border-radius: 0.9em;
+    background-color: #E2A850;
+    transition: 0.3s;
+}
+
+
+/*   settings mygtukas   */
+#settingsButton {
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+/*   DISPLAY NELEIDZIA TRANSITION   */
+.settings {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    right: 5%;
+    z-index: 3;
+    background-color: #e4e2e0fa;
+    width: 15%;
+    opacity: 0.9;
+    user-select: none;
+    border-top: 3px solid #b69e17;
+    border-bottom: 3px solid #b69e17;
+    transition: 0.3s;
+}
+
+.settings div div {
+    padding: 1em;
+}
+
+.settings div div:hover {
+    cursor: pointer;
+    background-color: #DE9B35;
+}
+
+
+.group::before, .group::after {
+    content: "";
+    display: block;
+    margin: 0.2em;
+}
+
+
+
+.smokeModeSwitch {
+    position: relative;
+}
+
+.smokeModeSwitch input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    background-color: #003049;
+    transition: 0.1s;
+    width: 3vh;
+    height: 1vh;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 2.5vh;
+    width: 2.5vh;
+    background-color: #fddb3a;
+    transition: 0.1s;
+    top: -0.75vh;
+    left: -1.25vh;
+}
+
+.smokeModeSwitch input:checked + .slider:before {
+    transform: translateX(3vh);
+    background-color: #D62828;
+}
+
+.slider.round::before {
+    border-radius: 2.5vh;
+}
+
+
+/* MAIN CONTENT */
+
+/*   Bendras main stilius   */
+main {
+    width: 100%;
+    min-height: 90vh;
+    text-align: center;
+    background-color: #f3f3f3;
+    padding: 1vh 0 10vh 0;
+    z-index: 1;
+}
+
+/*   nebenaudosim   */
+/*   bendras block'ų (popup'ų) stilius   */
+.smokesList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 2vw;
+    row-gap: 4vw;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+
+/*   nenaudosim   */
+/*   Kiekvieno block'o stilius   */
+.smokeBox {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    width: 15vw;
+    height: 35vh;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+.smokeBox img {
+    -webkit-user-drag: none;
+    width: 94%;
+}
+
+/*   popup background pozicija ir spalva   */
+.popupBackground {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    transition: all 0.2s ease 0s;
+}
+
+/*   popup pozicija ir stilius   */
+.popup {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(241, 236, 231, 0.95);
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+#popup {
+    transform: scale(0);
+    transition: transform 0.2s ease 0s;
+}
+
+/*   popup uždarymo mygtukas   */
+#imgCloseIcon {
+    position: absolute;
+    cursor: pointer;
+    float: right;
+    right: 15px;
+    top: 10px;
+}
+#imgBackIcon {
+    position: absolute;
+    cursor: pointer;
+    float: right;
+    visibility: hidden;
+    left: 15px;
+    top: 10px;
+}
+
+/*   popup pavadinimo pozicija   */
+#smokeTitle {
+    display: inline-block;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 2.5em;
+    padding: 0 5%;
+    margin: 0.5% 0 1.5% 0;
+    letter-spacing: -1px;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.4);
+}
+
+/*   kairioji pusė; nuotrauka su rodyklem; ir dešinioji pusė   */
+
+/*   popup nuotraukos pozicija  */
+.popupPhoto {
+    display: flex;
+    position: relative;
+    max-width: 73%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.popupPhoto:hover .videoControlBar {
+    transform: translateY(0);
+}
+
+.popupPhoto img, video {
+    width: 100%;
+}
+
+/*   popup pirmyn ir atgal rodykles   */
+.imgPrev, .imgNext {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.imgNext {
+    right: 0;
+    border-radius: 7px 0 0 7px;
+}
+.imgPrev {
+    left: 0;
+  border-radius: 0 7px 7px 0;
+}
+.imgPrev:hover, .imgNext:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*   popup aprašymo stilius + crouch teksto stilius   */
+.smokeDescription {
+    display: flex;
+    position: absolute;
+    font-family: 'Montserrat';
+    font-weight: 800;
+    font-size: 1em;
+    bottom: 0%;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(163, 163, 163, 0));
+    color: white;
+    
+    justify-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+
+    padding: 2% 0 1% 0;
+}
+
+/*   watch video ir favorite bendras tekstas   */
+
+.smokeInstructions {
+    margin: 0 0.5em;
+    letter-spacing: 1pt;
+}
+
+#photoVideoBtn {
+    position: absolute;
+    display: inline-block;
+    visibility: hidden;
+    top: 48%;
+    transform: translateY(-50%);
+    right: 3%;
+    width: 7%;
+
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+#photoVideoBtn i {
+    margin-top: 0.2em;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    padding: 0.2em 0.4em;
+    background-color: #DE9B35;
+    border: 2px solid  rgb(102, 102, 102);
+}
+
+
+/* FOOTER */
+footer {
+    background-color:#dddcd7;
+    height: 50vh;
+    text-align: center;
+}
