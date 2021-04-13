@@ -6,6 +6,7 @@ function playVideo(loc, number) {
     // panaikina nuotrauka ir ideda video
     if (playingVideo) {
         clearPopup();
+        document.getElementById('photoVideoBtn').style.visibility = "visible";
         document.getElementById('iframeContainer').style.display = "block";
         document.getElementById('iframe').src = "https://www.youtube.com/embed/" + map[loc][number].videoSrc + "?vq=hd1080&modestbranding=1&autoplay=1&loop=1";
         document.getElementById('btnDescription').innerHTML = "Photo";
